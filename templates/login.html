@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Login - Auction System</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-base:      #0d0e12;
+            --bg-card:      #13151c;
+            --bg-input:     #1a1d27;
+            --border:       #262a38;
+            --border-focus: #f5a623;
+            --accent:       #f5a623;
+            --accent-glow:  rgba(245,166,35,0.22);
+            --accent-dark:  #c47d00;
+            --text-primary: #edeef2;
+            --text-muted:   #6b7280;
+            --text-label:   #9ca3af;
+            --success:      #22c55e;
+            --danger:       #ef4444;
+        }
+
+        *, *::before, *::after { box-sizing: border-box; }
+
+        body {
+            background: var(--bg-base);
+            font-family: 'DM Sans', sans-serif;
+            color: var(--text-primary);
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        /* Noise texture */
+        body::before {
+            content: '';
+            position: fixed;
+            inset: 0;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        /* Ambient glow blobs */
+        body::after {
+            content: '';
+            position: fixed;
+            width: 520px; height: 520px;
+            background: radial-gradient(circle, rgba(245,166,35,0.08) 0%, transparent 70%);
+            top: -140px; right: -140px;
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .ambient-blob {
+            position: fixed;
+            width: 380px; height: 380px;
+            background: radial-gradient(circle, rgba(245,166,35,0.05) 0%, transparent 70%);
+            bottom: -100px; left: -100px;
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        /* Navbar */
+        .navbar {
+            background: rgba(13,14,18,0.85) !important;
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border);
+            padding: 10px 24px;
+            position: relative;
+            z-index: 10;
+        }
+
+        .navbar-brand {
+            font-family: 'Syne', sans-serif;
+            font-weight: 800;
+            font-size: 1.15rem;
+            color: var(--accent) !important;
+            letter-spacing: 0.5px;
+        }
+
+        .nav-link {
+            color: var(--text-muted) !important;
+            font-size: 0.88rem;
+            font-weight: 500;
+            transition: color 0.2s;
+            padding: 6px 14px !important;
+            border-radius: 8px;
+        }
+
+        .nav-link:hover, .nav-link.active {
+            color: var(--accent) !important;
+            background: var(--accent-glow);
+        }
+
+        /* Wrapper */
+        .login-wrapper {
+            min-height: calc(100vh - 57px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 40px 16px;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Card */
+        .form-card {
+            width: 100%;
+            max-width: 460px;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            padding: 40px 44px;
+            box-shadow:
+                0 0 0 1px rgba(255,255,255,0.03),
+                0 24px 60px rgba(0,0,0,0.55),
+                0 0 80px rgba(245,166,35,0.04);
+            animation: cardIn 0.5s cubic-bezier(0.22,1,0.36,1) both;
+        }
+
+        @keyframes cardIn {
+            from { opacity: 0; transform: translateY(24px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Icon badge */
+        .card-icon {
+            width: 58px; height: 58px;
+            background: linear-gradient(135deg, var(--accent), var(--accent-dark));
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 14px;
+            font-size: 22px;
+            color: #000;
+            box-shadow: 0 6px 24px var(--accent-glow);
+        }
+
+        .form-card h3 {
+            font-family: 'Syne', sans-serif;
+            font-weight: 700;
+            font-size: 1.4rem;
+            color: var(--text-primary);
+        }
+
+        /* Divider */
+        .divider {
+            border: none;
+            border-top: 1px solid var(--border);
+            margin: 10px 0 22px;
+        }
+
+        /* Form */
+        .form-group {
+            margin-bottom: 16px;
+            position: relative;
+        }
+
+        label {
+            font-size: 0.82rem;
+            font-weight: 500;
+            color: var(--text-label);
+            margin-bottom: 5px;
+            display: block;
+            letter-spacing: 0.3px;
+        }
+
+        label i { color: var(--accent); }
+
+        .form-control {
+            background: var(--bg-input);
+            border: 1.5px solid var(--border);
+            border-radius: 10px;
+            color: var(--text-primary);
+            font-size: 0.9rem;
+            padding: 11px 14px;
+            transition: border-color 0.25s, box-shadow 0.25s, background 0.25s;
+            font-family: 'DM Sans', sans-serif;
+        }
+
+        .form-control::placeholder { color: #3d4252; }
+
+        .form-control:focus {
+            background: #1e2130;
+            border-color: var(--border-focus);
+            box-shadow: 0 0 0 3px var(--accent-glow);
+            color: var(--text-primary);
+            outline: none;
+        }
+
+        .form-control.is-valid {
+            border-color: var(--success) !important;
+            background: var(--bg-input);
+            background-image: none !important;
+        }
+        .form-control.is-invalid {
+            border-color: var(--danger) !important;
+            background: var(--bg-input);
+            background-image: none !important;
+        }
+
+        .valid-feedback   { color: var(--success); font-size: 0.78rem; display: block; margin-top: 4px; }
+        .invalid-feedback { color: var(--danger);  font-size: 0.78rem; display: block; margin-top: 4px; }
+
+        /* Remember me */
+        .form-check-input {
+            accent-color: var(--accent);
+        }
+
+        .form-check-label {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+
+        /* Submit button */
+        .btn-login {
+            background: linear-gradient(135deg, var(--accent) 0%, var(--accent-dark) 100%);
+            border: none;
+            border-radius: 10px;
+            padding: 12px 30px;
+            font-family: 'Syne', sans-serif;
+            font-weight: 700;
+            font-size: 0.97rem;
+            color: #0d0e12;
+            width: 100%;
+            letter-spacing: 0.3px;
+            transition: transform 0.2s, box-shadow 0.2s, filter 0.2s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn-login::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(255,255,255,0.12), transparent);
+            pointer-events: none;
+        }
+
+        .btn-login:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 28px var(--accent-glow);
+            filter: brightness(1.08);
+        }
+
+        .btn-login:active { transform: translateY(0); }
+
+        /* Alert */
+        .alert {
+            background: rgba(239,68,68,0.1);
+            border: 1px solid rgba(239,68,68,0.25);
+            color: #fca5a5;
+            border-radius: 10px;
+            font-size: 0.85rem;
+        }
+
+        .alert-success {
+            background: rgba(34,197,94,0.1);
+            border-color: rgba(34,197,94,0.25);
+            color: #86efac;
+        }
+
+        /* Footer text */
+        .signup-link {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+
+        .signup-link a {
+            color: var(--accent);
+            font-weight: 600;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .signup-link a:hover { color: #ffd166; }
+
+        @media (max-width: 576px) {
+            .form-card { padding: 28px 22px; }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="ambient-blob"></div>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg">
+        <a class="navbar-brand" href="#"><i class="fas fa-gavel mr-2"></i>AuctionX</a>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link active" href="/login"><i class="fas fa-sign-in-alt mr-1"></i>Login</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/register"><i class="fas fa-user-plus mr-1"></i>Register</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Centered Form Wrapper -->
+    <div class="login-wrapper">
+        <div class="form-card">
+
+            <!-- Icon + Heading -->
+            <div class="text-center mb-3">
+                <div class="card-icon">
+                    <i class="fas fa-sign-in-alt"></i>
+                </div>
+                <h3 class="mb-1">Welcome Back</h3>
+                <p class="mb-0" style="font-size:0.85rem; color: var(--text-muted);">Sign in to your account to continue</p>
+            </div>
+
+            <hr class="divider">
+
+            <!-- Flash messages placeholder -->
+            {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+            {% for category, message in messages %}
+            <div class="alert alert-{{ category }} alert-dismissible fade show" role="alert">
+                {{ message }}
+                <button type="button" class="close" data-dismiss="alert" style="color:inherit"><span>&times;</span></button>
+            </div>
+            {% endfor %}
+            {% endif %}
+            {% endwith %}
+
+            <form method="post" id="loginForm" novalidate>
+
+                <!-- Email -->
+                <div class="form-group">
+                    <label><i class="fas fa-envelope mr-2"></i>Email</label>
+                    <input name="email" id="email" type="email" class="form-control"
+                        placeholder="Enter your email" required>
+                    <div class="invalid-feedback" id="emailError"></div>
+                    <div class="valid-feedback" id="emailSuccess"></div>
+                </div>
+
+                <!-- Password -->
+                <div class="form-group">
+                    <label><i class="fas fa-lock mr-2"></i>Password</label>
+                    <input name="password" id="password" type="password" class="form-control"
+                        placeholder="Enter your password" required>
+                    <div class="invalid-feedback" id="passwordError"></div>
+                    <div class="valid-feedback" id="passwordSuccess"></div>
+                </div>
+
+                <!-- Remember Me -->
+                <div class="form-group mb-1">
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input" id="rememberMe">
+                        <label class="form-check-label" for="rememberMe">Remember me</label>
+                    </div>
+                </div>
+
+                <!-- Submit -->
+                <div class="mt-3">
+                    <button type="submit" class="btn btn-login" id="submitBtn">
+                        <i class="fas fa-sign-in-alt mr-2"></i>Sign In
+                    </button>
+                </div>
+
+                <div class="text-center mt-3 signup-link">
+                    Don't have an account? <a href="/register">Sign Up</a>
+                </div>
+
+            </form>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#email').on('input', validateEmail);
+            $('#password').on('input', validatePassword);
+
+            $('#loginForm').on('submit', function (e) {
+                e.preventDefault();
+                if (validateForm()) this.submit();
+            });
+
+            function validateEmail() {
+                const email = $('#email').val().trim();
+                if (!email.length) { hideValidation('email'); return false; }
+                if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) return showError('email', 'Please enter a valid email address');
+                showSuccess('email', 'Email format is valid'); return true;
+            }
+
+            function validatePassword() {
+                const pw = $('#password').val();
+                if (!pw.length) { hideValidation('password'); return false; }
+                if (pw.length < 6) return showError('password', 'Password must be at least 6 characters long');
+                showSuccess('password', 'Password looks good'); return true;
+            }
+
+            function validateForm() {
+                return validateEmail() & validatePassword();
+            }
+
+            function showError(field, message) {
+                $(`#${field}`).addClass('is-invalid').removeClass('is-valid');
+                $(`#${field}Error`).text(message).show();
+                $(`#${field}Success`).hide();
+                return false;
+            }
+
+            function showSuccess(field, message) {
+                $(`#${field}`).addClass('is-valid').removeClass('is-invalid');
+                $(`#${field}Success`).text(message).show();
+                $(`#${field}Error`).hide();
+                return true;
+            }
+
+            function hideValidation(field) {
+                $(`#${field}`).removeClass('is-valid is-invalid');
+                $(`#${field}Error, #${field}Success`).hide();
+            }
+        });
+    </script>
+</body>
+
+</html>

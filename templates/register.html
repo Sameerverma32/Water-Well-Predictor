@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Register - Auction System</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-base:       #0d0e12;
+            --bg-card:       #13151c;
+            --bg-input:      #1a1d27;
+            --border:        #262a38;
+            --border-focus:  #f5a623;
+            --accent:        #f5a623;
+            --accent-glow:   rgba(245,166,35,0.22);
+            --accent-dark:   #c47d00;
+            --text-primary:  #edeef2;
+            --text-muted:    #6b7280;
+            --text-label:    #9ca3af;
+            --success:       #22c55e;
+            --danger:        #ef4444;
+        }
+
+        *, *::before, *::after { box-sizing: border-box; }
+
+        body {
+            background: var(--bg-base);
+            font-family: 'DM Sans', sans-serif;
+            color: var(--text-primary);
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        /* ── Noise texture overlay ── */
+        body::before {
+            content: '';
+            position: fixed;
+            inset: 0;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        /* ── Ambient glow blobs ── */
+        body::after {
+            content: '';
+            position: fixed;
+            width: 520px; height: 520px;
+            background: radial-gradient(circle, rgba(245,166,35,0.08) 0%, transparent 70%);
+            top: -140px; right: -140px;
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .ambient-blob {
+            position: fixed;
+            width: 380px; height: 380px;
+            background: radial-gradient(circle, rgba(245,166,35,0.05) 0%, transparent 70%);
+            bottom: -100px; left: -100px;
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        /* ── Navbar ── */
+        .navbar {
+            background: rgba(13,14,18,0.85) !important;
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border);
+            padding: 10px 24px;
+            position: relative;
+            z-index: 10;
+        }
+
+        .navbar-brand {
+            font-family: 'Syne', sans-serif;
+            font-weight: 800;
+            font-size: 1.15rem;
+            color: var(--accent) !important;
+            letter-spacing: 0.5px;
+        }
+
+        .nav-link {
+            color: var(--text-muted) !important;
+            font-size: 0.88rem;
+            font-weight: 500;
+            transition: color 0.2s;
+            padding: 6px 14px !important;
+            border-radius: 8px;
+        }
+
+        .nav-link:hover, .nav-link.active {
+            color: var(--accent) !important;
+            background: var(--accent-glow);
+        }
+
+        /* ── Wrapper ── */
+        .register-wrapper {
+            min-height: calc(100vh - 57px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 32px 16px;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* ── Card ── */
+        .form-card {
+            width: 100%;
+            max-width: 480px;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            padding: 36px 40px;
+            box-shadow:
+                0 0 0 1px rgba(255,255,255,0.03),
+                0 24px 60px rgba(0,0,0,0.55),
+                0 0 80px rgba(245,166,35,0.04);
+            animation: cardIn 0.5s cubic-bezier(0.22,1,0.36,1) both;
+        }
+
+        @keyframes cardIn {
+            from { opacity: 0; transform: translateY(24px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+
+        /* ── Icon badge ── */
+        .card-icon {
+            width: 52px; height: 52px;
+            background: linear-gradient(135deg, var(--accent), var(--accent-dark));
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 12px;
+            font-size: 20px;
+            color: #000;
+            box-shadow: 0 6px 24px var(--accent-glow);
+        }
+
+        .form-card h5 {
+            font-family: 'Syne', sans-serif;
+            font-weight: 700;
+            font-size: 1.25rem;
+            color: var(--text-primary);
+        }
+
+        /* ── Divider ── */
+        .divider {
+            border: none;
+            border-top: 1px solid var(--border);
+            margin: 14px 0 18px;
+        }
+
+        /* ── Form ── */
+        .form-group {
+            margin-bottom: 14px;
+            position: relative;
+        }
+
+        label {
+            font-size: 0.82rem;
+            font-weight: 500;
+            color: var(--text-label);
+            margin-bottom: 5px;
+            display: block;
+            letter-spacing: 0.3px;
+        }
+
+        label i { color: var(--accent); }
+
+        .form-control {
+            background: var(--bg-input);
+            border: 1.5px solid var(--border);
+            border-radius: 10px;
+            color: var(--text-primary);
+            font-size: 0.9rem;
+            padding: 10px 14px;
+            transition: border-color 0.25s, box-shadow 0.25s, background 0.25s;
+            font-family: 'DM Sans', sans-serif;
+        }
+
+        .form-control::placeholder { color: #3d4252; }
+
+        .form-control:focus {
+            background: #1e2130;
+            border-color: var(--border-focus);
+            box-shadow: 0 0 0 3px var(--accent-glow);
+            color: var(--text-primary);
+            outline: none;
+        }
+
+        /* Bootstrap dark override */
+        .form-control.is-valid {
+            border-color: var(--success) !important;
+            background: var(--bg-input);
+            background-image: none !important;
+        }
+        .form-control.is-invalid {
+            border-color: var(--danger) !important;
+            background: var(--bg-input);
+            background-image: none !important;
+        }
+
+        .valid-feedback   { color: var(--success); font-size: 0.78rem; display: block; margin-top: 4px; }
+        .invalid-feedback { color: var(--danger);  font-size: 0.78rem; display: block; margin-top: 4px; }
+
+        /* ── Password toggle ── */
+        .password-toggle {
+            position: absolute;
+            right: 14px;
+            top: calc(50% + 10px);
+            transform: translateY(-50%);
+            cursor: pointer;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            transition: color 0.2s;
+        }
+
+        .password-toggle:hover { color: var(--accent); }
+
+        /* ── Strength bar ── */
+        .password-strength {
+            height: 3px;
+            border-radius: 2px;
+            margin-top: 6px;
+            transition: all 0.3s ease;
+            background: var(--border);
+        }
+
+        .strength-weak   { background: var(--danger); }
+        .strength-medium { background: var(--accent); }
+        .strength-strong { background: var(--success); }
+
+        /* ── Submit button ── */
+        .btn-register {
+            background: linear-gradient(135deg, var(--accent) 0%, var(--accent-dark) 100%);
+            border: none;
+            border-radius: 10px;
+            padding: 11px 30px;
+            font-family: 'Syne', sans-serif;
+            font-weight: 700;
+            font-size: 0.95rem;
+            color: #0d0e12;
+            width: 100%;
+            letter-spacing: 0.3px;
+            transition: transform 0.2s, box-shadow 0.2s, filter 0.2s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn-register::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(255,255,255,0.12), transparent);
+            pointer-events: none;
+        }
+
+        .btn-register:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 28px var(--accent-glow);
+            filter: brightness(1.08);
+        }
+
+        .btn-register:active {
+            transform: translateY(0);
+        }
+
+        /* ── Alert ── */
+        .alert {
+            background: rgba(239,68,68,0.1);
+            border: 1px solid rgba(239,68,68,0.25);
+            color: #fca5a5;
+            border-radius: 10px;
+            font-size: 0.85rem;
+        }
+
+        .alert-success {
+            background: rgba(34,197,94,0.1);
+            border-color: rgba(34,197,94,0.25);
+            color: #86efac;
+        }
+
+        /* ── Footer text ── */
+        .signin-link {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+
+        .signin-link a {
+            color: var(--accent);
+            font-weight: 600;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .signin-link a:hover { color: #ffd166; }
+
+        @media (max-width: 576px) {
+            .form-card { padding: 28px 22px; }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="ambient-blob"></div>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg">
+        <a class="navbar-brand" href="#"><i class="fas fa-gavel mr-2"></i>AuctionX</a>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="/login"><i class="fas fa-sign-in-alt mr-1"></i>Login</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="/register"><i class="fas fa-user-plus mr-1"></i>Register</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Centered Form Wrapper -->
+    <div class="register-wrapper">
+        <div class="form-card">
+
+            <!-- Icon + Heading -->
+            <div class="text-center mb-1">
+                <div class="card-icon">
+                    <i class="fas fa-user-plus"></i>
+                </div>
+                <h5 class="mb-0">Create Account</h5>
+                <p class="mb-0" style="font-size:0.82rem; color: var(--text-muted);">Fill in your details to get started</p>
+            </div>
+
+            <hr class="divider">
+
+            <!-- Flash messages placeholder -->
+            {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+            {% for category, message in messages %}
+            <div class="alert alert-{{ category }} alert-dismissible fade show" role="alert">
+                {{ message }}
+                <button type="button" class="close" data-dismiss="alert" style="color:inherit"><span>&times;</span></button>
+            </div>
+            {% endfor %}
+            {% endif %}
+            {% endwith %}
+
+            <form method="post" id="registerForm" novalidate>
+
+                <!-- Full Name -->
+                <div class="form-group">
+                    <label><i class="fas fa-user mr-2"></i>Full Name</label>
+                    <input type="text" name="name" id="name" class="form-control"
+                        placeholder="Enter your full name" required>
+                    <div class="invalid-feedback" id="nameError"></div>
+                </div>
+
+                <!-- Email -->
+                <div class="form-group">
+                    <label><i class="fas fa-envelope mr-2"></i>Email Address</label>
+                    <input type="email" name="email" id="email" class="form-control"
+                        placeholder="Enter your email" required>
+                    <div class="invalid-feedback" id="emailError"></div>
+                    <div class="valid-feedback" id="emailSuccess"></div>
+                </div>
+
+                <!-- Password -->
+                <div class="form-group">
+                    <label><i class="fas fa-lock mr-2"></i>Password</label>
+                    <input type="password" name="password" id="password" class="form-control"
+                        placeholder="Create a strong password" required>
+                    <i class="fas fa-eye password-toggle" id="togglePassword"></i>
+                    <div class="password-strength mt-1" id="passwordStrength"></div>
+                    <div class="invalid-feedback" id="passwordError"></div>
+                    <div class="valid-feedback" id="passwordSuccess"></div>
+                </div>
+
+                <!-- Confirm Password -->
+                <div class="form-group">
+                    <label><i class="fas fa-lock mr-2"></i>Confirm Password</label>
+                    <input type="password" name="confirm_password" id="confirmPassword" class="form-control"
+                        placeholder="Confirm your password" required>
+                    <i class="fas fa-eye password-toggle" id="toggleConfirmPassword"></i>
+                    <div class="invalid-feedback" id="confirmPasswordError"></div>
+                    <div class="valid-feedback" id="confirmPasswordSuccess"></div>
+                </div>
+
+                <!-- Submit -->
+                <div class="mt-3">
+                    <button type="submit" class="btn btn-register" id="submitBtn">
+                        <i class="fas fa-user-plus mr-2"></i>Create Account
+                    </button>
+                </div>
+
+                <div class="text-center mt-3 signin-link">
+                    Already have an account? <a href="/login">Sign In</a>
+                </div>
+
+            </form>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#togglePassword, #toggleConfirmPassword').click(function () {
+                const input = $(this).siblings('input');
+                const icon = $(this);
+                if (input.attr('type') === 'password') {
+                    input.attr('type', 'text');
+                    icon.removeClass('fa-eye').addClass('fa-eye-slash');
+                } else {
+                    input.attr('type', 'password');
+                    icon.removeClass('fa-eye-slash').addClass('fa-eye');
+                }
+            });
+
+            $('#name').on('input', validateName);
+            $('#email').on('input', validateEmail);
+            $('#password').on('input', function () { validatePassword(); updatePasswordStrength(); });
+            $('#confirmPassword').on('input', validateConfirmPassword);
+
+            $('#registerForm').on('submit', function (e) {
+                e.preventDefault();
+                if (validateForm()) this.submit();
+            });
+
+            function validateName() {
+                const name = $('#name').val().trim();
+                if (name.length < 2) return showError('name', 'Name must be at least 2 characters long');
+                if (!/^[a-zA-Z\s]+$/.test(name)) return showError('name', 'Name can only contain letters and spaces');
+                showSuccess('name', 'Name looks good!'); return true;
+            }
+
+            function validateEmail() {
+                const email = $('#email').val().trim();
+                if (!email.length) { hideValidation('email'); return false; }
+                if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) return showError('email', 'Please enter a valid email address');
+                showSuccess('email', 'Email format is valid'); return true;
+            }
+
+            function validatePassword() {
+                const pw = $('#password').val();
+                if (!pw.length) { hideValidation('password'); return false; }
+                if (pw.length < 8) return showError('password', 'Password must be at least 8 characters long');
+                if (!/(?=.*[a-z])(?=.*[A-Z])(?=.*\d)/.test(pw)) return showError('password', 'Must contain uppercase, lowercase, and a number');
+                showSuccess('password', 'Password is strong!'); return true;
+            }
+
+            function validateConfirmPassword() {
+                const pw = $('#password').val(), cpw = $('#confirmPassword').val();
+                if (!cpw.length) { hideValidation('confirmPassword'); return false; }
+                if (pw !== cpw) return showError('confirmPassword', 'Passwords do not match');
+                showSuccess('confirmPassword', 'Passwords match!'); return true;
+            }
+
+            function updatePasswordStrength() {
+                const pw = $('#password').val();
+                const bar = $('#passwordStrength');
+                let s = 0;
+                if (pw.length >= 8) s++;
+                if (/[a-z]/.test(pw)) s++;
+                if (/[A-Z]/.test(pw)) s++;
+                if (/\d/.test(pw)) s++;
+                if (/[^a-zA-Z\d]/.test(pw)) s++;
+                bar.removeClass('strength-weak strength-medium strength-strong');
+                if (!pw.length) return;
+                if (s <= 2) bar.addClass('strength-weak');
+                else if (s <= 4) bar.addClass('strength-medium');
+                else bar.addClass('strength-strong');
+            }
+
+            function validateForm() {
+                return validateName() & validateEmail() & validatePassword() & validateConfirmPassword();
+            }
+
+            function showError(field, msg) {
+                $(`#${field}`).addClass('is-invalid').removeClass('is-valid');
+                $(`#${field}Error`).text(msg).show();
+                $(`#${field}Success`).hide();
+                return false;
+            }
+
+            function showSuccess(field, msg) {
+                $(`#${field}`).addClass('is-valid').removeClass('is-invalid');
+                $(`#${field}Success`).text(msg).show();
+                $(`#${field}Error`).hide();
+                return true;
+            }
+
+            function hideValidation(field) {
+                $(`#${field}`).removeClass('is-valid is-invalid');
+                $(`#${field}Error, #${field}Success`).hide();
+            }
+        });
+    </script>
+</body>
+</html>
