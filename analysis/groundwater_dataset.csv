@@ -1,0 +1,2103 @@
+state,district,annual_recharge,extractable_resource,annual_extraction,stage_of_development,category
+1,Safe,4951,73.39,16.51,66.57,Safe
+2,Semi Critical,711,10.54,2.82,11.40,Safe
+3,Critical,206,3.05,0.88,3.55,Safe
+4,Over-Exploited,751,11.13,4.20,16.93,Safe
+5,Saline,127,1.88,0.38,1.55,Safe
+S. No.,Ground Water Resources Assessment,2004,2009,2011,2013,Over Exploited
+2,Safe,4078,71.3,4277,73.2,Semi Critical
+3,Semi-critical,550,9.6,523,9,Safe
+4,Critical,226,3.9,169,2.9,Safe
+5,Over-Exploited,839,14.7,802,13.7,Safe
+6,Saline,30,0.5,71,1.2,Safe
+1,Alluvium,AL01,(Clay/Silt/Sand/ Calcareous,Quaternary,10,Safe
+3,Alluvium,AL03,(Silt/Sand/Gravel/Lithomargic,Quaternary,6,Safe
+4,Alluvium,AL04,Aeolian Alluvium (Silt/ Sand),Quaternary,16,Safe
+6,Alluvium,AL06,Valley Fills,Quaternary,16,Safe
+7,Alluvium,AL07,Glacial Deposits,Quaternary,16,Safe
+13,Sandstone,ST01,Sandstone/Conglomerate,Palaeozoic,3,Safe
+14,Sandstone,ST02,Sandstone with Shale,Palaeozoic,3,Safe
+16,Sandstone,ST04,Sandstone with Clay,Palaeozoic,3,Safe
+18,Sandstone,ST06,Sandstone with Shale,3,1,Safe
+19,Shale,SH01,"Shale with limestone 
+Palaeozoic",1.5,1,Safe
+20,Shale,SH02,"Shale with Sandstone 
+Palaeozoic",1.5,1,Safe
+21,Shale,SH03,Palaeozoic,1.5,1,Safe
+22,Shale,SH04,"Shale 
+Palaeozoic",1.5,1,Safe
+23,Shale,SH05,Shale/Shale with Sandstone,1.5,1,Safe
+24,Shale,SH06,Shale with Limestone,1.5,1,Safe
+25,Limestone,LS01,"Miliolitic Limestone 
+Quarternary",2,1,Safe
+26,Limestone,LS01,"KarstifiedMiliolitic Limestone 
+Quarternary",10,5,Safe
+27,Limestone,LS02,"Limestone / Dolomite 
+Palaeozoic",2,1,Safe
+28,Limestone,LS02,Palaeozoic,10,5,Safe
+29,Limestone,LS03,"Limestone/Dolomite 
+Proterozoic",2,1,Safe
+30,Limestone,LS03,Karstified Limestone/Dolomite  Proterozoic,10,5,Safe
+31,Limestone,LS04,"Limestone with Shale 
+Proterozoic",2,1,Safe
+32,Limestone,LS04,Proterozoic,10,5,Safe
+33,Limestone,LS05,Marble,2,1,Safe
+34,Limestone,LS05,Karstified Marble,10,5,Safe
+35,Granite,GR01,"(Granite,Syenite, Rhyolite",1.5,1,Safe
+1,Alluvium,AL01,(Clay/Silt/Sand/ Calcareous,Quaternary,22,Safe
+3,Alluvium,AL03,(Silt/Sand/Gravel/Lithomargic,Quaternary,22,Safe
+4,Alluvium,AL04,Aeolian Alluvium (Silt/ Sand),Quaternary,22,Safe
+6,Alluvium,AL06,Valley Fills,Quaternary,22,Safe
+7,Alluvium,AL07,Glacial Deposits,Quaternary,22,Safe
+13,Sandstone,ST01,Sandstone/Conglomerate,Palaeozoic,12,Safe
+14,Sandstone,ST02,Sandstone with Shale,Palaeozoic,12,Safe
+1,Alluvium,AL01,(Clay/Silt/Sand/ Calcareous,Quaternary,22,Safe
+3,Alluvium,AL03,(Silt/Sand/Gravel/Lithomargic,Quaternary,22,Safe
+4,Alluvium,AL04,Aeolian Alluvium (Silt/ Sand),Quaternary,22,Safe
+6,Alluvium,AL06,Valley Fills,Quaternary,22,Safe
+7,Alluvium,AL07,Glacial Deposits,Quaternary,22,Safe
+13,Sandstone,ST01,Sandstone/Conglomerate,Palaeozoic,12,Safe
+14,Sandstone,ST02,Sandstone with Shale,Palaeozoic,12,Safe
+16,Sandstone,ST04,Sandstone with Clay,Palaeozoic,12,Safe
+19,Shale,SH01,Shale with limestone,Palaeozoic,4,Safe
+20,Shale,SH02,Shale with Sandstone,Palaeozoic,4,Safe
+22,Shale,SH04,Shale,Palaeozoic,4,Safe
+25,Limestone,LS01,Miliolitic Limestone,Quarternary,6,Safe
+27,Limestone,LS02,Limestone / Dolomite,Palaeozoic,6,Safe
+29,Limestone,LS03,Limestone/Dolomite,Proterozoic,6,Safe
+31,Limestone,LS04,Limestone with Shale,Proterozoic,6,Safe
+2,ASSAM,0.5,26,88.7,108.5,Over Exploited
+3,MEGHALAYA,0.1,7.4,133,81.1,Semi Critical
+4,NAGALAND,0.3,2.1,45,62.2,Safe
+5,MANIPUR,0,0.8,36.1,37.6,Safe
+6,MIZORAM,0,0,56.8,109.4,Over Exploited
+7,TRIPURA,0,0,72.5,94.3,Critical
+8,SIKKIM,0.7,99,196,200.9,Over Exploited
+9,WEST BENGAL,0.1,1.7,62.7,41.1,Safe
+10,JHARKHAND,0,0,34.5,26.2,Safe
+11,BIHAR,0.2,0,19.7,14.8,Safe
+12,UTTAR PRADESH,8.1,0,24.9,11.9,Safe
+13,UTTARAKHAND,30.6,6.6,63.5,64,Safe
+14,HARYANA,11.6,0,41.8,14.6,Safe
+15,CHANDIGARH (UT),27.7,0,65.7,36.3,Safe
+16,DELHI,18.3,0,52.8,11.8,Safe
+17,PUNJAB,15.1,0.1,56.6,26,Safe
+18,HIMACHALPRADESH,86.8,30,66.7,103.5,Over Exploited
+20,LADAKH(UT),9.9,12,1.1,10.6,Safe
+21,RAJASTHAN,13,0,18.6,14.5,Safe
+22,ODISHA,0.1,0,58.9,63.4,Safe
+23,MADHYAPRADESH,5.5,0,22.1,23.1,Safe
+24,GUJARAT,1.6,0,13.9,6.4,Safe
+25,NAGARHAVELI and,0,0,0.9,1,Safe
+26,GOA,0,0,0.9,0,Safe
+27,MAHARASHTRA,0.3,0,9.5,30.3,Safe
+28,CHHATISGARH,0.1,0,35.3,40.6,Safe
+29,A & N ISLAND (UT),27.4,24,11.2,15.7,Safe
+30,ANDHRAPRADESH,0.9,0,49.7,28.7,Safe
+31,TELANGANA,0.4,0,42.9,48,Safe
+32,TAMILNADU,5.1,16,34.3,45.5,Safe
+33,PUDUCHERRY (UT),6.2,42,26.2,51.3,Safe
+34,KARNATAKA,0.7,0,8.6,30.3,Safe
+35,KERALA,12.8,2.4,31.6,76.5,Semi Critical
+36,LAKSHADWEEP (UT),33.4,1,3.4,16,Safe
+1,2,3,4,5,6,Safe
+1,Andhra Pradesh,9.00,10.79,0.82,7.18,Safe
+2,Arunachal Pradesh,2.16,0.27,1.11,0.34,Safe
+3,Assam,19.45,0.67,6.53,0.56,Safe
+4,Bihar,19.54,8.05,1.14,5.42,Safe
+5,Chhattisgarh,8.57,3.43,0.15,2.03,Safe
+6,Goa,0.35,0.01,0.00,0.03,Safe
+7,Gujarat,19.58,2.79,0.00,5.21,Safe
+8,Haryana,3.26,3.51,0.67,2.86,Safe
+9,Himachal Pradesh,0.61,0.18,0.13,0.20,Safe
+10,Jharkhand,4.98,0.46,0.47,0.37,Safe
+11,Karnataka,8.79,5.01,1.23,3.70,Safe
+12,Kerala,4.19,0.13,0.49,0.85,Safe
+13,Madhya Pradesh,27.00,1.68,0.17,7.04,Safe
+14,Maharashtra,20.69,2.76,0.73,8.85,Safe
+15,Manipur,0.4,0.001,0.11,0.006,Safe
+16,Meghalaya,1.35,0.06,0.42,0.04,Safe
+17,Mizoram,0.18,0.00,0.03,0.00,Safe
+18,Nagaland,0.41,0.12,0.08,0.01,Safe
+19,Odisha,10.18,2.94,1.51,2.84,Safe
+20,Punjab,4.79,9.01,0.72,4.37,Safe
+21,Rajasthan,9.08,0.65,0.22,2.62,Safe
+22,Sikkim,0.18,0.00,0.06,0.00,Safe
+23,Tamil Nadu,7.42,10.18,1.20,2.71,Safe
+24,Telangana,6.88,6.63,0.94,5.96,Safe
+25,Tripura,1.03,0.16,0.20,0.07,Safe
+26,Uttar Pradesh,36.43,14.12,0.81,21.47,Safe
+27,Uttarakhand,1.53,0.21,0.14,0.26,Safe
+28,West Bengal,16.65,1.71,3.40,4.13,Safe
+30,Chandigarh,0.01,0.01,0.00,0.03,Safe
+31,Haveli and Daman,0.09,0.01,0.00,0.02,Safe
+32,Delhi,0.12,0.09,0.00,0.17,Safe
+33,Jammu And Kashmir,1.19,0.35,0.85,0.15,Safe
+34,Ladakh,0.00,0.05,0.01,0.00,Safe
+35,Lakshadweep,0.01,0.00,0.00,0.00,Safe
+36,Puducherry,0.05,0.09,0.01,0.03,Safe
+1,2,3,4,5,6,Safe
+1,Alluri Sitharama Raju,43956.31,102516.48,2860.84,8890.60,Over Exploited
+2,Anakapalli,22443.69,38195.76,14423.44,6889.74,Over Exploited
+3,Ananthapuramu,40986.63,44150.14,1323.64,35512.65,Over Exploited
+4,Annamayya,44599.19,19166.03,2836.15,19968.94,Over Exploited
+5,Bapatla,23318.20,33572.17,1322.80,12065.45,Over Exploited
+6,Chittoor,55198.12,15130.71,1246.99,18849.65,Over Exploited
+7,East Godavari,25369.55,41713.88,2604.84,37601.73,Over Exploited
+8,Eluru,50680.82,88891.13,1620.74,41619.91,Over Exploited
+9,Guntur,12414.87,26259.86,2064.53,13762.42,Over Exploited
+10,Kakinada,16664.61,59653.79,3486.88,32788.46,Over Exploited
+11,Konaseema,15932.71,48720.13,2077.68,45519.00,Over Exploited
+12,Krishna,18162.93,90343.85,10846.76,47391.01,Over Exploited
+13,Kurnool,38342.94,17638.70,566.17,10907.07,Over Exploited
+14,Ntr,20780.78,28090.65,1227.81,14159.92,Over Exploited
+15,Nandyal,22651.71,40388.65,66.02,19114.07,Over Exploited
+16,Palnadu,25660.06,55379.59,1215.19,19221.55,Over Exploited
+17,Parvathipuram Manyam,29763.31,35032.83,3586.72,23061.67,Over Exploited
+18,Prakasam,63974.15,19744.85,1072.98,13544.20,Over Exploited
+19,Sri Potti Sriramulu Nellore,68345.39,36991.28,20510.69,71127.23,Over Exploited
+20,Sri Sathya Sai,43077.78,31974.68,595.26,44246.68,Over Exploited
+21,Srikakulam,34587.38,66648.48,2623.08,28333.77,Over Exploited
+22,Tirupati,81366.63,27763.10,87.94,52318.38,Over Exploited
+23,Visakhapatnam,7995.13,3262.26,285.34,1078.97,Over Exploited
+24,Vizianagaram,24997.08,66545.39,2538.33,48662.74,Over Exploited
+25,West Godavari,12011.91,21549.41,235.36,22132.19,Over Exploited
+26,Y.S.R Kadapa,57104.54,20117.22,549.87,29473.80,Over Exploited
+1,2,3,4,5,6,Safe
+1,Alluri Sitharama Raju,43956.31,102516.48,2860.84,8890.60,Over Exploited
+2,Anakapalli,22443.69,38195.76,14423.44,6889.74,Over Exploited
+3,Ananthapuramu,40986.63,44150.14,1323.64,35512.65,Over Exploited
+4,Annamayya,44599.19,19166.03,2836.15,19968.94,Over Exploited
+5,Bapatla,23318.20,33572.17,1322.80,12065.45,Over Exploited
+6,Chittoor,55198.12,15130.71,1246.99,18849.65,Over Exploited
+7,East Godavari,25369.55,41713.88,2604.84,37601.73,Over Exploited
+8,Eluru,50680.82,88891.13,1620.74,41619.91,Over Exploited
+9,Guntur,12414.87,26259.86,2064.53,13762.42,Over Exploited
+10,Kakinada,16664.61,59653.79,3486.88,32788.46,Over Exploited
+11,Konaseema,15932.71,48720.13,2077.68,45519.00,Over Exploited
+12,Krishna,18162.93,90343.85,10846.76,47391.01,Over Exploited
+13,Kurnool,38342.94,17638.70,566.17,10907.07,Over Exploited
+14,Ntr,20780.78,28090.65,1227.81,14159.92,Over Exploited
+15,Nandyal,22651.71,40388.65,66.02,19114.07,Over Exploited
+16,Palnadu,25660.06,55379.59,1215.19,19221.55,Over Exploited
+17,Parvathipuram Manyam,29763.31,35032.83,3586.72,23061.67,Over Exploited
+18,Prakasam,63974.15,19744.85,1072.98,13544.20,Over Exploited
+19,Sri Potti Sriramulu Nellore,68345.39,36991.28,20510.69,71127.23,Over Exploited
+20,Sri Sathya Sai,43077.78,31974.68,595.26,44246.68,Over Exploited
+21,Srikakulam,34587.38,66648.48,2623.08,28333.77,Over Exploited
+22,Tirupati,81366.63,27763.10,87.94,52318.38,Over Exploited
+23,Visakhapatnam,7995.13,3262.26,285.34,1078.97,Over Exploited
+24,Vizianagaram,24997.08,66545.39,2538.33,48662.74,Over Exploited
+25,West Godavari,12011.91,21549.41,235.36,22132.19,Over Exploited
+26,Y.S.R Kadapa,57104.54,20117.22,549.87,29473.80,Over Exploited
+1,2,3,4,5,6,Safe
+1,CHANGLANG,16679.04,4549.92,7569.09,5815.44,Over Exploited
+2,EAST KAMENG,8567.56,2631.98,3180.99,3784.03,Over Exploited
+3,EAST SIANG,60264.1,4366.95,17483.45,5602.81,Over Exploited
+4,LOHIT,63804.4,7648.62,41949.6,9764.9,Over Exploited
+5,LOWER DIBANG VALLEY,42860.4,963.08,33884.4,1502.58,Over Exploited
+6,LOWER SUBANSIRI,2263.28,1095.09,1442.42,1503.31,Over Exploited
+7,PAPUM PARE,8263.74,1432.16,2465.02,1856.88,Over Exploited
+8,TIRAP,6078.61,968.18,1784.76,1304.73,Over Exploited
+9,UPPER SUBANSIRI,141.52,1067.72,73.65,1468.67,Over Exploited
+10,WEST KAMENG,2342.96,381.06,397.31,375.13,Over Exploited
+11,WEST SIANG,4445.28,1460.46,916.74,1302.17,Over Exploited
+1,2,3,4,5,6,Safe
+1,CHANGLANG,16679.04,4549.92,7569.09,5815.44,Over Exploited
+2,EAST KAMENG,8567.56,2631.98,3180.99,3784.03,Over Exploited
+3,EAST SIANG,60264.1,4366.95,17483.45,5602.81,Over Exploited
+4,LOHIT,63804.4,7648.62,41949.6,9764.9,Over Exploited
+5,LOWER DIBANG VALLEY,42860.4,963.08,33884.4,1502.58,Over Exploited
+6,LOWER SUBANSIRI,2263.28,1095.09,1442.42,1503.31,Over Exploited
+7,PAPUM PARE,8263.74,1432.16,2465.02,1856.88,Over Exploited
+8,TIRAP,6078.61,968.18,1784.76,1304.73,Over Exploited
+9,UPPER SUBANSIRI,141.52,1067.72,73.65,1468.67,Over Exploited
+10,WEST KAMENG,2342.96,381.06,397.31,375.13,Over Exploited
+11,WEST SIANG,4445.28,1460.46,916.74,1302.17,Over Exploited
+1,2,3,4,5,6,Safe
+1,BAKSA,108627.73,4189.1,27266.79,6269.21,Over Exploited
+2,BARPETA,59076.65,5225.43,22901.18,3527.78,Over Exploited
+3,BONGAIGAON,37424.13,2572.17,12847.54,2897.03,Over Exploited
+4,CACHAR,64341.73,2250.95,23182.18,2896.86,Over Exploited
+5,CHIRANG,83302.01,413.42,25347.61,138.24,Over Exploited
+6,DARRANG,41118.91,1500.03,14212.77,1052.21,Over Exploited
+7,DHEMAJI,105039.67,302.56,38007,67.08,Safe
+8,DHUBRI,82305.99,4417.11,18117.49,5033.08,Over Exploited
+9,DIBRUGARH,108809.42,2133.21,37792.02,1121.99,Over Exploited
+10,DIMA HASAO,43723.76,144.95,19071.65,18.92,Safe
+11,GOALPARA,57216.7,2096.57,19326,2265.11,Over Exploited
+12,GOLAGHAT,77427.93,1421.46,29903.35,856.9,Over Exploited
+13,HAILAKANDI,19091.47,1478.02,9513.41,340.65,Over Exploited
+14,JORHAT,80772.65,8154.45,32140.71,8577.14,Over Exploited
+15,KAMRUP,62608.7,2015.27,22462.15,1392.37,Over Exploited
+16,KAMRUP (M),13360.41,7622.67,7023.53,1780.58,Over Exploited
+17,KARBI ANGLONG,105907.62,491.96,26988.64,107.63,Over Exploited
+18,KARIMGANJ,40446.37,1096.05,19365.36,281.84,Over Exploited
+19,KOKRAJHAR,136436.66,1938.75,42129.04,1587.37,Over Exploited
+20,LAKHIMPUR,86992.59,788.66,30085.16,204.89,Over Exploited
+21,MORIGAON,35858.02,2545.89,8474.76,2162.5,Over Exploited
+22,NAGAON,99592.56,8444.24,21452.74,10350.12,Over Exploited
+23,NALBARI,23855.97,155.72,8849.97,43.15,Safe
+24,SIBSAGAR,78656.97,603.47,32055.39,187.06,Over Exploited
+25,SONITPUR,131621.88,1919.6,42220.16,1035.05,Over Exploited
+26,TINSUKIA,111830.01,2578.92,40135.93,1772.98,Over Exploited
+27,UDALGURI,49340.16,732.15,22147.2,126.3,Over Exploited
+1,2,3,4,5,6,Safe
+1,BAKSA,108627.73,4189.1,27266.79,6269.21,Over Exploited
+2,BARPETA,59076.65,5225.43,22901.18,3527.78,Over Exploited
+3,BONGAIGAON,37424.13,2572.17,12847.54,2897.03,Over Exploited
+4,CACHAR,64341.73,2250.95,23182.18,2896.86,Over Exploited
+5,CHIRANG,83302.01,413.42,25347.61,138.24,Over Exploited
+6,DARRANG,41118.91,1500.03,14212.77,1052.21,Over Exploited
+7,DHEMAJI,105039.67,302.56,38007,67.08,Safe
+8,DHUBRI,82305.99,4417.11,18117.49,5033.08,Over Exploited
+9,DIBRUGARH,108809.42,2133.21,37792.02,1121.99,Over Exploited
+10,DIMA HASAO,43723.76,144.95,19071.65,18.92,Safe
+11,GOALPARA,57216.7,2096.57,19326,2265.11,Over Exploited
+12,GOLAGHAT,77427.93,1421.46,29903.35,856.9,Over Exploited
+13,HAILAKANDI,19091.47,1478.02,9513.41,340.65,Over Exploited
+14,JORHAT,80772.65,8154.45,32140.71,8577.14,Over Exploited
+15,KAMRUP,62608.7,2015.27,22462.15,1392.37,Over Exploited
+16,KAMRUP (M),13360.41,7622.67,7023.53,1780.58,Over Exploited
+17,KARBI ANGLONG,105907.62,491.96,26988.64,107.63,Over Exploited
+18,KARIMGANJ,40446.37,1096.05,19365.36,281.84,Over Exploited
+19,KOKRAJHAR,136436.66,1938.75,42129.04,1587.37,Over Exploited
+20,LAKHIMPUR,86992.59,788.66,30085.16,204.89,Over Exploited
+21,MORIGAON,35858.02,2545.89,8474.76,2162.5,Over Exploited
+22,NAGAON,99592.56,8444.24,21452.74,10350.12,Over Exploited
+23,NALBARI,23855.97,155.72,8849.97,43.15,Safe
+24,SIBSAGAR,78656.97,603.47,32055.39,187.06,Over Exploited
+25,SONITPUR,131621.88,1919.6,42220.16,1035.05,Over Exploited
+26,TINSUKIA,111830.01,2578.92,40135.93,1772.98,Over Exploited
+27,UDALGURI,49340.16,732.15,22147.2,126.3,Over Exploited
+1,2,3,4,5,6,Safe
+1,Araria,76581.72,44932.96,7485.44,31169.77,Over Exploited
+2,Arwal,10594.86,6582.82,0,3973.38,Over Exploited
+3,Aurangabad,49117.48,51355.76,1116.5,30936.05,Over Exploited
+4,Banka,43835.04,16524.95,915.09,8954.02,Over Exploited
+5,Begusarai,44245.15,3579.32,2724.84,5757.06,Over Exploited
+6,Bhagalpur,58336.95,8802.45,6287.29,5317.43,Over Exploited
+7,Bhojpur,47999.42,23694.1,1103.52,14948.8,Over Exploited
+8,Buxar,30622.56,18544.19,626.77,12012.53,Over Exploited
+9,Darbhanga,55273.13,9703.57,4990.37,7306.17,Over Exploited
+10,East Champaran,90477.76,59410.82,5352.08,37885.32,Over Exploited
+11,Gaya,92464.88,23670.48,2497.4,13752.93,Over Exploited
+12,Gopalganj,46155.43,35273.25,1553.12,23429.26,Over Exploited
+13,Jamui,34130.14,8889.05,1686.34,5053.15,Over Exploited
+14,Jehanabad,17557.33,8232.53,462.46,6598.22,Over Exploited
+15,Kaimur,49702.42,20753.34,900.77,11632.96,Over Exploited
+16,Katihar,82627.76,19264.18,7209.24,14268.59,Over Exploited
+17,Khagaria,39660.12,2210.63,1883.05,5238.35,Over Exploited
+18,Kishanganj,53513,2825.82,5300.16,2807.64,Over Exploited
+19,Lakhisarai,21472.95,11620.24,1279.31,7134.35,Over Exploited
+20,Madhepura,38605.05,41279.07,3931.72,25022.32,Over Exploited
+21,Madhubani,77162.85,33422.25,8011.77,23575.9,Over Exploited
+22,Munger,26111.97,9830.39,1545.83,4118.05,Over Exploited
+23,Muzaffarpur,74411.61,25605.83,4231.91,20002.28,Over Exploited
+24,Nalanda,45991.18,9003.48,1283.24,7728.63,Over Exploited
+25,Nawada,46357.36,12733.14,2056.28,8184,Over Exploited
+26,Patna,75614.12,17499.1,1990.62,13281.99,Over Exploited
+27,Purnea,74894.54,49309.87,8812.19,33751.91,Over Exploited
+28,Rohtas,68382.86,32365.48,1554.07,16035.93,Over Exploited
+29,Saharsa,42335.83,13402.96,4221.66,9459.72,Over Exploited
+30,Samastipur,67879.57,10363.42,3001.88,7756.75,Over Exploited
+31,Saran,55933.99,32419.73,2193.7,20610.92,Over Exploited
+32,Sheikhpura,12609.23,2696.66,610.19,2090.8,Over Exploited
+33,Sheohar,11894.64,3952.45,844.06,1728.44,Over Exploited
+34,Sitamarhi,54419.65,5200.9,4163.59,3439.53,Over Exploited
+35,Siwan,50257,32048.82,887.5,25045.59,Over Exploited
+36,Supaul,45038.71,30919.77,4815.78,26282.44,Over Exploited
+37,Vaishali,50503.4,17213.15,1783.69,11137.32,Over Exploited
+38,West Champaran,91148.59,50081.11,4241.96,34746.37,Over Exploited
+1,2,3,4,5,6,Safe
+1,Araria,76581.72,44932.96,7485.44,31169.77,Over Exploited
+2,Arwal,10594.86,6582.82,0,3973.38,Over Exploited
+3,Aurangabad,49117.48,51355.76,1116.5,30936.05,Over Exploited
+4,Banka,43835.04,16524.95,915.09,8954.02,Over Exploited
+5,Begusarai,44245.15,3579.32,2724.84,5757.06,Over Exploited
+6,Bhagalpur,58336.95,8802.45,6287.29,5317.43,Over Exploited
+7,Bhojpur,47999.42,23694.1,1103.52,14948.8,Over Exploited
+8,Buxar,30622.56,18544.19,626.77,12012.53,Over Exploited
+9,Darbhanga,55273.13,9703.57,4990.37,7306.17,Over Exploited
+10,East Champaran,90477.76,59410.82,5352.08,37885.32,Over Exploited
+11,Gaya,92464.88,23670.48,2497.4,13752.93,Over Exploited
+12,Gopalganj,46155.43,35273.25,1553.12,23429.26,Over Exploited
+13,Jamui,34130.14,8889.05,1686.34,5053.15,Over Exploited
+14,Jehanabad,17557.33,8232.53,462.46,6598.22,Over Exploited
+15,Kaimur,49702.42,20753.34,900.77,11632.96,Over Exploited
+16,Katihar,82627.76,19264.18,7209.24,14268.59,Over Exploited
+17,Khagaria,39660.12,2210.63,1883.05,5238.35,Over Exploited
+18,Kishanganj,53513,2825.82,5300.16,2807.64,Over Exploited
+19,Lakhisarai,21472.95,11620.24,1279.31,7134.35,Over Exploited
+20,Madhepura,38605.05,41279.07,3931.72,25022.32,Over Exploited
+21,Madhubani,77162.85,33422.25,8011.77,23575.9,Over Exploited
+22,Munger,26111.97,9830.39,1545.83,4118.05,Over Exploited
+23,Muzaffarpur,74411.61,25605.83,4231.91,20002.28,Over Exploited
+24,Nalanda,45991.18,9003.48,1283.24,7728.63,Over Exploited
+25,Nawada,46357.36,12733.14,2056.28,8184,Over Exploited
+26,Patna,75614.12,17499.1,1990.62,13281.99,Over Exploited
+27,Purnea,74894.54,49309.87,8812.19,33751.91,Over Exploited
+28,Rohtas,68382.86,32365.48,1554.07,16035.93,Over Exploited
+29,Saharsa,42335.83,13402.96,4221.66,9459.72,Over Exploited
+30,Samastipur,67879.57,10363.42,3001.88,7756.75,Over Exploited
+31,Saran,55933.99,32419.73,2193.7,20610.92,Over Exploited
+32,Sheikhpura,12609.23,2696.66,610.19,2090.8,Over Exploited
+33,Sheohar,11894.64,3952.45,844.06,1728.44,Over Exploited
+34,Sitamarhi,54419.65,5200.9,4163.59,3439.53,Over Exploited
+35,Siwan,50257,32048.82,887.5,25045.59,Over Exploited
+36,Supaul,45038.71,30919.77,4815.78,26282.44,Over Exploited
+37,Vaishali,50503.4,17213.15,1783.69,11137.32,Over Exploited
+38,West Champaran,91148.59,50081.11,4241.96,34746.37,Over Exploited
+1,2,3,4,5,6,Safe
+1,Balod,16827.95,15473.6,0,7403.29,Over Exploited
+2,Baloda Bazar,25659.93,36010.49,412.24,6557.98,Over Exploited
+3,Balrampur,46086.19,2343.06,309.07,2433.36,Over Exploited
+4,Bastar,22040.82,1313.81,1758.77,2006.53,Over Exploited
+5,Bemetara,18175.02,16782.78,0,12389.23,Over Exploited
+6,Bijapur,49859.36,762.77,214.88,1376.43,Over Exploited
+7,Bilaspur,21989.71,16860.67,426.62,11914.36,Over Exploited
+8,Dantewada,25283.02,630.44,342.85,1404.15,Over Exploited
+9,Dhamtari,20986.49,28926.68,0,18274.95,Over Exploited
+10,Durg,14510.5,19764.1,0,8830.02,Over Exploited
+11,Gariaband,22766.79,8496.39,0,6030.52,Over Exploited
+12,Gourela-Pendra-Marwahi,11297.19,1275.67,545.15,1242.23,Over Exploited
+13,Janjgir-Champa,12350.45,20831.76,153.04,15306.79,Over Exploited
+14,Jashpur,27453.62,2804.53,873.11,3715.88,Over Exploited
+15,Kabirdham,32690.31,29684.9,1408.77,9245.4,Over Exploited
+16,Kanker,55430.65,4915.27,2224.16,8633.41,Over Exploited
+18,Kondagaon,30505.36,2723.03,2064.15,2231.35,Over Exploited
+19,Korba,37675.69,4693.11,676.81,5510.46,Over Exploited
+20,Korea,9543.17,3323.71,53.15,1869.95,Over Exploited
+21,Mahasamund,47011.09,38521.02,325.68,16779.85,Over Exploited
+24,Mungeli,9680.27,12373.58,0,4844.83,Over Exploited
+25,Narayanpur,25101.06,457.92,772.79,553.46,Over Exploited
+26,Raigarh,35392.31,2788.33,408.53,3429.14,Over Exploited
+27,Raipur,19715.92,23406.18,42.18,7778.94,Over Exploited
+28,Rajnandgaon,20156.4,9704.94,236.55,8541.37,Over Exploited
+29,Sakti,9148.9,10717.41,101.69,13030.06,Over Exploited
+30,Sarangarh-Bilairagh,14175.82,6923.33,361.15,3280.46,Over Exploited
+31,Sukma,44267.11,915.59,0,976.69,Over Exploited
+32,Surajpur,28568.63,4629.44,217.28,6415.47,Over Exploited
+33,Surguja,34167.83,3443.26,885.79,3916.43,Over Exploited
+1,2,3,4,5,6,Safe
+1,Balod,16827.95,15473.6,0,7403.29,Over Exploited
+2,Baloda Bazar,25659.93,36010.49,412.24,6557.98,Over Exploited
+3,Balrampur,46086.19,2343.06,309.07,2433.36,Over Exploited
+4,Bastar,22040.82,1313.81,1758.77,2006.53,Over Exploited
+5,Bemetara,18175.02,16782.78,0,12389.23,Over Exploited
+6,Bijapur,49859.36,762.77,214.88,1376.43,Over Exploited
+7,Bilaspur,21989.71,16860.67,426.62,11914.36,Over Exploited
+8,Dantewada,25283.02,630.44,342.85,1404.15,Over Exploited
+9,Dhamtari,20986.49,28926.68,0,18274.95,Over Exploited
+10,Durg,14510.5,19764.1,0,8830.02,Over Exploited
+11,Gariaband,22766.79,8496.39,0,6030.52,Over Exploited
+12,Gourela-Pendra-Marwahi,11297.19,1275.67,545.15,1242.23,Over Exploited
+13,Janjgir-Champa,12350.45,20831.76,153.04,15306.79,Over Exploited
+14,Jashpur,27453.62,2804.53,873.11,3715.88,Over Exploited
+15,Kabirdham,32690.31,29684.9,1408.77,9245.4,Over Exploited
+16,Kanker,55430.65,4915.27,2224.16,8633.41,Over Exploited
+18,Kondagaon,30505.36,2723.03,2064.15,2231.35,Over Exploited
+19,Korba,37675.69,4693.11,676.81,5510.46,Over Exploited
+20,Korea,9543.17,3323.71,53.15,1869.95,Over Exploited
+21,Mahasamund,47011.09,38521.02,325.68,16779.85,Over Exploited
+24,Mungeli,9680.27,12373.58,0,4844.83,Over Exploited
+25,Narayanpur,25101.06,457.92,772.79,553.46,Over Exploited
+26,Raigarh,35392.31,2788.33,408.53,3429.14,Over Exploited
+27,Raipur,19715.92,23406.18,42.18,7778.94,Over Exploited
+28,Rajnandgaon,20156.4,9704.94,236.55,8541.37,Over Exploited
+29,Sakti,9148.9,10717.41,101.69,13030.06,Over Exploited
+30,Sarangarh-Bilairagh,14175.82,6923.33,361.15,3280.46,Over Exploited
+31,Sukma,44267.11,915.59,0,976.69,Over Exploited
+32,Surajpur,28568.63,4629.44,217.28,6415.47,Over Exploited
+33,Surguja,34167.83,3443.26,885.79,3916.43,Over Exploited
+1,2,3,4,5,6,Safe
+1,Ahmedabad,24716.2,7798.13,0,13286.9,Over Exploited
+2,Amreli,132123.42,7121.78,0,10900.56,Over Exploited
+3,Anand,32160.87,37639.44,0,48588.67,Over Exploited
+4,Arvalli,81761.61,3492.59,0,7360.04,Over Exploited
+5,Banaskantha,99386.1,15164.17,0,16738.96,Over Exploited
+6,Bharuch,41682.99,8452.01,0,19261.9,Over Exploited
+7,Bhavnagar,92561.12,7720.82,0,13545.1,Over Exploited
+8,Botad,37198.25,2430.61,0,4106.37,Over Exploited
+9,Chhota Udepur,42927.38,6798.3,0,13270.9,Over Exploited
+10,Dahod,19357.58,7094.7,0,10779.64,Over Exploited
+11,Dang,35324.46,1052.72,0,1371.28,Over Exploited
+12,Devbhumi Dwarka,36703.39,2710.84,0,4583.51,Over Exploited
+13,Gandhinagar,45828.31,7036.09,0,12091.49,Over Exploited
+14,Gir Somnath,67566.29,2897.06,0,6487.72,Over Exploited
+15,Jamnagar,123294.57,7240.74,0,12862.96,Over Exploited
+16,Junagadh,145869.35,5057.56,0,9602.92,Over Exploited
+17,Kachchh,63910.27,16039.5,0,20048.2,Over Exploited
+18,Kheda,46026.64,13549.45,0,27545.8,Over Exploited
+19,Mahesana,51321.75,10656.96,0,20129.45,Over Exploited
+20,Mahisagar,17689.09,5282.86,0,11032.6,Over Exploited
+21,Morbi,40445.58,9685.34,0,20718.18,Over Exploited
+22,Narmada,28186.56,5002.8,0,8490.52,Over Exploited
+23,Navsari,59194.36,5155.9,0,16001.48,Over Exploited
+24,Panchmahal,20567.94,14228.45,0,22943.6,Over Exploited
+25,Patan,23741.89,5937.11,0,9577.73,Over Exploited
+26,Porbandar,19392.04,1195.65,0,2150.39,Over Exploited
+27,Rajkot,135167.26,13902.7,0,23355.64,Over Exploited
+28,Sabarkantha,57339.46,9136.6,0,18143.9,Over Exploited
+29,Surat,97851.33,10136.59,0,38810.94,Over Exploited
+30,Surendranagar,61888.49,7039.96,0,11871.69,Over Exploited
+31,Tapi,56384.47,5100.18,0,17028.95,Over Exploited
+32,Vadodara,64529.38,11979.5,0,32795.08,Over Exploited
+33,Valsad,56360.68,5515.03,0,15025.98,Over Exploited
+1,2,3,4,5,6,Safe
+1,Ahmedabad,24716.2,7798.13,0,13286.9,Over Exploited
+2,Amreli,132123.42,7121.78,0,10900.56,Over Exploited
+3,Anand,32160.87,37639.44,0,48588.67,Over Exploited
+4,Arvalli,81761.61,3492.59,0,7360.04,Over Exploited
+5,Banaskantha,99386.1,15164.17,0,16738.96,Over Exploited
+6,Bharuch,41682.99,8452.01,0,19261.9,Over Exploited
+7,Bhavnagar,92561.12,7720.82,0,13545.1,Over Exploited
+8,Botad,37198.25,2430.61,0,4106.37,Over Exploited
+9,Chhota Udepur,42927.38,6798.3,0,13270.9,Over Exploited
+10,Dahod,19357.58,7094.7,0,10779.64,Over Exploited
+11,Dang,35324.46,1052.72,0,1371.28,Over Exploited
+12,Devbhumi Dwarka,36703.39,2710.84,0,4583.51,Over Exploited
+13,Gandhinagar,45828.31,7036.09,0,12091.49,Over Exploited
+14,Gir Somnath,67566.29,2897.06,0,6487.72,Over Exploited
+15,Jamnagar,123294.57,7240.74,0,12862.96,Over Exploited
+16,Junagadh,145869.35,5057.56,0,9602.92,Over Exploited
+17,Kachchh,63910.27,16039.5,0,20048.2,Over Exploited
+18,Kheda,46026.64,13549.45,0,27545.8,Over Exploited
+19,Mahesana,51321.75,10656.96,0,20129.45,Over Exploited
+20,Mahisagar,17689.09,5282.86,0,11032.6,Over Exploited
+21,Morbi,40445.58,9685.34,0,20718.18,Over Exploited
+22,Narmada,28186.56,5002.8,0,8490.52,Over Exploited
+23,Navsari,59194.36,5155.9,0,16001.48,Over Exploited
+24,Panchmahal,20567.94,14228.45,0,22943.6,Over Exploited
+25,Patan,23741.89,5937.11,0,9577.73,Over Exploited
+26,Porbandar,19392.04,1195.65,0,2150.39,Over Exploited
+27,Rajkot,135167.26,13902.7,0,23355.64,Over Exploited
+28,Sabarkantha,57339.46,9136.6,0,18143.9,Over Exploited
+29,Surat,97851.33,10136.59,0,38810.94,Over Exploited
+30,Surendranagar,61888.49,7039.96,0,11871.69,Over Exploited
+31,Tapi,56384.47,5100.18,0,17028.95,Over Exploited
+32,Vadodara,64529.38,11979.5,0,32795.08,Over Exploited
+33,Valsad,56360.68,5515.03,0,15025.98,Over Exploited
+1,2,3,4,5,6,Safe
+1,Ambala,23442.63,8196.61,5060.25,7063.24,Over Exploited
+2,Bhiwani,16336.92,13726.56,1917.12,12232.77,Over Exploited
+3,Charkhi Dadri,10197.24,5160.27,5128.86,4323.34,Over Exploited
+4,Faridabad,5803.66,3278.17,1003.9,4269.93,Over Exploited
+5,Fatehabad,11977.84,27872.28,2655.64,22278.51,Over Exploited
+6,Gurgaon,9806.15,5125.95,3206.15,4349.35,Over Exploited
+7,Hisar,22240.86,15237.18,3360.99,21018.33,Over Exploited
+8,Jhajjar,13547.16,17546.44,2919.87,14046.45,Over Exploited
+9,Jind,19302.46,31580.15,7590.42,27663.62,Over Exploited
+10,Kaithal,16567.36,15674,2786.69,11974.34,Over Exploited
+11,Karnal,29058.72,60764.43,3860.04,23925.01,Over Exploited
+12,Kurukshetra,16243.26,12011.47,2636.87,10098.55,Over Exploited
+13,Mahendragarh,8218.39,4220.93,2350.06,7611.54,Over Exploited
+14,Mewat,6854.16,4386.47,2301.14,4841.5,Over Exploited
+15,Palwal,9814.9,14838.72,1088.83,17513.18,Over Exploited
+16,Panchkula,10580.17,1310.96,1650.97,1027.63,Over Exploited
+17,Panipat,11118.38,29488.63,1784.34,9014.35,Over Exploited
+18,Rewari,10097.56,5555.22,3485.23,9828.24,Over Exploited
+19,Rohtak,10788.98,9906.05,3850.53,11028.14,Over Exploited
+20,Sirsa,19799.69,19635.89,1280.52,21085.04,Over Exploited
+21,Sonipat,23995.87,29684.73,2118.55,23347.25,Over Exploited
+22,Yamuna Nagar,20624.75,16278.93,5197.82,17931.88,Over Exploited
+1,2,3,4,5,6,Safe
+1,Ambala,23442.63,8196.61,5060.25,7063.24,Over Exploited
+2,Bhiwani,16336.92,13726.56,1917.12,12232.77,Over Exploited
+3,Charkhi Dadri,10197.24,5160.27,5128.86,4323.34,Over Exploited
+4,Faridabad,5803.66,3278.17,1003.9,4269.93,Over Exploited
+5,Fatehabad,11977.84,27872.28,2655.64,22278.51,Over Exploited
+6,Gurgaon,9806.15,5125.95,3206.15,4349.35,Over Exploited
+7,Hisar,22240.86,15237.18,3360.99,21018.33,Over Exploited
+8,Jhajjar,13547.16,17546.44,2919.87,14046.45,Over Exploited
+9,Jind,19302.46,31580.15,7590.42,27663.62,Over Exploited
+10,Kaithal,16567.36,15674,2786.69,11974.34,Over Exploited
+11,Karnal,29058.72,60764.43,3860.04,23925.01,Over Exploited
+12,Kurukshetra,16243.26,12011.47,2636.87,10098.55,Over Exploited
+13,Mahendragarh,8218.39,4220.93,2350.06,7611.54,Over Exploited
+14,Mewat,6854.16,4386.47,2301.14,4841.5,Over Exploited
+15,Palwal,9814.9,14838.72,1088.83,17513.18,Over Exploited
+16,Panchkula,10580.17,1310.96,1650.97,1027.63,Over Exploited
+17,Panipat,11118.38,29488.63,1784.34,9014.35,Over Exploited
+18,Rewari,10097.56,5555.22,3485.23,9828.24,Over Exploited
+19,Rohtak,10788.98,9906.05,3850.53,11028.14,Over Exploited
+20,Sirsa,19799.69,19635.89,1280.52,21085.04,Over Exploited
+21,Sonipat,23995.87,29684.73,2118.55,23347.25,Over Exploited
+22,Yamuna Nagar,20624.75,16278.93,5197.82,17931.88,Over Exploited
+1,2,3,4,5,6,Safe
+1,Bokaro,16452.33,1458.23,1993.99,1064.96,Over Exploited
+2,Chatra,21383.47,2130.51,755.28,1956.66,Over Exploited
+3,Deoghar,12962.21,1405.2,1331.1,1483.72,Over Exploited
+4,Dhanbad,19101.71,3793.65,1409.48,3761.71,Over Exploited
+5,Dumka,20690.54,2852.28,3265.87,1619.3,Over Exploited
+6,East Singhbhum,22527.96,1469.56,2752.11,1350.14,Over Exploited
+7,Garhwa,23951.07,2399.02,1295.9,2343.56,Over Exploited
+8,Giridih,35467.44,3009.81,2204.78,2546.32,Over Exploited
+9,Godda,18436.16,1757.05,1626.54,1032.54,Over Exploited
+10,Gumla,30172.19,707.35,3499.41,998.65,Over Exploited
+11,Hazaribagh,28297.63,2122.3,2209.45,2476.97,Over Exploited
+12,Jamtara,6029.76,1368.34,829.68,947.7,Over Exploited
+13,Khunti,11237.84,658.81,1075.88,738.68,Over Exploited
+14,Koderma,5282.33,385.93,434.49,649.7,Over Exploited
+15,Latehar,18767.64,2498.15,1493.79,1915.24,Over Exploited
+16,Lohardaga,17367.93,505.26,1382.32,590.3,Over Exploited
+17,Pakur,21805.05,1425.7,2685.38,908.5,Over Exploited
+18,Palamau,23941.92,6359.2,1463.36,2515.88,Over Exploited
+19,Ramgarh,8086.15,1240.98,779.56,1300.27,Over Exploited
+20,Ranchi,31358.34,2637.21,3313.74,3301.72,Over Exploited
+21,Sahebganj,24731.92,2920.8,2059.93,1390.49,Over Exploited
+22,Saraikela Kharsawan,14767.01,791.54,2406.28,525.2,Over Exploited
+23,Simdega,23326.88,569.18,737.13,626.96,Over Exploited
+24,West Singhbhum,42143.1,1471.81,5800.96,979.78,Over Exploited
+1,2,3,4,5,6,Safe
+1,Bokaro,16452.33,1458.23,1993.99,1064.96,Over Exploited
+2,Chatra,21383.47,2130.51,755.28,1956.66,Over Exploited
+3,Deoghar,12962.21,1405.2,1331.1,1483.72,Over Exploited
+4,Dhanbad,19101.71,3793.65,1409.48,3761.71,Over Exploited
+5,Dumka,20690.54,2852.28,3265.87,1619.3,Over Exploited
+6,East Singhbhum,22527.96,1469.56,2752.11,1350.14,Over Exploited
+7,Garhwa,23951.07,2399.02,1295.9,2343.56,Over Exploited
+8,Giridih,35467.44,3009.81,2204.78,2546.32,Over Exploited
+9,Godda,18436.16,1757.05,1626.54,1032.54,Over Exploited
+10,Gumla,30172.19,707.35,3499.41,998.65,Over Exploited
+11,Hazaribagh,28297.63,2122.3,2209.45,2476.97,Over Exploited
+12,Jamtara,6029.76,1368.34,829.68,947.7,Over Exploited
+13,Khunti,11237.84,658.81,1075.88,738.68,Over Exploited
+14,Koderma,5282.33,385.93,434.49,649.7,Over Exploited
+15,Latehar,18767.64,2498.15,1493.79,1915.24,Over Exploited
+16,Lohardaga,17367.93,505.26,1382.32,590.3,Over Exploited
+17,Pakur,21805.05,1425.7,2685.38,908.5,Over Exploited
+18,Palamau,23941.92,6359.2,1463.36,2515.88,Over Exploited
+19,Ramgarh,8086.15,1240.98,779.56,1300.27,Over Exploited
+20,Ranchi,31358.34,2637.21,3313.74,3301.72,Over Exploited
+21,Sahebganj,24731.92,2920.8,2059.93,1390.49,Over Exploited
+22,Saraikela Kharsawan,14767.01,791.54,2406.28,525.2,Over Exploited
+23,Simdega,23326.88,569.18,737.13,626.96,Over Exploited
+24,West Singhbhum,42143.1,1471.81,5800.96,979.78,Over Exploited
+1,2,3,4,5,6,Safe
+1,Bagalkot,19608.07,20756.06,2434.48,22548.55,Over Exploited
+2,Ballari,13976.06,40102.72,2093.77,12687.42,Over Exploited
+3,Belagavi,45536.96,24852.91,15202.13,34523.28,Over Exploited
+4,Bengaluru (Rural),7929.28,1952.24,5447.43,2173.7,Over Exploited
+5,Bengaluru (Urban),8379.36,7812.37,4802.41,10745.39,Over Exploited
+6,Bidar,30727.9,3514.63,300.09,2944.01,Over Exploited
+7,Chamarajanagara,18047.17,8257.72,5574.73,5684.58,Over Exploited
+8,Chikkaballapura,18827.1,4789.3,3377.37,6963.24,Over Exploited
+9,Chikkamagaluru,26644.38,22506.4,3410.81,15013.16,Over Exploited
+10,Chitradurga,22000.91,6831.95,5056.35,5956.86,Over Exploited
+11,Dakshina Kannada,54474.77,4993.38,10006.21,5412.25,Over Exploited
+12,Davanagere,15011.51,28372.96,3087.02,15070.2,Over Exploited
+13,Dharwad,15111.65,6838.6,3511.75,6930.34,Over Exploited
+14,Gadag,12351.34,8797.56,4545.35,7500.83,Over Exploited
+15,Hassan,29844.8,28319.51,2035.92,24879.87,Over Exploited
+16,Haveri,17339.18,26795.41,6383.89,6725.46,Over Exploited
+17,Kalburgi,56634.44,6045.19,1083.62,8119.18,Over Exploited
+18,Kodagu,18984.93,3478.18,25.43,1804.05,Over Exploited
+19,Kolara,16298.08,7390.64,4241.97,13277.73,Over Exploited
+20,Koppal,16706.83,30470.21,2299.94,15685.24,Over Exploited
+21,Mandya,19106.89,24542.37,2610.06,25789.29,Over Exploited
+22,Mysuru,25676.15,26799.2,3400.87,12963.46,Over Exploited
+23,Raichur,26044.07,36186.97,5207.45,11782.62,Over Exploited
+24,Ramanagara,9322.1,16343.21,8300.45,14007.89,Over Exploited
+25,Shivamogga,63554.9,28423.35,1290.71,17093.22,Over Exploited
+26,Tumakuru,43579.98,15455.32,9353.24,16359.55,Over Exploited
+27,Udupi,43394.11,2854.42,627.9,5001.29,Over Exploited
+28,Uttara Kannada,80255.87,4511.51,1196.29,5552.73,Over Exploited
+29,Vijayanagara,18447.04,9432.76,3886.16,8288.67,Over Exploited
+30,Vijayapura,63817.81,22783.39,532.62,13215.85,Over Exploited
+31,Yadgir,21848.96,21072.27,1812.89,14978.53,Over Exploited
+1,2,3,4,5,6,Safe
+1,Bagalkot,19608.07,20756.06,2434.48,22548.55,Over Exploited
+2,Ballari,13976.06,40102.72,2093.77,12687.42,Over Exploited
+3,Belagavi,45536.96,24852.91,15202.13,34523.28,Over Exploited
+4,Bengaluru (Rural),7929.28,1952.24,5447.43,2173.7,Over Exploited
+5,Bengaluru (Urban),8379.36,7812.37,4802.41,10745.39,Over Exploited
+6,Bidar,30727.9,3514.63,300.09,2944.01,Over Exploited
+7,Chamarajanagara,18047.17,8257.72,5574.73,5684.58,Over Exploited
+8,Chikkaballapura,18827.1,4789.3,3377.37,6963.24,Over Exploited
+9,Chikkamagaluru,26644.38,22506.4,3410.81,15013.16,Over Exploited
+10,Chitradurga,22000.91,6831.95,5056.35,5956.86,Over Exploited
+11,Dakshina Kannada,54474.77,4993.38,10006.21,5412.25,Over Exploited
+12,Davanagere,15011.51,28372.96,3087.02,15070.2,Over Exploited
+13,Dharwad,15111.65,6838.6,3511.75,6930.34,Over Exploited
+14,Gadag,12351.34,8797.56,4545.35,7500.83,Over Exploited
+15,Hassan,29844.8,28319.51,2035.92,24879.87,Over Exploited
+16,Haveri,17339.18,26795.41,6383.89,6725.46,Over Exploited
+17,Kalburgi,56634.44,6045.19,1083.62,8119.18,Over Exploited
+18,Kodagu,18984.93,3478.18,25.43,1804.05,Over Exploited
+19,Kolara,16298.08,7390.64,4241.97,13277.73,Over Exploited
+20,Koppal,16706.83,30470.21,2299.94,15685.24,Over Exploited
+21,Mandya,19106.89,24542.37,2610.06,25789.29,Over Exploited
+22,Mysuru,25676.15,26799.2,3400.87,12963.46,Over Exploited
+23,Raichur,26044.07,36186.97,5207.45,11782.62,Over Exploited
+24,Ramanagara,9322.1,16343.21,8300.45,14007.89,Over Exploited
+25,Shivamogga,63554.9,28423.35,1290.71,17093.22,Over Exploited
+26,Tumakuru,43579.98,15455.32,9353.24,16359.55,Over Exploited
+27,Udupi,43394.11,2854.42,627.9,5001.29,Over Exploited
+28,Uttara Kannada,80255.87,4511.51,1196.29,5552.73,Over Exploited
+29,Vijayanagara,18447.04,9432.76,3886.16,8288.67,Over Exploited
+30,Vijayapura,63817.81,22783.39,532.62,13215.85,Over Exploited
+31,Yadgir,21848.96,21072.27,1812.89,14978.53,Over Exploited
+1,2,3,4,5,6,Safe
+1,Alappuzha,28421.44,269.4,3336.99,6624.29,Over Exploited
+2,Ernakulam,38013.43,887.6,6802.15,6614.99,Over Exploited
+3,Idukki,18309.47,254.94,907.18,1799.7,Over Exploited
+4,Kannur,38954.9,886.11,1489.06,3791.65,Over Exploited
+5,Kasargod,28314.46,1369.38,1307.66,4236.1,Over Exploited
+6,Kollam,26854.83,836.88,7056.17,2708.07,Over Exploited
+7,Kottayam,30715.51,765.51,4619.14,5553.53,Over Exploited
+8,Kozhikkode,31488.68,570.45,1316.31,1538.64,Over Exploited
+9,Malappuram,39433.15,1124.34,4181.42,7954.32,Over Exploited
+10,Palakkad,32001.81,3994.02,3920.21,24537.19,Over Exploited
+11,Pathanamthitta,18204.33,495.57,5680.16,1919.88,Over Exploited
+12,Thiruvananthapuram,19674.25,598.56,6292.27,2673.09,Over Exploited
+13,Thrissur,46070.79,980.46,2248.65,14634.1,Over Exploited
+14,Wayanad,22654.22,396.88,0,633.01,Over Exploited
+1,2,3,4,5,6,Safe
+1,Alappuzha,28421.44,269.4,3336.99,6624.29,Over Exploited
+2,Ernakulam,38013.43,887.6,6802.15,6614.99,Over Exploited
+3,Idukki,18309.47,254.94,907.18,1799.7,Over Exploited
+4,Kannur,38954.9,886.11,1489.06,3791.65,Over Exploited
+5,Kasargod,28314.46,1369.38,1307.66,4236.1,Over Exploited
+6,Kollam,26854.83,836.88,7056.17,2708.07,Over Exploited
+7,Kottayam,30715.51,765.51,4619.14,5553.53,Over Exploited
+8,Kozhikkode,31488.68,570.45,1316.31,1538.64,Over Exploited
+9,Malappuram,39433.15,1124.34,4181.42,7954.32,Over Exploited
+10,Palakkad,32001.81,3994.02,3920.21,24537.19,Over Exploited
+11,Pathanamthitta,18204.33,495.57,5680.16,1919.88,Over Exploited
+12,Thiruvananthapuram,19674.25,598.56,6292.27,2673.09,Over Exploited
+13,Thrissur,46070.79,980.46,2248.65,14634.1,Over Exploited
+14,Wayanad,22654.22,396.88,0,633.01,Over Exploited
+1,2,3,4,5,6,Safe
+1,Agar Malwa,31648.46,2627.86,0,9353.38,Over Exploited
+2,Alirajpur,20453.23,784.39,0,1926.44,Over Exploited
+3,Anuppur,26932.88,232.32,2107.1,452.34,Over Exploited
+4,Ashoknagar,27871.27,2407,257.6,8403.66,Over Exploited
+5,Balaghat,69068.89,3963.98,224.2,3155.35,Over Exploited
+6,Barwani,33297.1,3754.53,0,19336.64,Over Exploited
+7,Betul,82429.62,4394.4,2418.12,16236.66,Over Exploited
+8,Bhind,80465.23,1680.29,0,13790.27,Over Exploited
+9,Bhopal,30498.59,2435.89,0,6595.32,Over Exploited
+10,Burhanpur,24887.72,3115.99,264.63,7760.34,Over Exploited
+11,Chhatarpur,65829.56,5108.42,53.68,17211.2,Over Exploited
+12,Chhindwara,86603.75,4438.42,3230.32,13761.28,Over Exploited
+13,Damoh,27965.93,2262.36,0,9381.76,Over Exploited
+14,Datia,40896.65,1033.56,0,7642.21,Over Exploited
+15,Dewas,67453.89,4917.14,0,15525.92,Over Exploited
+16,Dhar,85677.03,6867.85,0,45567.34,Over Exploited
+17,Dindori,31253.88,465.36,288.23,829.88,Over Exploited
+18,Guna,68453.75,4872.89,0,16009.98,Over Exploited
+19,Gwalior,53944.05,8162.28,390.68,18746.98,Over Exploited
+20,Harda,28714.24,3029.24,0,15970.24,Over Exploited
+21,Hoshangabad,137409.57,7666.46,0,41693.32,Over Exploited
+22,Indore,39897.15,4569.59,0,12736.94,Over Exploited
+23,Jabalpur,52926.5,2414.12,0,9055.73,Over Exploited
+24,Jhabua,21185.45,1293.73,0,4762.32,Over Exploited
+25,Katni,34740.97,1869.3,0,4903.76,Over Exploited
+26,Khandwa,55498.63,4586.72,0,62733.87,Over Exploited
+27,Khargone,57720.82,6286.61,0,37020.22,Over Exploited
+28,Mandla,41715.23,1151.11,453.63,4325.77,Over Exploited
+29,Mandsaur,46090.43,6104.12,0,17155.08,Over Exploited
+30,Morena,51834.05,1566.2,0,17732.94,Over Exploited
+1,2,3,4,5,6,Safe
+1,Agar Malwa,31648.46,2627.86,0,9353.38,Over Exploited
+2,Alirajpur,20453.23,784.39,0,1926.44,Over Exploited
+3,Anuppur,26932.88,232.32,2107.1,452.34,Over Exploited
+4,Ashoknagar,27871.27,2407,257.6,8403.66,Over Exploited
+5,Balaghat,69068.89,3963.98,224.2,3155.35,Over Exploited
+6,Barwani,33297.1,3754.53,0,19336.64,Over Exploited
+7,Betul,82429.62,4394.4,2418.12,16236.66,Over Exploited
+8,Bhind,80465.23,1680.29,0,13790.27,Over Exploited
+9,Bhopal,30498.59,2435.89,0,6595.32,Over Exploited
+10,Burhanpur,24887.72,3115.99,264.63,7760.34,Over Exploited
+11,Chhatarpur,65829.56,5108.42,53.68,17211.2,Over Exploited
+12,Chhindwara,86603.75,4438.42,3230.32,13761.28,Over Exploited
+13,Damoh,27965.93,2262.36,0,9381.76,Over Exploited
+14,Datia,40896.65,1033.56,0,7642.21,Over Exploited
+15,Dewas,67453.89,4917.14,0,15525.92,Over Exploited
+16,Dhar,85677.03,6867.85,0,45567.34,Over Exploited
+17,Dindori,31253.88,465.36,288.23,829.88,Over Exploited
+18,Guna,68453.75,4872.89,0,16009.98,Over Exploited
+19,Gwalior,53944.05,8162.28,390.68,18746.98,Over Exploited
+20,Harda,28714.24,3029.24,0,15970.24,Over Exploited
+21,Hoshangabad,137409.57,7666.46,0,41693.32,Over Exploited
+22,Indore,39897.15,4569.59,0,12736.94,Over Exploited
+23,Jabalpur,52926.5,2414.12,0,9055.73,Over Exploited
+24,Jhabua,21185.45,1293.73,0,4762.32,Over Exploited
+25,Katni,34740.97,1869.3,0,4903.76,Over Exploited
+26,Khandwa,55498.63,4586.72,0,62733.87,Over Exploited
+27,Khargone,57720.82,6286.61,0,37020.22,Over Exploited
+28,Mandla,41715.23,1151.11,453.63,4325.77,Over Exploited
+29,Mandsaur,46090.43,6104.12,0,17155.08,Over Exploited
+30,Morena,51834.05,1566.2,0,17732.94,Over Exploited
+1,2,3,4,5,6,Safe
+1,Ahmednagar,87414.55,13325.98,14398.48,45925.63,Over Exploited
+2,Akola,28849.65,1680.41,207.45,8900.29,Over Exploited
+3,Amravati,53494.29,4586.76,1228.13,24483.76,Over Exploited
+4,Aurangabad,74759.02,7315.56,4859.62,31620.12,Over Exploited
+5,Beed,80902.03,9247.40,6159.28,33981.21,Over Exploited
+6,Bhandara,32318.64,45408.18,417.80,16188.83,Over Exploited
+7,Buldhana,64860.26,5506.00,263.81,21040.92,Over Exploited
+8,Chandrapur,98913.75,5144.22,1471.98,11836.22,Over Exploited
+9,Dhule,45174.16,7207.86,0.00,20848.44,Over Exploited
+10,Gadchiroli,92707.85,3786.79,0.00,10921.86,Over Exploited
+11,Gondia,42680.49,6682.82,645.57,16414.08,Over Exploited
+12,Hingoli,50143.82,2996.45,1354.99,48447.79,Over Exploited
+13,Jalgaon,88722.94,8065.52,574.12,47455.32,Over Exploited
+14,Jalna,58268.35,3561.74,115.46,22708.87,Over Exploited
+15,Kolhapur,53349.10,10165.36,780.56,71694.67,Over Exploited
+16,Latur,44853.57,8517.28,0.00,17506.84,Over Exploited
+17,Mumbai,1365.05,104.70,0.00,85.67,Semi Critical
+18,Mumbai Sub,6912.88,132.26,0.00,108.22,Over Exploited
+19,Nagpur,65716.83,10566.59,2587.16,23996.35,Over Exploited
+20,Nanded,103267.93,1038.14,3718.96,17584.00,Over Exploited
+21,Nandurbar,39900.15,2868.92,0.00,9066.38,Over Exploited
+22,Nashik,132367.26,15003.40,3856.42,49686.39,Over Exploited
+23,Osmanabad,61044.75,8143.27,2583.65,17414.13,Over Exploited
+24,Palghar,18331.86,365.52,0.00,3447.27,Over Exploited
+25,Parbhani,58691.41,1844.79,602.32,26131.14,Over Exploited
+26,Pune,94080.55,26016.44,1192.62,73760.12,Over Exploited
+27,Raigad,32706.93,192.80,0.00,5192.29,Over Exploited
+28,Ratnagiri,38638.43,177.21,18.49,2242.79,Over Exploited
+29,Sangli,42106.88,21549.92,12389.03,65276.51,Over Exploited
+30,Satara,52161.08,18770.96,3744.03,36917.34,Over Exploited
+31,Sindhudurg,20891.02,196.26,3.83,2251.76,Over Exploited
+32,Solapur,91839.46,11270.79,2954.03,40448.73,Over Exploited
+33,Thane,14767.22,290.06,0.00,2232.87,Over Exploited
+34,Wardha,57486.01,5453.24,1427.60,25090.54,Over Exploited
+35,Washim,42509.28,5242.64,68.85,15402.51,Over Exploited
+36,Yawatmal,97171.18,3119.83,5825.78,18784.37,Over Exploited
+1,2,3,4,5,6,Safe
+1,Ahmednagar,87414.55,13325.98,14398.48,45925.63,Over Exploited
+2,Akola,28849.65,1680.41,207.45,8900.29,Over Exploited
+3,Amravati,53494.29,4586.76,1228.13,24483.76,Over Exploited
+4,Aurangabad,74759.02,7315.56,4859.62,31620.12,Over Exploited
+5,Beed,80902.03,9247.40,6159.28,33981.21,Over Exploited
+6,Bhandara,32318.64,45408.18,417.80,16188.83,Over Exploited
+7,Buldhana,64860.26,5506.00,263.81,21040.92,Over Exploited
+8,Chandrapur,98913.75,5144.22,1471.98,11836.22,Over Exploited
+9,Dhule,45174.16,7207.86,0.00,20848.44,Over Exploited
+10,Gadchiroli,92707.85,3786.79,0.00,10921.86,Over Exploited
+11,Gondia,42680.49,6682.82,645.57,16414.08,Over Exploited
+12,Hingoli,50143.82,2996.45,1354.99,48447.79,Over Exploited
+13,Jalgaon,88722.94,8065.52,574.12,47455.32,Over Exploited
+14,Jalna,58268.35,3561.74,115.46,22708.87,Over Exploited
+15,Kolhapur,53349.10,10165.36,780.56,71694.67,Over Exploited
+16,Latur,44853.57,8517.28,0.00,17506.84,Over Exploited
+17,Mumbai,1365.05,104.70,0.00,85.67,Semi Critical
+18,Mumbai Sub,6912.88,132.26,0.00,108.22,Over Exploited
+19,Nagpur,65716.83,10566.59,2587.16,23996.35,Over Exploited
+20,Nanded,103267.93,1038.14,3718.96,17584.00,Over Exploited
+21,Nandurbar,39900.15,2868.92,0.00,9066.38,Over Exploited
+22,Nashik,132367.26,15003.40,3856.42,49686.39,Over Exploited
+23,Osmanabad,61044.75,8143.27,2583.65,17414.13,Over Exploited
+24,Palghar,18331.86,365.52,0.00,3447.27,Over Exploited
+25,Parbhani,58691.41,1844.79,602.32,26131.14,Over Exploited
+26,Pune,94080.55,26016.44,1192.62,73760.12,Over Exploited
+27,Raigad,32706.93,192.80,0.00,5192.29,Over Exploited
+28,Ratnagiri,38638.43,177.21,18.49,2242.79,Over Exploited
+29,Sangli,42106.88,21549.92,12389.03,65276.51,Over Exploited
+30,Satara,52161.08,18770.96,3744.03,36917.34,Over Exploited
+31,Sindhudurg,20891.02,196.26,3.83,2251.76,Over Exploited
+32,Solapur,91839.46,11270.79,2954.03,40448.73,Over Exploited
+33,Thane,14767.22,290.06,0.00,2232.87,Over Exploited
+34,Wardha,57486.01,5453.24,1427.60,25090.54,Over Exploited
+35,Washim,42509.28,5242.64,68.85,15402.51,Over Exploited
+36,Yawatmal,97171.18,3119.83,5825.78,18784.37,Over Exploited
+1,2,3,4,5,6,Safe
+1,Bishnupur,9572.6,0.06,2257.53,83.68,Semi Critical
+2,Churachandpur,6707.1,0,1510.99,69,Safe
+3,Imphal East,11895.89,63.52,2713.54,275.39,Over Exploited
+4,Imphal West,6297.13,0.01,2327.91,74.33,Semi Critical
+5,Thoubal,5799.77,0.02,2075.4,62.28,Safe
+1,2,3,4,5,6,Safe
+1,East Garo Hills,6386.29,575.45,1795.66,669.9,Over Exploited
+2,East Jaintia Hills,12480.85,91.43,4292.83,88.93,Semi Critical
+3,East Khasi Hills,16813.38,468.19,4950.22,462.2,Over Exploited
+4,North Garo Hills,6013.23,2061.23,1325,568.96,Over Exploited
+5,Ri Bhoi,5042.91,112.64,1330.29,94.3,Critical
+6,South Garo Hills,16789.14,64.61,6616,59.76,Safe
+7,South West Garo Hills,5855.53,160.5,1857.49,218.78,Over Exploited
+8,South West Khasi Hills,11468.86,202.88,2625.09,61.02,Safe
+9,West Garo Hills,23701.2,398.92,6532.95,674.04,Over Exploited
+10,West Jaintia Hills,7879.86,108.19,3194.72,74.7,Semi Critical
+11,West Khasi Hills,22567.36,1316.88,7018.54,803.08,Over Exploited
+1,2,3,4,5,6,Safe
+1,East Garo Hills,6386.29,575.45,1795.66,669.9,Over Exploited
+2,East Jaintia Hills,12480.85,91.43,4292.83,88.93,Semi Critical
+3,East Khasi Hills,16813.38,468.19,4950.22,462.2,Over Exploited
+4,North Garo Hills,6013.23,2061.23,1325,568.96,Over Exploited
+5,Ri Bhoi,5042.91,112.64,1330.29,94.3,Critical
+6,South Garo Hills,16789.14,64.61,6616,59.76,Safe
+7,South West Garo Hills,5855.53,160.5,1857.49,218.78,Over Exploited
+8,South West Khasi Hills,11468.86,202.88,2625.09,61.02,Safe
+9,West Garo Hills,23701.2,398.92,6532.95,674.04,Over Exploited
+10,West Jaintia Hills,7879.86,108.19,3194.72,74.7,Semi Critical
+11,West Khasi Hills,22567.36,1316.88,7018.54,803.08,Over Exploited
+1,2,3,4,5,6,Safe
+1,Dimapur,19261.31,1409.54,2358.73,192.64,Over Exploited
+2,Kiphire,127.82,327.36,56.57,0.27,Safe
+3,Kohima,2073.08,1838.23,340.8,101.54,Over Exploited
+4,Longleng,1021.28,334.07,141.57,6.32,Safe
+5,Mokokchung,4294.87,775.47,1201.67,19.03,Safe
+6,Mon,3564.12,286.4,773.54,6.14,Safe
+7,Peren,3354.89,1695.14,917.28,63,Safe
+8,Phek,539.15,1141.93,163.85,16.33,Safe
+9,Tuensang,789.97,1871.5,220.51,0.26,Safe
+10,Wokha,5560,1615.41,1400.05,100.69,Over Exploited
+11,Zunheboto,701.11,813.02,196.18,44.74,Safe
+1,2,3,4,5,6,Safe
+1,Dimapur,19261.31,1409.54,2358.73,192.64,Over Exploited
+2,Kiphire,127.82,327.36,56.57,0.27,Safe
+3,Kohima,2073.08,1838.23,340.8,101.54,Over Exploited
+4,Longleng,1021.28,334.07,141.57,6.32,Safe
+5,Mokokchung,4294.87,775.47,1201.67,19.03,Safe
+6,Mon,3564.12,286.4,773.54,6.14,Safe
+7,Peren,3354.89,1695.14,917.28,63,Safe
+8,Phek,539.15,1141.93,163.85,16.33,Safe
+9,Tuensang,789.97,1871.5,220.51,0.26,Safe
+10,Wokha,5560,1615.41,1400.05,100.69,Over Exploited
+11,Zunheboto,701.11,813.02,196.18,44.74,Safe
+1,2,3,4,5,6,Safe
+1,Angul,39306.49,9428.98,3946.79,6174.76,Over Exploited
+2,Balasore,56961.95,35274.32,17271.26,32703.03,Over Exploited
+3,Bargarh,39800.56,12626.96,136.35,13026.9,Over Exploited
+4,Bhadrak,17822.9,16685.67,4479.06,20362.28,Over Exploited
+5,Bolangir,44737.51,7473.8,898.79,8524.16,Over Exploited
+6,Boudh,17978.32,3152.45,449.44,4404.64,Over Exploited
+7,Cuttack,39038.69,16296.94,9049.06,11773.77,Over Exploited
+8,Deogarh,20064.53,5606.48,1223.73,6389.56,Over Exploited
+9,Dhenkanal,28979.11,9984.76,5442.13,3940.75,Over Exploited
+10,Gajapati,12764.32,2087.96,4946.35,2430.25,Over Exploited
+11,Ganjam,43637.47,27877.81,17236.17,15607.33,Over Exploited
+12,Jagatsinghpur,16310.46,16871.22,4390.92,12384.88,Over Exploited
+13,Jajpur,31129.96,10415.8,7395.45,7629.05,Over Exploited
+14,Jharsuguda,17163.01,1590.9,221.62,2075.73,Over Exploited
+15,Kalahandi,46160.65,10519.78,1926.12,9693.15,Over Exploited
+16,Kandhamal,26808.66,2425.98,4436.19,3299.1,Over Exploited
+17,Kendrapara,6940.43,4869.29,1847.1,4404.28,Over Exploited
+18,Keonjhar,55455.51,13972.21,11495.85,11155.31,Over Exploited
+19,Khurda,22929.9,8394.75,6000.27,9669.5,Over Exploited
+20,Koraput,41148.22,4365.83,4155.74,6392.54,Over Exploited
+21,Malkangiri,26392.89,4552.65,1152.11,4506.85,Over Exploited
+22,Mayurbhanj,84354.55,20211.68,18391.17,25875.78,Over Exploited
+23,Nabarangapur,48025.19,3462.42,3944.31,4384.63,Over Exploited
+24,Nayagarh,21378.9,5110.17,5223.7,6936.7,Over Exploited
+25,Nuapada,23061,5113.91,706.75,4883.28,Over Exploited
+26,Puri,29061.82,11313.07,7134.83,17319.17,Over Exploited
+27,Rayagada,24168.27,3877.98,4565.28,3159.54,Over Exploited
+28,Sambalpur,46330.38,7527.34,311.16,12181.73,Over Exploited
+29,Subarnapur,19168.01,3723.19,155.55,4786.13,Over Exploited
+30,Sundargarh,70601.64,8869.02,2487.11,7858.15,Over Exploited
+1,2,3,4,5,6,Safe
+1,Angul,39306.49,9428.98,3946.79,6174.76,Over Exploited
+2,Balasore,56961.95,35274.32,17271.26,32703.03,Over Exploited
+3,Bargarh,39800.56,12626.96,136.35,13026.9,Over Exploited
+4,Bhadrak,17822.9,16685.67,4479.06,20362.28,Over Exploited
+5,Bolangir,44737.51,7473.8,898.79,8524.16,Over Exploited
+6,Boudh,17978.32,3152.45,449.44,4404.64,Over Exploited
+7,Cuttack,39038.69,16296.94,9049.06,11773.77,Over Exploited
+8,Deogarh,20064.53,5606.48,1223.73,6389.56,Over Exploited
+9,Dhenkanal,28979.11,9984.76,5442.13,3940.75,Over Exploited
+10,Gajapati,12764.32,2087.96,4946.35,2430.25,Over Exploited
+11,Ganjam,43637.47,27877.81,17236.17,15607.33,Over Exploited
+12,Jagatsinghpur,16310.46,16871.22,4390.92,12384.88,Over Exploited
+13,Jajpur,31129.96,10415.8,7395.45,7629.05,Over Exploited
+14,Jharsuguda,17163.01,1590.9,221.62,2075.73,Over Exploited
+15,Kalahandi,46160.65,10519.78,1926.12,9693.15,Over Exploited
+16,Kandhamal,26808.66,2425.98,4436.19,3299.1,Over Exploited
+17,Kendrapara,6940.43,4869.29,1847.1,4404.28,Over Exploited
+18,Keonjhar,55455.51,13972.21,11495.85,11155.31,Over Exploited
+19,Khurda,22929.9,8394.75,6000.27,9669.5,Over Exploited
+20,Koraput,41148.22,4365.83,4155.74,6392.54,Over Exploited
+21,Malkangiri,26392.89,4552.65,1152.11,4506.85,Over Exploited
+22,Mayurbhanj,84354.55,20211.68,18391.17,25875.78,Over Exploited
+23,Nabarangapur,48025.19,3462.42,3944.31,4384.63,Over Exploited
+24,Nayagarh,21378.9,5110.17,5223.7,6936.7,Over Exploited
+25,Nuapada,23061,5113.91,706.75,4883.28,Over Exploited
+26,Puri,29061.82,11313.07,7134.83,17319.17,Over Exploited
+27,Rayagada,24168.27,3877.98,4565.28,3159.54,Over Exploited
+28,Sambalpur,46330.38,7527.34,311.16,12181.73,Over Exploited
+29,Subarnapur,19168.01,3723.19,155.55,4786.13,Over Exploited
+30,Sundargarh,70601.64,8869.02,2487.11,7858.15,Over Exploited
+1,2,3,4,5,6,Safe
+1,Amritsar,29515.8,82671.79,5345.17,30811.4,Over Exploited
+2,Barnala,13419.43,25795.05,1267.8,16138.89,Over Exploited
+3,Bathinda,17708.15,64376.11,3125.99,35907.55,Over Exploited
+4,Faridkot,9819.89,35685.13,1160.18,16942.02,Over Exploited
+5,Fatehgarh Sahib,14525.56,14446.92,1670.85,8118.72,Over Exploited
+6,Fazilka,11232.43,45176.88,1490.88,23280.99,Over Exploited
+7,Firozpur,18259.72,82916.59,2465.89,41525.3,Over Exploited
+8,Gurdaspur,36564.83,89272.74,6344.47,35669.86,Over Exploited
+9,Hoshiarpur,47326.84,24745.2,7725.46,9448.12,Over Exploited
+10,Jalandhar,28442.13,31371.53,4285.85,15714.64,Over Exploited
+11,Kapurthala,18016.2,36758.33,2772.39,10728.06,Over Exploited
+12,Ludhiana,35403.16,77423.57,4762.96,37466.22,Over Exploited
+13,Malerkotla,7710.33,8284.44,1054.35,4534.83,Over Exploited
+14,Mansa,10990.24,33984.15,1517.12,22057.15,Over Exploited
+15,Moga,17930.84,43832.59,2427.44,18625.44,Over Exploited
+16,Muktsar,11492.71,50959.42,2041.74,33781.89,Over Exploited
+17,Pathankot,12080.52,21288.63,2901.77,12100.02,Over Exploited
+18,Patiala,38529.91,30108.22,5216.18,18455.88,Over Exploited
+19,Rupnagar,20708.53,12058.55,3087.2,7503.87,Over Exploited
+20,Sas Nagar,14438.14,5045.03,1982.84,2679.54,Over Exploited
+21,Sbs Nagar,16174.5,27596.8,2216.48,8859.49,Over Exploited
+22,Sangrur,25945.63,28667.73,3091.36,12990.88,Over Exploited
+23,Tarn Taran,22615.53,28124.09,3901,13430.19,Over Exploited
+1,2,3,4,5,6,Safe
+1,Amritsar,29515.8,82671.79,5345.17,30811.4,Over Exploited
+2,Barnala,13419.43,25795.05,1267.8,16138.89,Over Exploited
+3,Bathinda,17708.15,64376.11,3125.99,35907.55,Over Exploited
+4,Faridkot,9819.89,35685.13,1160.18,16942.02,Over Exploited
+5,Fatehgarh Sahib,14525.56,14446.92,1670.85,8118.72,Over Exploited
+6,Fazilka,11232.43,45176.88,1490.88,23280.99,Over Exploited
+7,Firozpur,18259.72,82916.59,2465.89,41525.3,Over Exploited
+8,Gurdaspur,36564.83,89272.74,6344.47,35669.86,Over Exploited
+9,Hoshiarpur,47326.84,24745.2,7725.46,9448.12,Over Exploited
+10,Jalandhar,28442.13,31371.53,4285.85,15714.64,Over Exploited
+11,Kapurthala,18016.2,36758.33,2772.39,10728.06,Over Exploited
+12,Ludhiana,35403.16,77423.57,4762.96,37466.22,Over Exploited
+13,Malerkotla,7710.33,8284.44,1054.35,4534.83,Over Exploited
+14,Mansa,10990.24,33984.15,1517.12,22057.15,Over Exploited
+15,Moga,17930.84,43832.59,2427.44,18625.44,Over Exploited
+16,Muktsar,11492.71,50959.42,2041.74,33781.89,Over Exploited
+17,Pathankot,12080.52,21288.63,2901.77,12100.02,Over Exploited
+18,Patiala,38529.91,30108.22,5216.18,18455.88,Over Exploited
+19,Rupnagar,20708.53,12058.55,3087.2,7503.87,Over Exploited
+20,Sas Nagar,14438.14,5045.03,1982.84,2679.54,Over Exploited
+21,Sbs Nagar,16174.5,27596.8,2216.48,8859.49,Over Exploited
+22,Sangrur,25945.63,28667.73,3091.36,12990.88,Over Exploited
+23,Tarn Taran,22615.53,28124.09,3901,13430.19,Over Exploited
+1,2,3,4,5,6,Safe
+1,Ajmer,28701.14,2007.64,139.73,7184.15,Over Exploited
+2,Alwar,68419.63,922.44,2737.71,5180.36,Over Exploited
+3,Banswara,10215.56,276.91,0,12679.72,Over Exploited
+4,Baran,39601.43,5274.14,0,19860.34,Over Exploited
+5,Barmer,36380.39,675.88,61.67,2050.01,Over Exploited
+6,Bharatpur,31725.17,1879.57,863.03,5507.36,Over Exploited
+7,Bhilwara,31497.34,47.81,0,13901.04,Over Exploited
+8,Bikaner,24934.37,713.47,3768.26,1811.24,Over Exploited
+9,Bundi,18779.31,2610.2,0,13268.1,Over Exploited
+10,Chittaurgarh,23337.91,1695.18,0,9712.24,Over Exploited
+11,Churu,14214.48,25.87,1728.5,518.4,Over Exploited
+12,Dausa,23601.22,431.71,392.24,2503.4,Over Exploited
+13,Dhaulpur,20373,1356.19,1062.51,5316.71,Over Exploited
+14,Dungarpur,9052.51,1173.88,0,12232.67,Over Exploited
+15,Ganganagar,4874.65,16256.49,1043.77,25978.02,Over Exploited
+16,Hanumangarh,5562.87,7924.31,1016.12,8323.2,Over Exploited
+17,Jaipur,64291.54,1920.08,827.32,7598.77,Over Exploited
+18,Jaisalmer,8430.91,380.4,672.06,1118.55,Over Exploited
+19,Jalor,39223.97,1201.36,0,8085.03,Over Exploited
+20,Jhalawar,39875.56,2827.4,0,12815.92,Over Exploited
+21,Jhunjhunu,21237.43,294.28,1648.99,1471.34,Over Exploited
+22,Jodhpur,36034.41,1042.53,1225.94,3058.83,Over Exploited
+23,Karauli,28210.86,453.93,394.64,5045.25,Over Exploited
+24,Kota,28869.94,3201.96,0,19795.97,Over Exploited
+25,Nagaur,57435.4,1112.95,2064.48,3441.21,Over Exploited
+26,Pali,28643.5,617,1.5,4796.94,Over Exploited
+27,Pratapgarh,15439.49,171.37,0,7381.03,Over Exploited
+28,Rajsamand,8755.96,220.54,35.1,2814.1,Over Exploited
+29,Sawai Madhopur,31883.85,2038.52,39.78,10562.54,Over Exploited
+30,Sikar,31587.39,1795.59,1985.15,2057.58,Over Exploited
+31,Sirohi,26307.47,172.5,0,4660.4,Over Exploited
+32,Tonk,29169.51,3862.26,14.75,11237.79,Over Exploited
+33,Udaipur,21537.52,548.46,3.52,10529.48,Over Exploited
+1,2,3,4,5,6,Safe
+1,Ajmer,28701.14,2007.64,139.73,7184.15,Over Exploited
+2,Alwar,68419.63,922.44,2737.71,5180.36,Over Exploited
+3,Banswara,10215.56,276.91,0,12679.72,Over Exploited
+4,Baran,39601.43,5274.14,0,19860.34,Over Exploited
+5,Barmer,36380.39,675.88,61.67,2050.01,Over Exploited
+6,Bharatpur,31725.17,1879.57,863.03,5507.36,Over Exploited
+7,Bhilwara,31497.34,47.81,0,13901.04,Over Exploited
+8,Bikaner,24934.37,713.47,3768.26,1811.24,Over Exploited
+9,Bundi,18779.31,2610.2,0,13268.1,Over Exploited
+10,Chittaurgarh,23337.91,1695.18,0,9712.24,Over Exploited
+11,Churu,14214.48,25.87,1728.5,518.4,Over Exploited
+12,Dausa,23601.22,431.71,392.24,2503.4,Over Exploited
+13,Dhaulpur,20373,1356.19,1062.51,5316.71,Over Exploited
+14,Dungarpur,9052.51,1173.88,0,12232.67,Over Exploited
+15,Ganganagar,4874.65,16256.49,1043.77,25978.02,Over Exploited
+16,Hanumangarh,5562.87,7924.31,1016.12,8323.2,Over Exploited
+17,Jaipur,64291.54,1920.08,827.32,7598.77,Over Exploited
+18,Jaisalmer,8430.91,380.4,672.06,1118.55,Over Exploited
+19,Jalor,39223.97,1201.36,0,8085.03,Over Exploited
+20,Jhalawar,39875.56,2827.4,0,12815.92,Over Exploited
+21,Jhunjhunu,21237.43,294.28,1648.99,1471.34,Over Exploited
+22,Jodhpur,36034.41,1042.53,1225.94,3058.83,Over Exploited
+23,Karauli,28210.86,453.93,394.64,5045.25,Over Exploited
+24,Kota,28869.94,3201.96,0,19795.97,Over Exploited
+25,Nagaur,57435.4,1112.95,2064.48,3441.21,Over Exploited
+26,Pali,28643.5,617,1.5,4796.94,Over Exploited
+27,Pratapgarh,15439.49,171.37,0,7381.03,Over Exploited
+28,Rajsamand,8755.96,220.54,35.1,2814.1,Over Exploited
+29,Sawai Madhopur,31883.85,2038.52,39.78,10562.54,Over Exploited
+30,Sikar,31587.39,1795.59,1985.15,2057.58,Over Exploited
+31,Sirohi,26307.47,172.5,0,4660.4,Over Exploited
+32,Tonk,29169.51,3862.26,14.75,11237.79,Over Exploited
+33,Udaipur,21537.52,548.46,3.52,10529.48,Over Exploited
+1,2,3,4,5,6,Safe
+1,Ariyalur,17210.13,18042.90,529.40,1938.82,Over Exploited
+2,Chengalpattu,18796.31,40567.26,5.33,3419.08,Over Exploited
+3,Chennai,8083.42,1276.81,0.00,857.66,Over Exploited
+4,Coimbatore,21677.03,27401.17,2546.08,8759.61,Over Exploited
+5,Cuddalore,38344.96,42474.47,19177.00,11828.45,Over Exploited
+6,Dharmapuri,21538.17,10569.37,2744.22,12959.21,Over Exploited
+7,Dindigul,24410.90,24598.03,2890.51,10266.73,Over Exploited
+8,Erode,14311.16,46688.32,3360.73,9245.65,Over Exploited
+9,Kallakurichchi,27040.34,28226.82,957.28,10907.10,Over Exploited
+10,Kancheepuram,16343.90,34743.88,0.00,6832.73,Over Exploited
+11,Kanniyakumari,7205.09,19927.85,1583.91,4216.68,Over Exploited
+12,Karur,11838.73,18240.32,1543.66,2393.28,Over Exploited
+13,Krishnagiri,17062.06,16330.06,2653.56,12357.14,Over Exploited
+14,Madurai,22674.30,36893.58,2970.90,16166.92,Over Exploited
+15,Mayiladuthurai,6974.64,31576.70,128.16,805.84,Over Exploited
+16,Nagapattinam,0.00,0.00,0.00,0.00,Safe
+17,Namakkal,21286.89,26608.88,5034.78,6850.17,Over Exploited
+18,Perambalur,9067.19,12416.20,766.27,3071.48,Over Exploited
+19,Pudukkottai,34481.46,53460.42,4476.72,4527.29,Over Exploited
+20,Ramanathapuram,2891.90,9080.72,30558.74,6102.45,Over Exploited
+21,Ranipet,14519.93,7221.58,186.01,6413.49,Over Exploited
+22,Salem,19180.42,26896.35,1722.66,5196.36,Over Exploited
+23,Sivagangai,27427.23,34507.81,2800.34,1303.27,Over Exploited
+24,Tenkasi,10874.16,38307.56,2681.82,6195.87,Over Exploited
+25,Thanjavur,60999.97,33798.42,4218.78,5745.08,Over Exploited
+26,The Nilgiris,12873.36,359.63,1350.65,157.66,Over Exploited
+27,Theni,7079.35,16915.16,3875.36,3536.86,Over Exploited
+28,Thiruvarur,7406.89,15146.72,372.59,766.34,Over Exploited
+29,Thoothukudi,20368.15,33087.00,3130.67,12143.36,Over Exploited
+30,Tiruchirappalli,18793.81,52296.67,1334.26,8061.50,Over Exploited
+31,Tirunelveli,32066.25,35001.03,8302.60,8309.02,Over Exploited
+32,Tirupathur,5782.61,2037.85,372.78,1843.91,Over Exploited
+33,Tiruppur,14146.09,31482.15,3526.64,12854.86,Over Exploited
+34,Tiruvallur,54634.50,21864.32,0.00,9768.65,Over Exploited
+35,Tiruvannamalai,28596.19,67544.24,401.79,25057.49,Over Exploited
+36,Vellore,7479.24,4606.61,281.98,4631.89,Over Exploited
+37,Villupuram,41734.19,47839.63,73.03,13447.78,Over Exploited
+38,Virudhunagar,16739.31,49971.26,3534.29,12343.59,Over Exploited
+1,2,3,4,5,6,Safe
+1,Ariyalur,17210.13,18042.90,529.40,1938.82,Over Exploited
+2,Chengalpattu,18796.31,40567.26,5.33,3419.08,Over Exploited
+3,Chennai,8083.42,1276.81,0.00,857.66,Over Exploited
+4,Coimbatore,21677.03,27401.17,2546.08,8759.61,Over Exploited
+5,Cuddalore,38344.96,42474.47,19177.00,11828.45,Over Exploited
+6,Dharmapuri,21538.17,10569.37,2744.22,12959.21,Over Exploited
+7,Dindigul,24410.90,24598.03,2890.51,10266.73,Over Exploited
+8,Erode,14311.16,46688.32,3360.73,9245.65,Over Exploited
+9,Kallakurichchi,27040.34,28226.82,957.28,10907.10,Over Exploited
+10,Kancheepuram,16343.90,34743.88,0.00,6832.73,Over Exploited
+11,Kanniyakumari,7205.09,19927.85,1583.91,4216.68,Over Exploited
+12,Karur,11838.73,18240.32,1543.66,2393.28,Over Exploited
+13,Krishnagiri,17062.06,16330.06,2653.56,12357.14,Over Exploited
+14,Madurai,22674.30,36893.58,2970.90,16166.92,Over Exploited
+15,Mayiladuthurai,6974.64,31576.70,128.16,805.84,Over Exploited
+16,Nagapattinam,0.00,0.00,0.00,0.00,Safe
+17,Namakkal,21286.89,26608.88,5034.78,6850.17,Over Exploited
+18,Perambalur,9067.19,12416.20,766.27,3071.48,Over Exploited
+19,Pudukkottai,34481.46,53460.42,4476.72,4527.29,Over Exploited
+20,Ramanathapuram,2891.90,9080.72,30558.74,6102.45,Over Exploited
+21,Ranipet,14519.93,7221.58,186.01,6413.49,Over Exploited
+22,Salem,19180.42,26896.35,1722.66,5196.36,Over Exploited
+23,Sivagangai,27427.23,34507.81,2800.34,1303.27,Over Exploited
+24,Tenkasi,10874.16,38307.56,2681.82,6195.87,Over Exploited
+25,Thanjavur,60999.97,33798.42,4218.78,5745.08,Over Exploited
+26,The Nilgiris,12873.36,359.63,1350.65,157.66,Over Exploited
+27,Theni,7079.35,16915.16,3875.36,3536.86,Over Exploited
+28,Thiruvarur,7406.89,15146.72,372.59,766.34,Over Exploited
+29,Thoothukudi,20368.15,33087.00,3130.67,12143.36,Over Exploited
+30,Tiruchirappalli,18793.81,52296.67,1334.26,8061.50,Over Exploited
+31,Tirunelveli,32066.25,35001.03,8302.60,8309.02,Over Exploited
+32,Tirupathur,5782.61,2037.85,372.78,1843.91,Over Exploited
+33,Tiruppur,14146.09,31482.15,3526.64,12854.86,Over Exploited
+34,Tiruvallur,54634.50,21864.32,0.00,9768.65,Over Exploited
+35,Tiruvannamalai,28596.19,67544.24,401.79,25057.49,Over Exploited
+36,Vellore,7479.24,4606.61,281.98,4631.89,Over Exploited
+37,Villupuram,41734.19,47839.63,73.03,13447.78,Over Exploited
+38,Virudhunagar,16739.31,49971.26,3534.29,12343.59,Over Exploited
+1,2,3,4,5,6,Safe
+1,Adilabad,26523.48,16847.06,0.00,17686.14,Over Exploited
+2,Bhadradri Kothagudem,56543.34,29755.14,8389.74,14476.68,Over Exploited
+3,Hanumakonda,11740.45,19498.35,1438.71,20184.80,Over Exploited
+4,Hyderabad,1112.23,1695.20,244.60,3361.97,Over Exploited
+5,Jagtial,17751.86,19252.02,1999.56,17989.08,Over Exploited
+6,Jangaon,12364.96,14080.85,2415.54,9397.54,Over Exploited
+7,Jayashankar Bhupalapally,19391.47,9522.93,1197.89,14132.72,Over Exploited
+8,Jogulamba Gadwal,9383.46,22241.52,2588.33,5482.67,Over Exploited
+9,Kamareddy,28944.02,18178.58,3043.34,18158.39,Over Exploited
+10,Karimnagar,14223.02,38855.54,1738.79,43952.79,Over Exploited
+11,Khammam,30102.49,52417.75,6290.39,14760.48,Over Exploited
+12,Komarambheem Asifabad,33482.93,18381.10,0.00,14254.48,Over Exploited
+13,Mahabubabad,25824.33,14626.84,3280.83,18666.41,Over Exploited
+14,Mahabubnagar,11867.31,8132.20,3379.82,11395.14,Over Exploited
+15,Mancherial,34109.21,28225.41,0.00,33691.77,Over Exploited
+16,Medak,17026.44,13172.62,2098.26,16092.02,Over Exploited
+17,Medchal Malkajgiri,4529.27,2786.86,913.26,2254.50,Over Exploited
+18,Mulug,31270.68,13104.69,1924.11,13166.67,Over Exploited
+19,Nagarkurnool,24519.17,29005.87,7476.06,19896.59,Over Exploited
+20,Nalgonda,32084.11,45687.11,9350.96,34059.15,Over Exploited
+21,Narayanpet,9226.20,9709.04,2037.52,7841.44,Over Exploited
+22,Nirmal,26000.70,21932.33,1423.23,21256.36,Over Exploited
+23,Nizamabad,34184.41,26667.46,2391.14,40771.54,Over Exploited
+24,Peddapalle,15376.02,19157.13,1205.70,13755.60,Over Exploited
+25,Rajanna Siricilla,17789.85,15351.26,2.25,17532.57,Over Exploited
+26,Rangareddy,23804.12,15242.54,6560.92,12114.10,Over Exploited
+27,Sangareddy,25665.31,5018.76,4665.93,6035.53,Over Exploited
+28,Siddipet,20238.35,21279.48,3490.35,21485.69,Over Exploited
+29,Suryapet,19246.80,19786.79,3822.60,19805.20,Over Exploited
+30,Vikarabad,19589.29,13205.62,3598.12,16586.54,Over Exploited
+31,Wanaparthy,3553.32,27685.56,727.99,32244.64,Over Exploited
+32,Warangal,11305.62,23003.55,1729.48,14710.02,Over Exploited
+33,Yadadri Bhuvanagiri,18930.10,29104.42,4576.76,28766.58,Over Exploited
+1,2,3,4,5,6,Safe
+1,Adilabad,26523.48,16847.06,0.00,17686.14,Over Exploited
+2,Bhadradri Kothagudem,56543.34,29755.14,8389.74,14476.68,Over Exploited
+3,Hanumakonda,11740.45,19498.35,1438.71,20184.80,Over Exploited
+4,Hyderabad,1112.23,1695.20,244.60,3361.97,Over Exploited
+5,Jagtial,17751.86,19252.02,1999.56,17989.08,Over Exploited
+6,Jangaon,12364.96,14080.85,2415.54,9397.54,Over Exploited
+7,Jayashankar Bhupalapally,19391.47,9522.93,1197.89,14132.72,Over Exploited
+8,Jogulamba Gadwal,9383.46,22241.52,2588.33,5482.67,Over Exploited
+9,Kamareddy,28944.02,18178.58,3043.34,18158.39,Over Exploited
+10,Karimnagar,14223.02,38855.54,1738.79,43952.79,Over Exploited
+11,Khammam,30102.49,52417.75,6290.39,14760.48,Over Exploited
+12,Komarambheem Asifabad,33482.93,18381.10,0.00,14254.48,Over Exploited
+13,Mahabubabad,25824.33,14626.84,3280.83,18666.41,Over Exploited
+14,Mahabubnagar,11867.31,8132.20,3379.82,11395.14,Over Exploited
+15,Mancherial,34109.21,28225.41,0.00,33691.77,Over Exploited
+16,Medak,17026.44,13172.62,2098.26,16092.02,Over Exploited
+17,Medchal Malkajgiri,4529.27,2786.86,913.26,2254.50,Over Exploited
+18,Mulug,31270.68,13104.69,1924.11,13166.67,Over Exploited
+19,Nagarkurnool,24519.17,29005.87,7476.06,19896.59,Over Exploited
+20,Nalgonda,32084.11,45687.11,9350.96,34059.15,Over Exploited
+21,Narayanpet,9226.20,9709.04,2037.52,7841.44,Over Exploited
+22,Nirmal,26000.70,21932.33,1423.23,21256.36,Over Exploited
+23,Nizamabad,34184.41,26667.46,2391.14,40771.54,Over Exploited
+24,Peddapalle,15376.02,19157.13,1205.70,13755.60,Over Exploited
+25,Rajanna Siricilla,17789.85,15351.26,2.25,17532.57,Over Exploited
+26,Rangareddy,23804.12,15242.54,6560.92,12114.10,Over Exploited
+27,Sangareddy,25665.31,5018.76,4665.93,6035.53,Over Exploited
+28,Siddipet,20238.35,21279.48,3490.35,21485.69,Over Exploited
+29,Suryapet,19246.80,19786.79,3822.60,19805.20,Over Exploited
+30,Vikarabad,19589.29,13205.62,3598.12,16586.54,Over Exploited
+31,Wanaparthy,3553.32,27685.56,727.99,32244.64,Over Exploited
+32,Warangal,11305.62,23003.55,1729.48,14710.02,Over Exploited
+33,Yadadri Bhuvanagiri,18930.10,29104.42,4576.76,28766.58,Over Exploited
+1,2,3,4,5,6,Safe
+1,Dhalai,17702.07,941.03,3503.23,565.64,Over Exploited
+2,Gomati,16952.74,3321.95,2993.49,603.54,Over Exploited
+3,Khowai,7962.58,1790.19,1888.56,596.38,Over Exploited
+4,North Tripura,10031.21,583.28,2402.57,704.7,Over Exploited
+5,Sepahijala,12196.63,3032.8,2552.3,1109.7,Over Exploited
+6,South Tripura,18672.52,2948.1,2776.3,1335.74,Over Exploited
+7,Unakoti,7425.2,1119.49,1470.76,432.73,Over Exploited
+8,West Tripura,11691.33,2313.76,2290.86,1379.91,Over Exploited
+1,2,3,4,5,6,Safe
+1,Dhalai,17702.07,941.03,3503.23,565.64,Over Exploited
+2,Gomati,16952.74,3321.95,2993.49,603.54,Over Exploited
+3,Khowai,7962.58,1790.19,1888.56,596.38,Over Exploited
+4,North Tripura,10031.21,583.28,2402.57,704.7,Over Exploited
+5,Sepahijala,12196.63,3032.8,2552.3,1109.7,Over Exploited
+6,South Tripura,18672.52,2948.1,2776.3,1335.74,Over Exploited
+7,Unakoti,7425.2,1119.49,1470.76,432.73,Over Exploited
+8,West Tripura,11691.33,2313.76,2290.86,1379.91,Over Exploited
+1,2,3,4,5,6,Safe
+1,Agra,37767.38,15917.84,547.66,34898.5,Over Exploited
+2,Aligarh,47094.18,16413.02,1607.99,34112.99,Over Exploited
+3,Ambedkar Nagar,52738.03,11897.75,392.18,15515.15,Over Exploited
+4,Amethi,40883,20985.23,891.9,27011.16,Over Exploited
+5,Amroha,39389.29,5775.79,1075.17,9287.74,Over Exploited
+6,Auraiya,27295.09,13148.75,286.71,27395.98,Over Exploited
+7,Ayodhya,50208.72,15496.67,447.72,29116.43,Over Exploited
+8,Azamgarh,77689.97,24668.31,1265.19,36694.2,Over Exploited
+9,Bagpat,16395.8,7281.47,945.23,11750.52,Over Exploited
+10,Bahraich,82931.76,23687.5,2945.77,39374.11,Over Exploited
+11,Ballia,54838.75,15108.15,1799.62,23690.37,Over Exploited
+12,Balrampur,60833.88,13722.98,1398.21,22084.51,Over Exploited
+13,Banda,49916.03,8739.76,519.8,14125.53,Over Exploited
+14,Barabanki,77451.87,45634.27,1121.58,86298.92,Over Exploited
+15,Bareilly,72075.07,20247.69,1401.51,31304.69,Over Exploited
+16,Basti,67278.11,4154.43,662.66,11358.61,Over Exploited
+17,Bijnor,94119.36,18363.94,3865.7,32412.9,Over Exploited
+18,Budaun,64031.17,6336.39,1631.21,10432.41,Over Exploited
+19,Bulandshahar,43483.14,44703.01,1160.71,68698.67,Over Exploited
+20,Chandauli,30828.51,16308.56,279.63,9387.52,Over Exploited
+21,Chitrakoot,31991.6,4885.16,305.36,6690.62,Over Exploited
+22,Deoria,50878.85,43733.69,1580.82,50969.75,Over Exploited
+23,Etah,30538.68,16741.4,530.17,38759.43,Over Exploited
+24,Etawah,27126.28,15245.14,313.59,28572.34,Over Exploited
+25,Farrukhabad,30385.04,4011.6,492.27,12175.69,Over Exploited
+26,Fatehpur,60433.94,22384.96,276.01,33490.02,Over Exploited
+27,Firozabad,30861.37,16267.82,449.69,32977.57,Over Exploited
+28,G.B.Nagar,13548.84,14044.77,401.64,21631.4,Over Exploited
+29,Ghaziabad,15558.03,10401.85,539.38,16322.87,Over Exploited
+30,Ghazipur,58581.69,17562.94,445.32,28826.92,Over Exploited
+31,Gonda,77473.74,17055.08,1186.83,26537.04,Over Exploited
+32,Gorakhpur,72545.94,67327.45,2046.4,32058.82,Over Exploited
+33,Hamirpur,32695.52,5955.91,84.22,6918.95,Over Exploited
+34,Hapur,17850.63,12541.33,647.33,19242.5,Over Exploited
+35,Hardoi,96045.47,29847.31,2042.14,49922.89,Over Exploited
+36,Hathras,22377.11,16078.08,442.05,33804.59,Over Exploited
+37,Jalaun,64813.61,11745.63,513.29,26664.18,Over Exploited
+38,Jaunpur,68918.56,22980.69,214.94,38979.32,Over Exploited
+39,Jhansi,32707.65,17626.85,0,23823.38,Over Exploited
+40,Kannauj,24284.91,10621.87,675.64,23960.88,Over Exploited
+41,Kanpur Dehat,42732.68,12437.17,684.58,25488.88,Over Exploited
+42,Kanpur Nagar,42662.14,14131.02,918.52,30144.79,Over Exploited
+43,Kasganj,26858.88,13187.92,557.66,32695.34,Over Exploited
+44,Kaushambi,31495.86,7629.91,271.18,12010.7,Over Exploited
+45,Kushi Nagar,47036,69834.84,2263.39,54650.76,Over Exploited
+46,Lakhimpur Kheri,135182.42,33965.63,4730.12,54101.69,Over Exploited
+47,Lalitpur,16130.37,5596.5,0,17931.89,Over Exploited
+1,2,3,4,5,6,Safe
+1,Agra,37767.38,15917.84,547.66,34898.5,Over Exploited
+2,Aligarh,47094.18,16413.02,1607.99,34112.99,Over Exploited
+3,Ambedkar Nagar,52738.03,11897.75,392.18,15515.15,Over Exploited
+4,Amethi,40883,20985.23,891.9,27011.16,Over Exploited
+5,Amroha,39389.29,5775.79,1075.17,9287.74,Over Exploited
+6,Auraiya,27295.09,13148.75,286.71,27395.98,Over Exploited
+7,Ayodhya,50208.72,15496.67,447.72,29116.43,Over Exploited
+8,Azamgarh,77689.97,24668.31,1265.19,36694.2,Over Exploited
+9,Bagpat,16395.8,7281.47,945.23,11750.52,Over Exploited
+10,Bahraich,82931.76,23687.5,2945.77,39374.11,Over Exploited
+11,Ballia,54838.75,15108.15,1799.62,23690.37,Over Exploited
+12,Balrampur,60833.88,13722.98,1398.21,22084.51,Over Exploited
+13,Banda,49916.03,8739.76,519.8,14125.53,Over Exploited
+14,Barabanki,77451.87,45634.27,1121.58,86298.92,Over Exploited
+15,Bareilly,72075.07,20247.69,1401.51,31304.69,Over Exploited
+16,Basti,67278.11,4154.43,662.66,11358.61,Over Exploited
+17,Bijnor,94119.36,18363.94,3865.7,32412.9,Over Exploited
+18,Budaun,64031.17,6336.39,1631.21,10432.41,Over Exploited
+19,Bulandshahar,43483.14,44703.01,1160.71,68698.67,Over Exploited
+20,Chandauli,30828.51,16308.56,279.63,9387.52,Over Exploited
+21,Chitrakoot,31991.6,4885.16,305.36,6690.62,Over Exploited
+22,Deoria,50878.85,43733.69,1580.82,50969.75,Over Exploited
+23,Etah,30538.68,16741.4,530.17,38759.43,Over Exploited
+24,Etawah,27126.28,15245.14,313.59,28572.34,Over Exploited
+25,Farrukhabad,30385.04,4011.6,492.27,12175.69,Over Exploited
+26,Fatehpur,60433.94,22384.96,276.01,33490.02,Over Exploited
+27,Firozabad,30861.37,16267.82,449.69,32977.57,Over Exploited
+28,G.B.Nagar,13548.84,14044.77,401.64,21631.4,Over Exploited
+29,Ghaziabad,15558.03,10401.85,539.38,16322.87,Over Exploited
+30,Ghazipur,58581.69,17562.94,445.32,28826.92,Over Exploited
+31,Gonda,77473.74,17055.08,1186.83,26537.04,Over Exploited
+32,Gorakhpur,72545.94,67327.45,2046.4,32058.82,Over Exploited
+33,Hamirpur,32695.52,5955.91,84.22,6918.95,Over Exploited
+34,Hapur,17850.63,12541.33,647.33,19242.5,Over Exploited
+35,Hardoi,96045.47,29847.31,2042.14,49922.89,Over Exploited
+36,Hathras,22377.11,16078.08,442.05,33804.59,Over Exploited
+37,Jalaun,64813.61,11745.63,513.29,26664.18,Over Exploited
+38,Jaunpur,68918.56,22980.69,214.94,38979.32,Over Exploited
+39,Jhansi,32707.65,17626.85,0,23823.38,Over Exploited
+40,Kannauj,24284.91,10621.87,675.64,23960.88,Over Exploited
+41,Kanpur Dehat,42732.68,12437.17,684.58,25488.88,Over Exploited
+42,Kanpur Nagar,42662.14,14131.02,918.52,30144.79,Over Exploited
+43,Kasganj,26858.88,13187.92,557.66,32695.34,Over Exploited
+44,Kaushambi,31495.86,7629.91,271.18,12010.7,Over Exploited
+45,Kushi Nagar,47036,69834.84,2263.39,54650.76,Over Exploited
+46,Lakhimpur Kheri,135182.42,33965.63,4730.12,54101.69,Over Exploited
+47,Lalitpur,16130.37,5596.5,0,17931.89,Over Exploited
+1,2,3,4,5,6,Safe
+48,Lucknow,41061.25,16215.96,829.93,24931.87,Over Exploited
+49,Mahoba,9414.19,9214.76,0,12006.81,Over Exploited
+50,Mahrajganj,67261.11,20159.82,1967.16,23440.29,Over Exploited
+51,Mainpuri,37697.62,20442.84,420.64,36750.8,Over Exploited
+52,Mathura,35588.28,34097.49,792.68,68422.45,Over Exploited
+53,Maunath Bhanjan,30994.29,8775.42,458.75,10917,Over Exploited
+54,Meerut,43700.5,15496.76,1783.17,23473.15,Over Exploited
+55,Mirzapur,26904.55,16147.24,57.63,19459.4,Over Exploited
+56,Moradabad,40743.49,12152.21,1106.96,16853.36,Over Exploited
+57,Muzaffarnagar,44937.37,23481.67,3002.98,40023.55,Over Exploited
+58,Pilibhit,71381.88,15736.31,4156.95,28454.46,Over Exploited
+59,Pratapgarh,64142.56,31535.71,203.23,45815.11,Over Exploited
+60,Prayagraj,73683.7,29485.01,0,39855.89,Over Exploited
+61,Raibareli,56648.98,26150.55,225.36,41201.86,Over Exploited
+62,Rampur,47164.81,12417.3,1571.16,20161.62,Over Exploited
+63,Saharanpur,85630.26,21723.82,5245.01,37554.88,Over Exploited
+64,Sambhal,38062.91,3337.31,929.64,5378.31,Over Exploited
+65,Sant Kabir Nagar,42699.55,3681.91,764.46,6825.78,Over Exploited
+66,Sant Ravidas Nagar,18384.55,22134.41,181.48,47148.3,Over Exploited
+67,Shahjahanpur,88749.08,17684.61,2690.75,25398.16,Over Exploited
+68,Shamli,22183,9303.59,1482.92,14001.06,Over Exploited
+69,Shrawasti,43711.48,5042.14,1187.29,7609.34,Over Exploited
+70,Siddharth Nagar,68463.79,10570.4,1324.31,16110.72,Over Exploited
+71,Sitapur,96696.34,41773.65,2012.06,66705.43,Over Exploited
+72,Sonbhadra,15345.95,30046.28,129.25,11842.12,Over Exploited
+73,Sultanpur,49062.97,18731.17,174.63,26460.29,Over Exploited
+74,Unnao,65534.12,45310.28,966.14,62820.65,Over Exploited
+75,Varanasi,28608.47,9002.48,123.08,13485.96,Over Exploited
+2,3,4,5,6,7,Safe
+Lucknow,41061.25,16215.96,829.93,24931.87,83039.01,Over Exploited
+Mahoba,9414.19,9214.76,0,12006.81,30635.76,Over Exploited
+Mahrajganj,67261.11,20159.82,1967.16,23440.29,112828.38,Over Exploited
+Mainpuri,37697.62,20442.84,420.64,36750.8,95311.9,Over Exploited
+Mathura,35588.28,34097.49,792.68,68422.45,138900.9,Over Exploited
+Maunath Bhanjan,30994.29,8775.42,458.75,10917,51145.46,Over Exploited
+Meerut,43700.5,15496.76,1783.17,23473.15,84453.58,Over Exploited
+Mirzapur,26904.55,16147.24,57.63,19459.4,62568.82,Over Exploited
+Moradabad,40743.49,12152.21,1106.96,16853.36,70856.02,Over Exploited
+Muzaffarnagar,44937.37,23481.67,3002.98,40023.55,111445.57,Over Exploited
+Pilibhit,71381.88,15736.31,4156.95,28454.46,119729.6,Over Exploited
+Pratapgarh,64142.56,31535.71,203.23,45815.11,141696.61,Over Exploited
+Prayagraj,73683.7,29485.01,0,39855.89,143024.6,Over Exploited
+Raibareli,56648.98,26150.55,225.36,41201.86,124226.75,Over Exploited
+Rampur,47164.81,12417.3,1571.16,20161.62,81314.89,Over Exploited
+Saharanpur,85630.26,21723.82,5245.01,37554.88,150153.97,Over Exploited
+Sambhal,38062.91,3337.31,929.64,5378.31,47708.17,Over Exploited
+Sant Kabir Nagar,42699.55,3681.91,764.46,6825.78,53971.7,Over Exploited
+Sant Ravidas Nagar,18384.55,22134.41,181.48,47148.3,87848.74,Over Exploited
+Shahjahanpur,88749.08,17684.61,2690.75,25398.16,134522.6,Over Exploited
+Shamli,22183,9303.59,1482.92,14001.06,46970.57,Over Exploited
+Shrawasti,43711.48,5042.14,1187.29,7609.34,57550.25,Over Exploited
+Siddharth Nagar,68463.79,10570.4,1324.31,16110.72,96469.22,Over Exploited
+Sitapur,96696.34,41773.65,2012.06,66705.43,207187.48,Over Exploited
+Sonbhadra,15345.95,30046.28,129.25,11842.12,57363.6,Over Exploited
+Sultanpur,49062.97,18731.17,174.63,26460.29,94429.06,Over Exploited
+Unnao,65534.12,45310.28,966.14,62820.65,174631.19,Over Exploited
+Varanasi,28608.47,9002.48,123.08,13485.96,51219.99,Over Exploited
+Total(Ham),3643421.97,1412285.13,80646.31,2147412.74,7283766.15,Over Exploited
+Total(Bcm),36.43,14.12,0.81,21.47,72.84,Semi Critical
+1,2,3,4,5,6,Safe
+1,Dehradun,50923.02,1128.82,2995.42,1666.98,Over Exploited
+2,Haridwar,28302.56,6353.12,3577.67,9257.4,Over Exploited
+3,Nainital,17510.26,3377.49,4236.36,4911.83,Over Exploited
+4,Udhamsingh Nagar,56327.8,10111.94,3064.31,10107.27,Over Exploited
+1,2,3,4,5,6,Safe
+1,Dehradun,50923.02,1128.82,2995.42,1666.98,Over Exploited
+2,Haridwar,28302.56,6353.12,3577.67,9257.4,Over Exploited
+3,Nainital,17510.26,3377.49,4236.36,4911.83,Over Exploited
+4,Udhamsingh Nagar,56327.8,10111.94,3064.31,10107.27,Over Exploited
+1,2,3,4,5,6,Safe
+1,Alipurduar,102782.18,1129.37,21452.15,3720.79,Over Exploited
+2,Bankura,98606.75,16416.39,16172.89,28068.81,Over Exploited
+3,Birbhum,76350.59,8665.36,12368.14,16675.75,Over Exploited
+4,Dakshin Dinajpur,66147.9,9075.83,12931.9,25943.2,Over Exploited
+5,Darjiling,34042.06,669.29,7397.67,995.72,Over Exploited
+6,Haora,16999.38,894.68,3325.09,1407.08,Over Exploited
+7,Hugli,80800.27,9608.55,16644.65,23547.14,Over Exploited
+8,Jalpaiguri,150286.43,1952.77,30717.68,5401.85,Over Exploited
+9,Jhargram,72564.12,4441.66,15109.92,9454.55,Over Exploited
+10,Kalimpong,3156.89,189.21,557.84,98.37,Critical
+11,Koch Bihar,135906.96,9098.87,30837,31483.46,Over Exploited
+12,Kolkatta,0,0,0,0,Safe
+13,Malda,81201.35,7077.97,13223.48,16329.5,Over Exploited
+14,Murshidabad,114827.81,14324.54,27520.69,40081.53,Over Exploited
+15,Nadia,98234.39,21137.11,22470.15,48156.69,Over Exploited
+16,North 24 Parganas,77294.08,14869.44,19096.05,41919.93,Over Exploited
+17,Paschim Barddhaman,16135.16,1922.65,3513.51,3311.51,Over Exploited
+18,Paschim Medinipur,158148.85,13401.26,29960.86,39812.52,Over Exploited
+19,Purba Barddhaman,123035.46,17317.07,25331.09,39049.86,Over Exploited
+20,Purba Medinipur,45870.98,3083.32,10246.14,7916.12,Over Exploited
+21,Puruliya,33532.12,8787.68,5742.81,10513.97,Over Exploited
+22,South 24 Parganas,0,0,0,0,Safe
+23,Uttar Dinajpur,78855.65,6775.3,15478.61,19374.91,Over Exploited
+1,2,3,4,5,6,Safe
+1,Alipurduar,102782.18,1129.37,21452.15,3720.79,Over Exploited
+2,Bankura,98606.75,16416.39,16172.89,28068.81,Over Exploited
+3,Birbhum,76350.59,8665.36,12368.14,16675.75,Over Exploited
+4,Dakshin Dinajpur,66147.9,9075.83,12931.9,25943.2,Over Exploited
+5,Darjiling,34042.06,669.29,7397.67,995.72,Over Exploited
+6,Haora,16999.38,894.68,3325.09,1407.08,Over Exploited
+7,Hugli,80800.27,9608.55,16644.65,23547.14,Over Exploited
+8,Jalpaiguri,150286.43,1952.77,30717.68,5401.85,Over Exploited
+9,Jhargram,72564.12,4441.66,15109.92,9454.55,Over Exploited
+10,Kalimpong,3156.89,189.21,557.84,98.37,Critical
+11,Koch Bihar,135906.96,9098.87,30837,31483.46,Over Exploited
+12,Kolkatta,0,0,0,0,Safe
+13,Malda,81201.35,7077.97,13223.48,16329.5,Over Exploited
+14,Murshidabad,114827.81,14324.54,27520.69,40081.53,Over Exploited
+15,Nadia,98234.39,21137.11,22470.15,48156.69,Over Exploited
+16,North 24 Parganas,77294.08,14869.44,19096.05,41919.93,Over Exploited
+17,Paschim Barddhaman,16135.16,1922.65,3513.51,3311.51,Over Exploited
+18,Paschim Medinipur,158148.85,13401.26,29960.86,39812.52,Over Exploited
+19,Purba Barddhaman,123035.46,17317.07,25331.09,39049.86,Over Exploited
+20,Purba Medinipur,45870.98,3083.32,10246.14,7916.12,Over Exploited
+21,Puruliya,33532.12,8787.68,5742.81,10513.97,Over Exploited
+22,South 24 Parganas,0,0,0,0,Safe
+23,Uttar Dinajpur,78855.65,6775.3,15478.61,19374.91,Over Exploited
+1,2,"3
+4","5
+6",7,8,Safe
+1,N & M Andaman,"9538.75
+73.12","6116.57
+78.78",15807.22,1580.73,Over Exploited
+2,Nicobar,"4732.16
+7.46","6264.08
+8.68",11012.38,1101.25,Over Exploited
+3,South Andaman,"5974.52
+13.76","4802.74
+6.7",10797.72,1079.76,Over Exploited
+1,2,"3
+4","5
+6",7,8,Safe
+1,N & M Andaman,"9538.75
+73.12","6116.57
+78.78",15807.22,1580.73,Over Exploited
+2,Nicobar,"4732.16
+7.46","6264.08
+8.68",11012.38,1101.25,Over Exploited
+3,South Andaman,"5974.52
+13.76","4802.74
+6.7",10797.72,1079.76,Over Exploited
+1,2,"3
+4","5
+6",7,8,Safe
+1,Dadra Nagar Haveli,"5876.08
+661.93","329.73
+1948.12",8815.86,582.76,Over Exploited
+2,Daman,"2824.29
+41.21","0
+71.91",2937.41,146.88,Over Exploited
+3,Diu,"545.42
+14.13","0
+23.09",582.64,29.13,Safe
+1,2,"3
+4","5
+6",7,8,Safe
+1,Dadra Nagar Haveli,"5876.08
+661.93","329.73
+1948.12",8815.86,582.76,Over Exploited
+2,Daman,"2824.29
+41.21","0
+71.91",2937.41,146.88,Over Exploited
+3,Diu,"545.42
+14.13","0
+23.09",582.64,29.13,Safe
+1,2,3,4,5,6,Safe
+1,Anantnag,2859.55,595.48,10288.85,201.3,Over Exploited
+2,Bandipora,1084.76,102.35,5300.9,0.2,Safe
+3,Baramulla,2685.07,1230.72,12823.78,418.08,Over Exploited
+4,Barmulla,0,0,0,0,Safe
+5,Budgam,830.09,1329.3,2858.94,258.44,Over Exploited
+6,Doda,64.93,661.15,151.76,161.07,Over Exploited
+7,Ganderbal,118.96,224.57,401.75,194.47,Over Exploited
+8,Jammu,32569.62,4632.75,7492.26,2040.93,Over Exploited
+9,Kathua,16775.04,2539.46,3666.44,1630.47,Over Exploited
+10,Kishtwar,224.72,372.5,525.22,195,Over Exploited
+11,Kulgam,1173.59,1112.51,4222.68,303.03,Over Exploited
+12,Kupwara,0,0,0,0,Safe
+13,Kupwarar,629.85,1933.65,3077.84,607.5,Over Exploited
+14,Mirpur,0,0,0,0,Safe
+15,Muzaffarabad,0,0,0,0,Safe
+16,Poonch,291.25,2561.6,1637.61,664.76,Over Exploited
+17,Pulwama,1087.05,1502.5,3800.95,337.6,Over Exploited
+18,Rajouri,19612.89,2108.04,6012.14,1002.39,Over Exploited
+19,Ramban,55.74,221.85,313.38,116.55,Over Exploited
+20,Reasi,8051.09,9283.22,2510.85,4450.68,Over Exploited
+21,Samba,15932.45,1410.3,3501.07,1078.02,Over Exploited
+22,Shopian,1322.94,904.5,4759.97,397.26,Over Exploited
+23,Srinagar,2539.46,468.27,8576.26,623.46,Over Exploited
+24,Srinagar Hilly Area,0,0,0,0,Safe
+25,Udhampur,11468.81,2108.87,3177.43,729.79,Over Exploited
+1,2,3,4,5,6,Safe
+1,Anantnag,2859.55,595.48,10288.85,201.3,Over Exploited
+2,Bandipora,1084.76,102.35,5300.9,0.2,Safe
+3,Baramulla,2685.07,1230.72,12823.78,418.08,Over Exploited
+4,Barmulla,0,0,0,0,Safe
+5,Budgam,830.09,1329.3,2858.94,258.44,Over Exploited
+6,Doda,64.93,661.15,151.76,161.07,Over Exploited
+7,Ganderbal,118.96,224.57,401.75,194.47,Over Exploited
+8,Jammu,32569.62,4632.75,7492.26,2040.93,Over Exploited
+9,Kathua,16775.04,2539.46,3666.44,1630.47,Over Exploited
+10,Kishtwar,224.72,372.5,525.22,195,Over Exploited
+11,Kulgam,1173.59,1112.51,4222.68,303.03,Over Exploited
+12,Kupwara,0,0,0,0,Safe
+13,Kupwarar,629.85,1933.65,3077.84,607.5,Over Exploited
+14,Mirpur,0,0,0,0,Safe
+15,Muzaffarabad,0,0,0,0,Safe
+16,Poonch,291.25,2561.6,1637.61,664.76,Over Exploited
+17,Pulwama,1087.05,1502.5,3800.95,337.6,Over Exploited
+18,Rajouri,19612.89,2108.04,6012.14,1002.39,Over Exploited
+19,Ramban,55.74,221.85,313.38,116.55,Over Exploited
+20,Reasi,8051.09,9283.22,2510.85,4450.68,Over Exploited
+21,Samba,15932.45,1410.3,3501.07,1078.02,Over Exploited
+22,Shopian,1322.94,904.5,4759.97,397.26,Over Exploited
+23,Srinagar,2539.46,468.27,8576.26,623.46,Over Exploited
+24,Srinagar Hilly Area,0,0,0,0,Safe
+25,Udhampur,11468.81,2108.87,3177.43,729.79,Over Exploited
+1,Andhra Pradesh,679,591,87.0,38,Safe
+3,Assam,245,244,99.59,1,Safe
+4,Bihar,535,473,88.41,49,Safe
+5,Chhattisgarh,146,120,82.19,21,Safe
+7,Gujarat,252,184,73.02,24,Safe
+8,Haryana,143,36,25.17,8,Safe
+10,Jharkhand,263,240,91.25,12,Safe
+11,Karnataka,237,144,60.76,33,Safe
+12,Kerala,152,120,78.95,29,Safe
+13,Madhya Pradesh,317,225,70.98,61,Safe
+14,Maharashtra,359,302,84.12,41,Safe
+19,Odisha,314,299,95.22,9,Safe
+20,Punjab,153,22,14.38,12,Safe
+21,Rajasthan,302,37,12.25,21,Safe
+23,Tamil Nadu,313,127,40.58,55,Safe
+24,Telangana,620,490,79.03,85,Semi Critical
+26,Uttar Pradesh,836,566,67.7,165,Over Exploited
+27,Uttarakhand,20,16,80,4,Safe
+28,West Bengal,345,239,69.28,36,Safe
+32,Delhi,34,5,14.71,2,Safe
+34,Ladakh,18,17,94.44,1,Safe
+35,Lakshadweep,5,4,80,1,Safe
+36,Puducherry,8,3,37.50,3,Safe
+5,Sri Sathya Sai,32,22,68.75,5,Safe
+11,Palnadu,28,26,92.86,1,Safe
+13,Y.S.R Kadapa,36,32,88.89,4,Safe
+14,Ananthapuramu,32,31,96.88,1,Safe
+15,Chittoor,31,21,67.74,10,Safe
+16,East Godavari,19,15,78.95,4,Safe
+19,Kurnool,26,25,96.15,1,Safe
+20,Prakasam,38,30,78.95,5,Safe
+21,Visakhapatnam,11,7,63.64,4,Safe
+23,Annamayya,30,28,93.33,2,Safe
+31,Rohtas,19,17,89.47,2,Safe
+32,Samastipur,20,14,70,4,Safe
+34,Sheikhpura,6,5,83.33,1,Safe
+36,Vaishali,16,10,62.5,2,Safe
+1,Balod,5,2,40,2,Safe
+7,Bilaspur,4,2,50,2,Safe
+9,Dhamtari,4,2,50,2,Safe
+10,Durg,3,1,33.33,2,Safe
+11,Gariaband,5,4,80,1,Safe
+15,Kabirdham,4,3,75,1,Safe
+16,Kanker,7,6,85.71,1,Safe
+21,Mahasamund,5,3,60,2,Safe
+26,Raigarh,7,6,85.71,1,Safe
+28,Rajnandgaon,4,1,25,3,Safe
+32,Surajpur,6,5,83.33,1,Safe
+1,Ahmedabad,10,4,40.00,2,Safe
+2,Amreli,11,10,90.91,1,Safe
+8,Botad,4,3,75,1,Safe
+12,Devbhumi Dwarka,4,2,50,2,Safe
+15,Jamnagar,6,5,83.33,1,Safe
+20,Mahisagar,6,5,83.33,1,Safe
+22,Narmada,5,4,80,1,Safe
+27,Rajkot,12,6,50,6,Safe
+28,Sabarkantha,8,6,75,1,Safe
+29,Surat,10,8,80,1,Safe
+30,Surendranagar,10,9,90,1,Safe
+32,Vadodara,9,5,55.56,1,Safe
+1,Agar Malwa,4,1,25,1,Safe
+3,Anuppur,4,3,75,1,Safe
+4,Ashoknagar,4,2,50,2,Safe
+6,Barwani,7,5,71.43,1,Safe
+7,Betul,10,8,80,2,Safe
+10,Burhanpur,2,1,50,1,Safe
+11,Chhatarpur,8,4,50,4,Safe
+12,Chhindwara,11,8,72.73,2,Safe
+13,Damoh,7,6,85.71,1,Safe
+15,Dewas,6,3,50,1,Safe
+18,Guna,5,4,80,1,Safe
+19,Gwalior,5,4,80,1,Safe
+21,Hoshangabad,7,6,85.71,1,Safe
+23,Jabalpur,8,7,87.5,1,Safe
+24,Jhabua,6,5,83.33,1,Safe
+26,Khandwa,7,6,85.71,1,Safe
+1,Ahmednagar,14,4,28.57,5,Safe
+2,Akola,7,6,85.71,1,Safe
+3,Amravati,14,8,57.14,3,Safe
+4,Aurangabad,9,8,88.89,1,Safe
+7,Buldhana,13,8,61.54,3,Safe
+13,Jalgaon,15,3,20.00,10,Safe
+22,Nashik,15,9,60.00,4,Safe
+26,Pune,14,9,64.29,4,Safe
+29,Sangli,10,9,90.00,1,Safe
+30,Satara,11,9,81.82,2,Safe
+32,Solapur,11,3,27.27,7,Safe
+1,Angul,8,7,87.5,1,Safe
+2,Balasore,12,11,91.67,1,Safe
+13,Jajpur,10,9,90,1,Safe
+14,Jharsuguda,5,4,80,1,Safe
+19,Khurda,10,7,70,3,Safe
+24,Nayagarh,8,7,87.5,1,Safe
+25,Nuapada,5,4,80,1,Safe
+5,Bikaner,8,3,37.5,1,Safe
+15,Tonk,6,1,16.67,1,Safe
+19,Dungarpur,10,8,80,2,Safe
+23,Bundi,5,1,20,1,Safe
+25,Barmer,17,1,5.88,1,Safe
+28,Hanumangarh,7,5,71.43,1,Safe
+29,Banswara,11,5,45.45,5,Safe
+31,Pali,10,1,10,1,Safe
+1,Jagtial,20,17,85,3,Safe
+3,Kamareddy,25,22,88,3,Safe
+4,Medak,21,12,57.14,8,Safe
+6,Mahabubnagar,17,9,52.94,7,Safe
+7,Narayanpet,13,10,76.92,3,Safe
+10,Khammam,21,18,85.71,2,Safe
+12,Nalgonda,33,25,75.76,6,Safe
+14,Rangareddy,27,16,59.26,6,Safe
+15,Rajanna Siricilla,13,11,84.62,2,Safe
+19,Peddapalle,14,13,92.86,1,Safe
+21,Jangaon,12,10,83.33,1,Safe
+22,Jogulamba Gadwal,13,12,92.31,1,Safe
+23,Mahabubabad,18,15,83.33,3,Safe
+25,Medchal Malkajgiri,15,5,33.33,5,Safe
+26,Nagarkurnool,20,18,90,2,Safe
+27,Nizamabad,33,25,75.76,7,Safe
+28,Sangareddy,28,23,82.14,4,Safe
+29,Siddipet,26,17,65.38,8,Safe
+32,Hanumakonda,14,10,71.43,4,Safe
+33,Yadadri Bhuvanagiri,17,6,35.29,5,Safe
+1,Purba Barddhaman,23,18,78.26,5,Safe
+2,Murshidabad,26,19,73.08,6,Safe
+4,North 24 Parganas,22,8,36.36,6,Safe
+6,Malda,15,14,93.33,1,Safe
+13,Hugli,18,15,83.33,3,Safe
+17,Bankura,22,21,95.45,1,Safe
+19,Dakshin Dinajpur,8,6,75,2,Safe
+20,Nadia,18,3,16.67,9,Safe
+23,Paschim Medinipur,21,18,85.71,3,Safe
+1,Andhra Pradesh,26411.44,25186.08,95.36,897.37,Over Exploited
+3,Assam,20891.31,20849.84,99.80,41.47,Safe
+4,Bihar,30954.51,28524.13,92.15,1995.40,Over Exploited
+5,Chhattisgarh,12927.34,10132.06,78.38,2334.88,Over Exploited
+7,Gujarat,25578.51,20121.22,78.66,2389.22,Over Exploited
+8,Haryana,9358.58,2138.84,22.85,568.22,Over Exploited
+10,Jharkhand,5757.56,5302.35,92.09,259.77,Over Exploited
+11,Karnataka,16881.48,10783.49,63.88,2358.88,Over Exploited
+12,Kerala,5129.67,4240.06,82.66,752.74,Over Exploited
+13,Madhya Pradesh,33989.73,23437.40,68.95,6464.26,Over Exploited
+14,Maharashtra,31147.44,25212.56,80.95,4317.33,Over Exploited
+19,Odisha,16041.33,15546.24,96.91,495.09,Over Exploited
+20,Punjab,17633.77,3250.53,18.43,1044.85,Over Exploited
+21,Rajasthan,11374.61,1216.98,10.70,930.04,Over Exploited
+23,Tamil Nadu,19461.53,9197.84,47.26,3550.20,Over Exploited
+24,Telangana,18442.87,16150.68,87.57,1742.45,Over Exploited
+26,Uttar Pradesh,66375.17,47105.34,70.97,12109.78,Over Exploited
+27,Uttarakhand,1964.07,1583.97,80.65,380.10,Over Exploited
+28,West Bengal,23562.00,19403.24,82.35,3007.80,Over Exploited
+32,Delhi,341.90,72.34,21.16,12.16,Safe
+34,Ladakh,60.68,54.85,90.39,5.83,Safe
+35,Lakshadweep,5.70,4.31,75.60,1.39,Safe
+36,Puducherry,173.48,40.58,23.39,108.82,Over Exploited
+3,Ananthapuramu,1158.74,1129.57,97.48,29.18,Safe
+4,Annamayya,822.42,793.85,96.53,28.57,Safe
+6,Chittoor,859.04,583.88,67.97,275.16,Over Exploited
+7,East Godavari,1019.25,872.29,85.58,146.96,Over Exploited
+13,Kurnool,640.82,626.39,97.75,14.43,Safe
+16,Palnadu,964.02,914.48,94.86,31.28,Safe
+18,Prakasam,934.19,771.61,82.60,115.00,Over Exploited
+19,Sri Potti Sriramulu Nellore,1871.25,1819.33,97.22,51.93,Safe
+20,Sri Sathya Sai,1139.00,848.51,74.50,127.08,Over Exploited
+23,Visakhapatnam,119.91,105.47,87.96,14.44,Safe
+26,Y.S.R Kadapa,1018.83,955.49,93.78,63.34,Safe
+6,Kamrup (M),233.68,192.22,82.26,41.47,Safe
+1,Begusarai,506.76,424.34,83.74,82.41,Semi Critical
+4,Nawada,625.7,479.02,76.56,146.68,Over Exploited
+7,Kaimur,748.95,684.13,91.35,64.82,Safe
+9,Bhojpur,789.71,664.04,84.09,125.67,Over Exploited
+17,Gaya,1194.81,974.67,81.58,220.14,Over Exploited
+19,Jehanabad,297.05,107.32,36.13,114.09,Over Exploited
+27,Muzaffarpur,1120,756.5,67.54,317.32,Over Exploited
+28,Nalanda,580.03,220.69,38.05,316.94,Over Exploited
+29,Patna,982.19,746.83,76.04,189.9,Over Exploited
+31,Rohtas,1065.05,936.11,87.89,128.93,Over Exploited
+32,Samastipur,804.34,552.91,68.74,197.65,Over Exploited
+34,Sheikhpura,163.31,139.38,85.34,23.93,Safe
+36,Vaishali,730.85,492.41,67.38,66.9,Safe
+1,Balod,358.66,150.06,41.84,134.6,Over Exploited
+7,Bilaspur,464.69,173.96,37.44,290.73,Over Exploited
+9,Dhamtari,616.59,231.91,37.61,384.68,Over Exploited
+10,Durg,390.7,135.23,34.61,255.47,Over Exploited
+11,Gariaband,337.69,251.8,74.56,85.89,Semi Critical
+15,Kabirdham,657.26,550.65,83.78,106.61,Over Exploited
+16,Kanker,658.27,573.2,87.08,85.07,Semi Critical
+21,Mahasamund,938.24,619.2,66,319.04,Over Exploited
+26,Raigarh,383.11,341.47,89.13,41.64,Safe
+28,Rajnandgaon,352.03,101.09,28.72,250.94,Over Exploited
+30,Sarangarh-Bilairagh,227.96,160.55,70.43,67.41,Safe
+1,Ahmedabad,422.52,183.36,43.4,107.53,Over Exploited
+2,Amreli,1426.38,1386.63,97.21,39.76,Safe
+8,Botad,415.48,290.75,69.98,124.73,Over Exploited
+12,Devbhumi Dwarka,417.98,162.89,38.97,255.09,Over Exploited
+15,Jamnagar,1362.28,1293.73,94.97,68.56,Safe
+20,Mahisagar,306.04,274.86,89.81,31.18,Safe
+22,Narmada,386.93,206.25,53.3,180.68,Over Exploited
+27,Rajkot,1638.04,931.36,56.86,706.68,Over Exploited
+28,Sabarkantha,761.58,511.21,67.13,175,Over Exploited
+29,Surat,1344.69,1114.57,82.89,107.57,Over Exploited
+30,Surendranagar,760.58,711.06,93.49,49.53,Safe
+32,Vadodara,1026.33,656.8,63.99,38.8,Safe
+4,Jind,782.71,134.09,17.13,63.86,Safe
+16,Palwal,392.41,155.91,39.73,75.82,Semi Critical
+2,Giridih,400.31,363.84,90.89,36.47,Safe
+4,Garhwa,273.72,246.41,90.02,27.31,Safe
+12,Deoghar,160.86,127.57,79.3,33.3,Safe
+13,Dhanbad,258.56,64.54,24.96,120.72,Over Exploited
+15,Hazaribagh,320.29,310.61,96.98,9.68,Safe
+18,Koderma,62.09,43.39,69.88,10.09,Safe
+22,Ranchi,369.33,288.73,78.17,22.2,Safe
+1,Bagalkot,588.12,127.67,21.71,297.73,Over Exploited
+3,Belagavi,1086.56,523.56,48.18,393.96,Over Exploited
+6,Bidar,337.57,248.27,73.55,89.3,Semi Critical
+12,Davanagere,553.88,223.11,40.28,68.46,Safe
+14,Gadag,298.76,62.32,20.86,176.58,Over Exploited
+16,Haveri,515.2,237.53,46.1,240.49,Over Exploited
+20,Koppal,586.46,298.09,50.83,166.35,Over Exploited
+21,Mandya,649.84,509.66,78.43,140.18,Over Exploited
+23,Raichur,713.5,593.49,83.18,120.01,Over Exploited
+26,Tumakuru,762.73,254.76,33.4,67.93,Safe
+30,Vijayapura,903.15,863.9,95.65,39.24,Safe
+31,Yadgir,540.51,383.89,71.02,156.62,Over Exploited
+2,Idukki,191.44,147.12,76.85,44.32,Safe
+5,Thiruvananthapuram,267.68,188.76,70.52,78.92,Semi Critical
+6,Thrissur,578.42,479.2,82.85,99.21,Critical
+8,Kannur,406.1,345.3,85.03,60.8,Safe
+9,Malappuram,475.6,253.8,53.36,221.8,Over Exploited
+10,Kozhikkode,314.23,233.19,74.21,81.04,Semi Critical
+11,Kollam,338.1,284.81,84.24,53.28,Safe
+12,Kasargod,317.05,211.23,66.63,59.56,Safe
+14,Palakkad,584.17,439.74,75.28,53.81,Safe
+1,Agar Malwa,414.48,113.01,27.27,104.43,Over Exploited
+3,Anuppur,282.38,238.54,84.48,43.84,Safe
+4,Ashoknagar,369.93,218.72,59.12,151.21,Over Exploited
+6,Barwani,532.83,364.79,68.46,106.78,Over Exploited
+7,Betul,1001.4,748.01,74.7,253.39,Over Exploited
+10,Burhanpur,342.27,163.62,47.8,178.65,Over Exploited
+11,Chhatarpur,837.93,454.06,54.19,383.86,Over Exploited
+12,Chhindwara,1016.71,700.19,68.87,215.14,Over Exploited
+13,Damoh,376.3,315.74,83.91,60.55,Safe
+15,Dewas,834.78,452.55,54.21,120.82,Over Exploited
+18,Guna,848.7,657.49,77.47,191.2,Over Exploited
+19,Gwalior,771.82,719.49,93.22,52.33,Safe
+21,Hoshangabad,1774.29,1575.69,88.81,198.6,Over Exploited
+23,Jabalpur,611.77,578.24,94.52,33.52,Safe
+24,Jhabua,258.79,237.54,91.79,21.25,Safe
+26,Khandwa,1138.8,1014.34,89.07,124.46,Over Exploited
+27,Khargone,952.85,891.73,93.59,61.12,Safe
+31,Narsinghpur,1197.78,976.36,81.51,221.42,Over Exploited
+35,Raisen,919.75,823.63,89.55,96.12,Critical
+38,Rewa,515.58,430.12,83.42,85.46,Semi Critical
+40,Satna,740.89,400.32,54.03,340.57,Over Exploited
+45,Sheopur,513.52,419.06,81.61,94.45,Critical
+46,Shivpuri,827.07,366.55,44.32,460.53,Over Exploited
+52,Vidisha,902.69,672.89,74.54,229.8,Over Exploited
+1,Ahmednagar,1528.88,466.88,30.54,560.66,Over Exploited
+2,Akola,368.57,312.12,84.69,56.44,Safe
+3,Amravati,778.22,383.78,49.31,231.93,Over Exploited
+4,Aurangabad,1125.55,1076.42,95.64,49.12,Safe
+7,Buldhana,863.21,536.04,62.10,234.24,Over Exploited
+13,Jalgaon,1369.88,237.66,17.35,947.59,Over Exploited
+22,Nashik,1897.71,1133.76,59.74,425.97,Over Exploited
+26,Pune,1804.59,1107.45,61.37,555.12,Over Exploited
+29,Sangli,1317.41,1203.87,91.38,113.54,Over Exploited
+30,Satara,1046.98,794.39,75.87,252.59,Over Exploited
+32,Solapur,1388.55,302.28,21.77,890.13,Over Exploited
+1,Angul,547.06,516.31,94.38,30.75,Safe
+2,Balasore,1308.44,1242.57,94.97,65.87,Safe
+13,Jajpur,522.63,435.01,83.24,87.61,Semi Critical
+14,Jharsuguda,194.89,156.06,80.08,38.83,Safe
+19,Khurda,427.63,284.27,66.48,143.36,Over Exploited
+24,Nayagarh,358.48,318.15,88.75,40.32,Safe
+25,Nuapada,310.3,221.96,71.53,88.34,Semi Critical
+1,Fazilka,864.44,551.47,63.79,54.88,Safe
+2,Pathankot,439.41,361.37,82.24,78.04,Semi Critical
+6,Hoshiarpur,815.47,64.64,7.93,246.74,Over Exploited
+12,Mansa,618.12,182.35,29.5,219.79,Over Exploited
+13,Bathinda,1090.06,382.3,35.07,175.57,Over Exploited
+16,Rupnagar,395.4,153.57,38.84,75.72,Semi Critical
+20,Sbs Nagar,498.8,26.66,5.34,117.9,Over Exploited
+23,Gurdaspur,1525.77,82.96,5.44,34,Safe
+5,Bikaner,281.05,75.72,26.94,38.82,Safe
+15,Tonk,400.87,53.75,13.41,70.81,Semi Critical
+19,Dungarpur,202.32,142.21,70.29,60.11,Safe
+23,Bundi,319.2,43.98,13.78,77.82,Semi Critical
+25,Barmer,352.51,29.49,8.37,11.12,Safe
+28,Hanumangarh,205.44,168.19,81.87,37.25,Safe
+29,Banswara,208.55,113.02,54.19,80.36,Semi Critical
+31,Pali,308.28,3.31,1.07,10.98,Safe
+1,Ariyalur,343.40,313.27,91.23,30.13,Safe
+2,Chengalpattu,565.84,241.10,42.61,324.74,Over Exploited
+3,Chennai,92.97,20.91,22.49,8.57,Safe
+4,Coimbatore,544.22,116.08,21.33,23.01,Safe
+5,Cuddalore,1009.41,538.93,53.39,57.37,Safe
+6,Dharmapuri,430.30,82.74,19.23,101.86,Over Exploited
+7,Dindigul,560.88,36.66,6.54,126.14,Over Exploited
+8,Erode,663.70,243.43,36.68,248.60,Over Exploited
+9,Kallakurichchi,610.34,238.80,39.13,157.53,Over Exploited
+13,Krishnagiri,438.86,79.86,18.20,93.16,Critical
+14,Madurai,733.67,421.12,57.40,214.53,Over Exploited
+17,Namakkal,542.17,20.71,3.82,52.56,Safe
+19,Pudukkottai,872.95,740.22,84.80,132.73,Over Exploited
+21,Ranipet,258.30,0.00,0.00,184.80,Over Exploited
+24,Tenkasi,523.84,211.63,40.40,133.33,Over Exploited
+27,Theni,282.66,145.01,51.30,85.85,Semi Critical
+29,Thoothukudi,620.13,564.83,91.08,55.31,Safe
+30,Tiruchirappalli,724.93,402.03,55.46,43.74,Safe
+31,Tirunelveli,757.89,680.08,89.73,77.80,Semi Critical
+33,Tiruppur,559.44,222.08,39.70,135.24,Over Exploited
+34,Tiruvallur,786.56,717.92,91.27,68.64,Safe
+35,Tiruvannamalai,1101.46,270.87,24.59,482.00,Over Exploited
+37,Villupuram,934.25,337.31,36.10,107.85,Over Exploited
+38,Virudhunagar,747.36,354.94,47.49,345.06,Over Exploited
+1,Jagtial,513.05,474.96,92.58,38.09,Safe
+3,Kamareddy,618.70,566.62,91.58,52.08,Safe
+4,Medak,439.47,297.17,67.62,126.53,Over Exploited
+6,Mahabubnagar,315.28,175.94,55.80,119.39,Over Exploited
+7,Narayanpet,259.89,232.00,89.27,27.89,Safe
+10,Khammam,935.87,805.10,86.03,102.98,Over Exploited
+12,Nalgonda,1093.40,899.51,82.27,141.52,Over Exploited
+14,Rangareddy,521.59,378.49,72.56,110.06,Over Exploited
+15,Rajanna Siricilla,458.07,410.07,89.52,48.00,Safe
+19,Peddapalle,447.55,408.05,91.18,39.49,Safe
+20,Bhadradri Kothagudem,987.16,856.57,86.77,115.42,Over Exploited
+21,Jangaon,345.59,306.02,88.55,14.60,Safe
+22,Jogulamba Gadwal,357.61,340.52,95.22,17.10,Safe
+23,Mahabubabad,561.58,500.13,89.06,61.45,Safe
+25,Medchal Malkajgiri,94.65,34.39,36.33,37.49,Safe
+26,Nagarkurnool,729.05,682.61,93.63,46.44,Safe
+27,Nizamabad,944.27,742.36,78.62,201.00,Over Exploited
+28,Sangareddy,375.17,314.09,83.72,43.13,Safe
+29,Siddipet,606.17,437.05,72.10,141.90,Over Exploited
+32,Hanumakonda,476.54,370.19,77.68,106.35,Over Exploited
+33,Yadadri Bhuvanagiri,735.33,384.52,52.29,140.84,Over Exploited
+2,Saharanpur,1372.2,296.3,21.59,593.87,Over Exploited
+6,Chandauli,514.22,467.68,90.95,46.54,Safe
+7,Mirzapur,570.6,451.05,79.05,73.84,Semi Critical
+10,Kanpur Dehat,735.6,457.37,62.18,278.24,Over Exploited
+11,Chitrakoot,400.47,89.32,22.3,204.43,Over Exploited
+14,Jaunpur,1191.75,816.57,68.52,375.18,Over Exploited
+18,Kaushambi,462.67,138.76,29.99,258.72,Over Exploited
+24,Hathras,654.32,160.37,24.51,228.75,Over Exploited
+25,Budaun,761.51,202.87,26.64,368.98,Over Exploited
+26,Bulandshahar,1453.93,89.78,6.18,552.03,Over Exploited
+27,Amethi,811.1,716.59,88.35,94.51,Critical
+28,Bareilly,1142.4,922.26,80.73,147.8,Over Exploited
+30,Jhansi,673.59,428.46,63.61,245.13,Over Exploited
+31,Aligarh,912.87,393.5,43.11,442.43,Over Exploited
+32,Bijnor,1351.19,971.76,71.92,261.37,Over Exploited
+35,Kannauj,542.51,320.25,59.03,101.11,Over Exploited
+36,Etah,784.39,276.63,35.27,507.76,Over Exploited
+37,Varanasi,466.31,123.57,26.5,165.4,Over Exploited
+38,Lucknow,766.35,624.38,81.48,66.21,Safe
+47,Pratapgarh,1295.28,545.83,42.14,439.26,Over Exploited
+49,Mainpuri,862.35,548.21,63.57,269.76,Over Exploited
+51,Meerut,776.91,340.25,43.8,322.52,Over Exploited
+53,Fatehpur,1066.03,682.27,64,268.38,Over Exploited
+54,Kasganj,665.87,420.89,63.21,244.99,Over Exploited
+57,Sambhal,434.39,58.79,13.53,198.47,Over Exploited
+63,Kanpur Nagar,800.26,214.48,26.8,446.73,Over Exploited
+65,Ghazipur,956.55,888.28,92.86,68.26,Safe
+66,Sonbhadra,517.68,478.77,92.48,38.91,Safe
+67,Hamirpur,413.46,289.59,70.04,123.87,Over Exploited
+69,Farrukhabad,436.02,214.31,49.15,221.7,Over Exploited
+72,Muzaffarnagar,1028.13,472.83,45.99,213.77,Over Exploited
+73,Prayagraj,1289.86,772.24,59.87,413.72,Over Exploited
+74,Rampur,742.88,362.21,48.76,380.67,Over Exploited
+2,Haridwar,435.576,236.4125,54.27,199.1635,Over Exploited
+3,Nainital,270.3234,158.006,58.45,112.3174,Over Exploited
+4,Udhamsingh Nagar,747.745,679.126,90.82,68.619,Safe
+1,Lakshadweep,5.7,4.31,75.6,1.39,Safe
+1,Puducherry,134.98,2.08,1.54,108.82,Over Exploited
+1,Sri Potti Sriramulu Nellore,9953.26,9809.06,98.55,144.2,Over Exploited
+5,Sri Sathya Sai,7636.24,5787.13,75.79,931.28,Over Exploited
+11,Palnadu,6516.56,5641.54,86.57,539.1,Over Exploited
+13,Y.S.R Kadapa,8808.08,8050.04,91.39,758.04,Over Exploited
+14,Ananthapuramu,9464.79,9216.06,97.37,248.73,Over Exploited
+15,Chittoor,6004.51,4223.14,70.33,1781.37,Over Exploited
+16,East Godavari,2545.53,1831.91,71.97,713.61,Over Exploited
+19,Kurnool,7522.47,7191.65,95.6,330.82,Over Exploited
+20,Prakasam,11381.9,8550.75,75.13,1898.51,Over Exploited
+21,Visakhapatnam,1001.67,812.09,81.07,189.58,Over Exploited
+23,Annamayya,6660.66,6248.08,93.81,412.58,Over Exploited
+6,Kamrup (M),659.12,458.7,69.59,200.42,Over Exploited
+1,Begusarai,1891.31,1595,84.33,296.31,Over Exploited
+4,Nawada,2456.58,1835.76,74.73,620.82,Over Exploited
+7,Kaimur,2980.4,2769.86,92.94,210.54,Over Exploited
+9,Bhojpur,2275.3,1798.89,79.06,476.41,Over Exploited
+17,Gaya,4909.78,4108.82,83.69,800.96,Over Exploited
+19,Jehanabad,932.57,340.83,36.55,334.92,Over Exploited
+27,Muzaffarpur,3042.77,1979.2,65.05,943.6,Over Exploited
+28,Nalanda,2316.46,915.11,39.5,1245.12,Over Exploited
+29,Patna,3200.84,2424.36,75.74,602.26,Over Exploited
+1,Balod,2614.7,1292.95,49.45,984.95,Over Exploited
+7,Bilaspur,3175.95,1572.65,49.52,1603.3,Over Exploited
+9,Dhamtari,2487.06,1215.81,48.89,1271.25,Over Exploited
+10,Durg,2319.99,762.33,32.86,1557.66,Over Exploited
+11,Gariaband,2631.4,2036.1,77.38,595.3,Over Exploited
+15,Kabirdham,4239.63,3123.17,73.67,1116.46,Over Exploited
+17,Kanker,1490.38,689.15,46.24,801.23,Over Exploited
+21,Mahasamund,4597.2,3142.2,68.35,1455,Over Exploited
+26,Raigarh,3859.19,3348.89,86.78,510.3,Over Exploited
+28,Rajnandgaon,2597.32,747.87,28.79,1849.45,Over Exploited
+"Total
+106078.71",88869.46,83.78,14090.19,13.28,3119.06,Over Exploited
+1,Ahmedabad,7077.26,2993.62,42.3,1275.94,Over Exploited
+2,Amreli,7478.47,6630.87,88.67,847.6,Over Exploited
+8,Botad,2484.8,1588.07,63.91,896.73,Over Exploited
+12,Devbhumi Dwarka,4206.37,2276.91,54.13,1929.46,Over Exploited
+15,Jamnagar,6423.48,5856.34,91.17,567.15,Over Exploited
+20,Mahisagar,2459.01,2197.14,89.35,261.87,Over Exploited
+22,Narmada,2509.95,1950.65,77.72,559.3,Over Exploited
+27,Rajkot,7762.59,3795.02,48.89,3967.57,Over Exploited
+28,Sabarkantha,4073.78,2807.59,68.92,858.1,Over Exploited
+29,Surat,4212.4,3573.31,84.83,195.89,Over Exploited
+30,Surendranagar,9276.07,8753.08,94.36,522.99,Over Exploited
+32,Vadodara,4063.99,2585.68,63.62,231.65,Over Exploited
+4,Jind,2750.91,684.67,24.89,215.5,Over Exploited
+16,Palwal,1358.26,558.47,41.12,300.54,Over Exploited
+2,Idukki,1088.91,854.63,78.48,234.28,Over Exploited
+5,Thiruvananthapuram,1942.97,1452.78,74.77,490.19,Over Exploited
+6,Thrissur,2366.85,1977.08,83.53,389.77,Over Exploited
+8,Kannur,2323.96,2002.78,86.18,321.18,Over Exploited
+9,Malappuram,2541.81,1327.05,52.21,1214.76,Over Exploited
+10,Kozhikkode,1661.8,1188.82,71.54,472.98,Over Exploited
+11,Kollam,2112,1837.06,86.98,274.94,Over Exploited
+12,Kasargod,1648.3,1058.18,64.2,331.36,Over Exploited
+14,Palakkad,2982.28,2084.06,69.88,379.6,Over Exploited
+1,Agar Malwa,2515.76,654.46,26.01,700.83,Over Exploited
+3,Anuppur,2942,2602,88.44,340,Over Exploited
+4,Ashoknagar,4622.44,2462.59,53.27,2159.85,Over Exploited
+6,Barwani,3668.31,2646.15,72.14,730.36,Over Exploited
+7,Betul,8564.5,6663.5,77.8,1901,Over Exploited
+10,Burhanpur,2570.5,1400.5,54.48,1170,Over Exploited
+11,Chhatarpur,7904.34,3938.28,49.82,3966.06,Over Exploited
+12,Chhindwara,8847.77,6631.89,74.96,1580.72,Over Exploited
+13,Damoh,4746.19,3842.82,80.97,903.37,Over Exploited
+15,Dewas,5770.82,3313.7,57.42,876.31,Over Exploited
+18,Guna,6175.14,4992.82,80.85,1182.32,Over Exploited
+19,Gwalior,4283,3859.65,90.12,423.35,Over Exploited
+21,Hoshangabad,5583.52,4914.52,88.02,669,Over Exploited
+23,Jabalpur,4438.68,4070.28,91.7,368.4,Over Exploited
+24,Jhabua,3112.53,2699.53,86.73,413,Over Exploited
+26,Khandwa,5814.46,4953.46,85.19,861,Over Exploited
+27,Khargone,6568.97,6074.57,92.47,494.4,Over Exploited
+1,Ahmednagar,15624.75,5172.01,33.10,5972.85,Over Exploited
+2,Akola,5141.65,4458.18,86.71,683.47,Over Exploited
+3,Amravati,8392.39,4219.42,50.28,2045.13,Over Exploited
+4,Aurangabad,9501.74,9101.75,95.79,399.99,Over Exploited
+7,Buldhana,8206.15,5068.16,61.76,2079.54,Over Exploited
+13,Jalgaon,11378.83,1777.93,15.62,7824.14,Over Exploited
+22,Nashik,13488.56,7485.45,55.49,3605.88,Over Exploited
+26,Pune,12757.28,6839.01,53.61,4431.36,Over Exploited
+29,Sangli,8427.58,7678.05,91.11,749.53,Over Exploited
+30,Satara,8775.07,6080.85,69.30,2694.22,Over Exploited
+1,Angul,5085.85,4797.19,94.32,288.66,Over Exploited
+2,Balasore,3564.77,3299.7,92.56,265.07,Over Exploited
+13,Jajpur,2662.13,2333.95,87.67,328.18,Over Exploited
+14,Jharsuguda,2118.42,1699.25,80.21,419.17,Over Exploited
+19,Khurda,2607.17,1607.13,61.64,1000.04,Over Exploited
+24,Nayagarh,2578.45,2381.27,92.35,197.18,Over Exploited
+25,Nuapada,3083.04,2241.38,72.7,841.66,Over Exploited
+1,Fazilka,2739.54,1933.1,70.56,328.37,Over Exploited
+2,Pathankot,781.36,538.44,68.91,242.92,Over Exploited
+6,Hoshiarpur,3368.71,225.73,6.7,1162.94,Over Exploited
+12,Mansa,2168.62,682.61,31.48,725.9,Over Exploited
+13,Bathinda,3374.24,1055.74,31.29,332.58,Over Exploited
+16,Rupnagar,1376.53,724.28,52.62,320.31,Over Exploited
+20,Sbs Nagar,1259.61,168.02,13.34,324.64,Over Exploited
+23,Gurdaspur,2614.25,197.34,7.55,109.2,Over Exploited
+5,Bikaner,30381.77,14440.01,47.53,1912.89,Over Exploited
+15,Tonk,5881.74,911.14,15.49,1242.09,Over Exploited
+19,Dungarpur,2634.13,2026.5,76.93,607.63,Over Exploited
+23,Bundi,4240.18,462.53,10.91,1152.88,Over Exploited
+25,Barmer,28578.58,1802.75,6.31,1263.04,Over Exploited
+28,Hanumangarh,9579.6,6779.33,70.77,1128.02,Over Exploited
+29,Banswara,3979.96,2019.81,50.75,1452.26,Over Exploited
+Total,317010.74,46283.9,14.6,"17908.38
+5.65",21084.64,Over Exploited
+1,Ariyalur,1926.59,1639.13,85.08,287.46,Over Exploited
+2,Chengalpattu,2424.15,1135.23,46.83,1288.92,Over Exploited
+3,Chennai,446.28,106.80,23.93,17.71,Safe
+4,Coimbatore,3604.51,417.15,11.57,268.61,Over Exploited
+5,Cuddalore,3636.73,1212.40,33.34,333.78,Over Exploited
+6,Dharmapuri,2856.00,640.86,22.44,732.90,Over Exploited
+7,Dindigul,4877.41,453.59,9.30,1032.11,Over Exploited
+8,Erode,3463.40,942.99,27.23,1153.54,Over Exploited
+9,Kallakurichchi,2579.23,972.70,37.71,736.82,Over Exploited
+13,Krishnagiri,3103.61,869.26,28.01,757.78,Over Exploited
+14,Madurai,3256.47,1779.15,54.63,1013.73,Over Exploited
+17,Namakkal,2928.10,208.26,7.11,187.04,Over Exploited
+19,Pudukkottai,4427.94,3521.69,79.53,906.25,Over Exploited
+24,Tenkasi,2442.44,734.10,30.06,562.91,Over Exploited
+25,Thanjavur,3394.70,0.00,0.00,617.98,Over Exploited
+27,Theni,1894.17,986.67,52.09,514.86,Over Exploited
+28,Thiruvarur,2072.57,1068.28,51.54,0.00,Safe
+29,Thoothukudi,4597.12,4242.76,92.29,354.36,Over Exploited
+30,Tiruchirappalli,4036.10,1547.41,38.34,370.63,Over Exploited
+1,Jagtial,2667.15,2296,86.08,371.15,Over Exploited
+3,Kamareddy,3488.32,3200.49,91.75,287.83,Over Exploited
+4,Medak,2545.57,1618.88,63.6,836.61,Over Exploited
+6,Mahabubnagar,2542.63,1398.98,55.02,974.86,Over Exploited
+7,Narayanpet,2318.11,1942.46,83.8,375.65,Over Exploited
+10,Khammam,4281.59,3650.61,85.26,441.26,Over Exploited
+12,Nalgonda,7046.73,5253.4,74.55,1341.56,Over Exploited
+14,Rangareddy,4826.98,3449.5,71.46,1071.81,Over Exploited
+15,Rajanna Siricilla,1731.39,1502.14,86.76,229.25,Over Exploited
+19,Peddapalle,1940.64,1716.99,88.48,223.66,Over Exploited
+20,Bhadradri Kothagudem,7108.43,6313.39,88.82,681.46,Over Exploited
+21,Jangaon,2107.13,1814.06,86.09,114.81,Over Exploited
+22,Jogulamba Gadwal,2603.69,2427.45,93.23,176.24,Over Exploited
+23,Mahabubabad,3344.59,2964.62,88.64,379.98,Over Exploited
+25,Medchal Malkajgiri,1038.07,354.96,34.19,432.93,Over Exploited
+26,Nagarkurnool,6132.22,5766.41,94.03,365.81,Over Exploited
+27,Nizamabad,4129.91,3064.85,74.21,1062.34,Over Exploited
+28,Sangareddy,4110.61,3455.89,84.07,479.82,Over Exploited
+29,Siddipet,3407.27,2375.25,69.71,862.34,Over Exploited
+1,Jagtial,2667.15,2296,86.08,371.15,Over Exploited
+3,Kamareddy,3488.32,3200.49,91.75,287.83,Over Exploited
+4,Medak,2545.57,1618.88,63.6,836.61,Over Exploited
+6,Mahabubnagar,2542.63,1398.98,55.02,974.86,Over Exploited
+7,Narayanpet,2318.11,1942.46,83.8,375.65,Over Exploited
+10,Khammam,4281.59,3650.61,85.26,441.26,Over Exploited
+12,Nalgonda,7046.73,5253.4,74.55,1341.56,Over Exploited
+14,Rangareddy,4826.98,3449.5,71.46,1071.81,Over Exploited
+15,Rajanna Siricilla,1731.39,1502.14,86.76,229.25,Over Exploited
+19,Peddapalle,1940.64,1716.99,88.48,223.66,Over Exploited
+20,Bhadradri Kothagudem,7108.43,6313.39,88.82,681.46,Over Exploited
+21,Jangaon,2107.13,1814.06,86.09,114.81,Over Exploited
+22,Jogulamba Gadwal,2603.69,2427.45,93.23,176.24,Over Exploited
+23,Mahabubabad,3344.59,2964.62,88.64,379.98,Over Exploited
+25,Medchal Malkajgiri,1038.07,354.96,34.19,432.93,Over Exploited
+26,Nagarkurnool,6132.22,5766.41,94.03,365.81,Over Exploited
+27,Nizamabad,4129.91,3064.85,74.21,1062.34,Over Exploited
+28,Sangareddy,4110.61,3455.89,84.07,479.82,Over Exploited
+29,Siddipet,3407.27,2375.25,69.71,862.34,Over Exploited
+2,Saharanpur,3689.41,887.86,24.07,1441,Over Exploited
+3,Banda,4404.6,2159.49,49.03,2245.11,Over Exploited
+6,Chandauli,1883.69,1676.45,89,207.24,Over Exploited
+7,Mirzapur,2954.37,2408.24,81.51,332.24,Over Exploited
+10,Kanpur Dehat,3237.37,2112.54,65.25,1124.83,Over Exploited
+11,Chitrakoot,3006.65,1041.84,34.65,1410.8,Over Exploited
+14,Jaunpur,3990.94,2709.55,67.89,1281.39,Over Exploited
+18,Kaushambi,1780.01,484.65,27.23,1015.97,Over Exploited
+24,Hathras,1837.99,327.4,17.81,556.14,Over Exploited
+25,Budaun,4237.88,1138.23,26.86,2088.61,Over Exploited
+26,Bulandshahar,3609.47,152.46,4.22,1258.17,Over Exploited
+27,Amethi,2329.92,2068.95,88.8,260.97,Over Exploited
+28,Bareilly,4120,3244.34,78.75,540.15,Over Exploited
+30,Jhansi,4619.37,2644.95,57.26,1974.42,Over Exploited
+7,NORTH WEST,154.36,121.37,78.6279,32.99,Safe
+1,Andhra Pradesh,679,4,16,643,Over Exploited
+2,Arunachal Pradesh,42,0,0,42,Safe
+3,Assam,245,0,0,245,Over Exploited
+4,Bihar,535,14,2,519,Over Exploited
+5,Chhattisgarh,146,2,1,143,Over Exploited
+6,Goa,12,0,0,12,Safe
+7,Gujarat,252,7,12,233,Over Exploited
+8,Haryana,143,6,5,132,Over Exploited
+9,Himachal Pradesh,10,0,0,10,Safe
+10,Jharkhand,263,0,1,262,Over Exploited
+11,Karnataka,237,3,13,218,Over Exploited
+12,Kerala,152,1,0,151,Over Exploited
+13,Madhya Pradesh,317,1,2,314,Over Exploited
+14,Maharashtra,359,22,0,331,Over Exploited
+15,Manipur,9,0,0,9,Safe
+16,Meghalaya,40,0,0,39,Safe
+17,Mizoram,26,0,0,26,Safe
+18,Nagaland,52,0,0,52,Safe
+19,Odisha,314,0,0,314,Over Exploited
+20,Punjab,153,5,0,148,Over Exploited
+21,Rajasthan,302,4,5,293,Over Exploited
+22,Sikkim,38,0,0,38,Safe
+23,Tamil Nadu,313,18,21,274,Over Exploited
+24,Telangana,620,9,76,527,Over Exploited
+25,Tripura,59,0,0,59,Safe
+26,Uttar Pradesh,836,22,12,802,Over Exploited
+27,Uttarakhand,20,0,0,18,Safe
+28,West Bengal,345,4,4,337,Over Exploited
+29,Andaman And Nicobar,9,0,0,9,Safe
+30,Chandigarh,1,1,0,0,Safe
+32,Delhi,34,0,3,31,Safe
+33,Jammu And Kashmir,149,0,0,149,Over Exploited
+34,Lakshadweep,5,0,0,5,Safe
+35,Puducherry,8,0,0,8,Safe
+36,Ladakh,18,5,0,13,Safe
