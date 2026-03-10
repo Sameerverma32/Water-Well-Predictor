@@ -1,4 +1,4 @@
-state,district,annual_recharge,extractable_resource,annual_extraction,stage_of_development,category
+sno,state,annual_recharge,extractable_resource,annual_extraction,stage_of_development,category
 1,Safe,4951,73.39,16.51,66.57,Safe
 2,Semi Critical,711,10.54,2.82,11.40,Safe
 3,Critical,206,3.05,0.88,3.55,Safe
