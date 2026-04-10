@@ -11,18 +11,21 @@ import joblib
 import os
 from flask_sqlalchemy import SQLAlchemy
 from werkzeug.security import generate_password_hash, check_password_hash
-from flask import Flask, request, jsonify, render_template, redirect, url_for, session, flash
 from flask_login import LoginManager, UserMixin, login_user, login_required, logout_user, current_user
-from flask_bcrypt import bcrypt
 
 
 
 app = Flask(__name__)
-app.config['SECRET KEY'] = 'your_secret_key_here'
+app.config['SECRET_KEY'] = 'your_secret_key_here'
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///users.db'
 db = SQLAlchemy(app)
 
-class User(db.Model):
+# Initialize Flask-Login
+login_manager = LoginManager()
+login_manager.init_app(app)
+login_manager.login_view = 'login'
+
+class User(UserMixin, db.Model):
     id = db.Column(db.Integer, primary_key=True)
     username = db.Column(db.String(150), unique=True, nullable=False)
     
@@ -31,6 +34,10 @@ class User(db.Model):
 # Create all database tables
 with app.app_context():
     db.create_all()
+
+@login_manager.user_loader
+def load_user(user_id):
+    return User.query.get(int(user_id))
 
 df = pd.read_csv('groundwater_ml_dataset_cleaned.csv')
 
@@ -110,7 +117,30 @@ def Category_Distribution():
 
 
 
+#analysis pages 
+@app.route('/Resource & Extraction_Analysis')
+@login_required
+def job_analysis():
+    graph1_html = Annual_Recharge_Trend()
+    graph2_html = Statewise_Annual_Recharge()
+    graph3_html = Annual_Extraction_Trend()
+    graph4_html = Statewise_Annual_Extraction()
+    graph5_html = Recharge_vs_Extraction()
+    graph6_html = Resource_Distribution()
+    graph7_html = Resource_Over_Time()
+    graph8_html = Recharge_Distribution()
+    graph9_html = Category_Distribution()
 
+    return render_template('resource_extraction_analysis.html', 
+                            graph1_html=graph1_html, 
+                            graph2_html=graph2_html, 
+                            graph3_html=graph3_html, 
+                            graph4_html=graph4_html, 
+                            graph5_html=graph5_html, 
+                            graph6_html=graph6_html, 
+                            graph7_html=graph7_html, 
+                            graph8_html=graph8_html, 
+                            graph9_html=graph9_html)
 
 if __name__ == '__main__':
     if not os.path.exists('users.db'):
