@@ -118,9 +118,8 @@ def Category_Distribution():
 
 
 #resource & Extraction Analysis pages 
-@app.route('/Resource & Extraction_Analysis')
-@login_required
-def job_analysis():
+@app.route('/resource_extraction_analysis')
+def resource_extraction_analysis():
     graph1_html = Annual_Recharge_Trend()
     graph2_html = Statewise_Annual_Recharge()
     graph3_html = Annual_Extraction_Trend()
