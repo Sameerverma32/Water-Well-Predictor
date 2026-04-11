@@ -117,7 +117,7 @@ def Category_Distribution():
 
 
 
-#analysis pages 
+#resource & Extraction Analysis pages 
 @app.route('/Resource & Extraction_Analysis')
 @login_required
 def job_analysis():
