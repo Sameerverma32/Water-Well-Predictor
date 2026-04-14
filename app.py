@@ -256,6 +256,7 @@ def  State_wise_Risk_Distribution():
 
 #resource & Extraction Analysis pages 
 @app.route('/resource_extraction_analysis')
+@login_required
 def resource_extraction_analysis():
     graph1_html = Annual_Recharge_Trend()
     graph2_html = Statewise_Annual_Recharge()
@@ -279,6 +280,7 @@ def resource_extraction_analysis():
                             graph9_html=graph9_html)
 
 @app.route('/stress_risk_analysis')
+@login_required
 def stress_risk_analysis():
     graph10_html = Stress_Level_Count()
     graph11_html = Risk_Score_Distribution()
