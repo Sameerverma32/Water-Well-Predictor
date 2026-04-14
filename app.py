@@ -12,7 +12,7 @@ import os
 from flask_sqlalchemy import SQLAlchemy
 from werkzeug.security import generate_password_hash, check_password_hash
 from flask_login import LoginManager, UserMixin, login_user, login_required, logout_user, current_user
-
+import plotly.figure_factory as ff
 
 
 app = Flask(__name__)
@@ -112,6 +112,68 @@ def Category_Distribution():
             title="Category Distribution")
     graph9_html = pio.to_html(fig, full_html=False)
     return graph9_html
+
+def Stress_Level_Count():
+    fig = px.bar(df, x="stress_level",
+            title="Stress Level Count")
+    graph10_html = pio.to_html(fig, full_html=False)
+    return graph10_html
+
+def Risk_Score_Distribution():
+    fig = px.box(df, x="state", y="risk_score",
+            title="Risk Score Distribution")    
+    graph11_html = pio.to_html(fig, full_html=False)
+    return graph11_html
+
+def Risk_vs_Extraction_Ratio():
+    fig = px.scatter(df, x="extraction_ratio", y="risk_score",
+                color="stress_level",
+                title="Risk vs Extraction Ratio")
+    graph12_html = pio.to_html(fig, full_html=False)
+    return graph12_html
+
+def Average_Risk_Over_Time():
+    fig = px.line(df.groupby("year")["risk_score"].mean().reset_index(),
+            x="year", y="risk_score",
+            title="Average Risk Over Time")
+    graph13_html = pio.to_html(fig, full_html=False)
+    return graph13_html
+
+def  Utilization_Distribution():
+    fig = px.violin(df, y="utilization_rate",
+                title="Utilization Distribution")
+    graph14_html = pio.to_html(fig, full_html=False)
+    return graph14_html
+
+def  Utilization_vs_Risk():
+    fig = px.scatter(df, x="utilization_rate", y="risk_score",
+                color="category",
+                title="Utilization vs Risk")
+    graph15_html = pio.to_html(fig, full_html=False)
+    return graph15_html
+
+def  Stress_vs_Extraction():
+    fig = px.box(df, x="stress_level", y="annual_extraction",
+            title="Stress vs Extraction")
+    graph16_html = pio.to_html(fig, full_html=False)
+    return graph16_html
+
+def  Risk_Score_Distribution():
+    fig = px.histogram(df, x="risk_score",
+                title="Risk Score Distribution")
+    graph17_html = pio.to_html(fig, full_html=False)
+    return graph17_html
+
+def  Stress_vs_Utilization():
+    fig = px.strip(df, x="stress_level", y="utilization_rate",
+            title="Stress vs Utilization")
+    graph18_html = pio.to_html(fig, full_html=False)
+    return graph18_html
+
+
+
+
+
 
 
 
