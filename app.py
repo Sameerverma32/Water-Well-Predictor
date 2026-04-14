@@ -225,9 +225,17 @@ def Density_Heatmap():
     graph26_html = pio.to_html(fig, full_html=False)
     return graph26_html
 
-def
-    
+def  Category_Distribution_Pie():
+    fig = px.pie(df, names="category", values="annual_extraction",
+            title="Category Distribution")
+    graph27_html = pio.to_html(fig, full_html=False)
+    return graph27_html
 
+def  State_wise_Risk_Distribution():
+    fig = px.violin(df, x="state", y="risk_score",
+                title="State-wise Risk Distribution")
+    graph28_html = pio.to_html(fig, full_html=False)
+    return graph28_html
 
 #resource & Extraction Analysis pages 
 @app.route('/resource_extraction_analysis')
