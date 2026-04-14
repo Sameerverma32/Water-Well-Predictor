@@ -535,9 +535,8 @@
       Find Water<br><em>Underground</em><br>with AI
     </h1>
     <p class="hero-sub">
-      Enter your location, soil type, and geological parameters —
-      WellSense predicts optimal well depth, water availability,
-      and aquifer zone using trained machine learning models.
+      Built on {{ stats.records | int }} groundwater records from {{ stats.states }} states and {{ stats.districts }} districts.
+      WellSense mines annual recharge, extraction, risk score, and category data to recommend smarter well planning for {{ stats.years }}.
     </p>
     <div class="hero-actions">
       <a href="#predict" class="btn-primary">&#x25BC; Start Prediction</a>
@@ -558,16 +557,16 @@
   <!-- Bottom cards -->
   <div class="hero-cards">
     <div class="hero-card">
-      <div class="hc-val">95%</div>
-      <div class="hc-lbl">Accuracy</div>
+      <div class="hc-val">{{ stats.states }}</div>
+      <div class="hc-lbl">States Covered</div>
     </div>
     <div class="hero-card">
-      <div class="hc-val">700+</div>
-      <div class="hc-lbl">Districts</div>
+      <div class="hc-val">{{ stats.districts }}</div>
+      <div class="hc-lbl">Districts Covered</div>
     </div>
     <div class="hero-card">
-      <div class="hc-val">8</div>
-      <div class="hc-lbl">ML Models</div>
+      <div class="hc-val">{{ stats.records }}</div>
+      <div class="hc-lbl">Dataset Records</div>
     </div>
   </div>
 
@@ -790,11 +789,11 @@
 <!-- ═══ STATS ═══ -->
 <div id="stats">
   <div class="stats-grid">
-    <div class="stat-item"><div class="stat-val" data-target="700" data-suffix="+">0</div><div class="stat-lbl">Districts Covered</div></div>
-    <div class="stat-item"><div class="stat-val" data-target="95" data-suffix="%">0</div><div class="stat-lbl">Model Accuracy R²</div></div>
-    <div class="stat-item"><div class="stat-val" data-target="50000" data-suffix="+">0</div><div class="stat-lbl">Well Records Trained</div></div>
-    <div class="stat-item"><div class="stat-val" data-target="8" data-suffix="">0</div><div class="stat-lbl">ML Algorithms</div></div>
-    <div class="stat-item"><div class="stat-val" data-target="20" data-suffix="yr">0</div><div class="stat-lbl">Historical Data</div></div>
+    <div class="stat-item"><div class="stat-val">{{ stats.records }}</div><div class="stat-lbl">Groundwater Records</div></div>
+    <div class="stat-item"><div class="stat-val">{{ stats.states }}</div><div class="stat-lbl">States Covered</div></div>
+    <div class="stat-item"><div class="stat-val">{{ stats.districts }}</div><div class="stat-lbl">Districts Covered</div></div>
+    <div class="stat-item"><div class="stat-val">{{ stats.over_pct }}%</div><div class="stat-lbl">Over-Exploited Share</div></div>
+    <div class="stat-item"><div class="stat-val">{{ stats.avg_risk }}</div><div class="stat-lbl">Average Risk Score</div></div>
   </div>
 </div>
 

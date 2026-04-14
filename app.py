@@ -43,7 +43,25 @@ df = pd.read_csv('groundwater_ml_dataset_cleaned.csv')
 
 @app.route('/')
 def home():
-    return render_template('home.html')
+    year_min = int(df['year'].min())
+    year_max = int(df['year'].max())
+    year_range = str(year_min) if year_min == year_max else f"{year_min}–{year_max}"
+    stats = {
+        'records': len(df),
+        'states': df['state'].nunique(),
+        'districts': df['district'].nunique(),
+        'years': year_range,
+        'latest_year': year_max,
+        'avg_risk': round(df['risk_score'].mean(), 2),
+        'avg_recharge': round(df['annual_recharge'].mean(), 2),
+        'avg_extraction': round(df['annual_extraction'].mean(), 2),
+        'safe_pct': round(100 * (df['category'] == 'Safe').sum() / len(df), 1),
+        'over_pct': round(100 * (df['category'] == 'Over Exploited').sum() / len(df), 1),
+        'critical_pct': round(100 * (df['category'] == 'Critical').sum() / len(df), 1),
+        'semi_pct': round(100 * (df['category'] == 'Semi Critical').sum() / len(df), 1),
+        'top_risk_states': list(df.groupby('state')['risk_score'].mean().nlargest(3).round(1).items()),
+    }
+    return render_template('home.html', stats=stats)
 
 @app.route('/about')
 def about():
