@@ -170,13 +170,63 @@ def  Stress_vs_Utilization():
     graph18_html = pio.to_html(fig, full_html=False)
     return graph18_html
 
+def  Hierarchical_View():
+    fig = px.sunburst(df, path=["state", "district", "category"],
+                values="annual_extraction",
+                title="Hierarchical View")
+    graph19_html = pio.to_html(fig, full_html=False)
+    return graph19_html
 
+def  Resource_Treemap():
+    fig = px.treemap(df, path=["state", "district"],
+                values="extractable_resource",
+                title="Resource Treemap")
+    graph20_html = pio.to_html(fig, full_html=False)
+    return graph20_html
 
+def  Statewise_Extraction_Trend():
+    fig = px.line(df, x="year", y="annual_extraction",
+            color="state",
+            title="State-wise Extraction Trend")
+    graph21_html = pio.to_html(fig, full_html=False)
+    return graph21_html
 
+def  State_Comparison():
+    fig = px.scatter(df, x="annual_recharge", y="annual_extraction",
+                facet_col="state",
+                title="State Comparison")
+    graph22_html = pio.to_html(fig, full_html=False)
+    return graph22_html
 
+def Bubble_Chart():
+    fig = px.scatter(df, x="annual_recharge", y="annual_extraction",
+                size="extractable_resource",
+                color="state",
+                title="Bubble Chart")
+    graph23_html = pio.to_html(fig, full_html=False)
+    return graph23_html
 
+def  Avg_Risk_by_State():
+    avg = df.groupby("state")["risk_score"].mean().reset_index()
+    fig = px.bar(avg, x="state", y="risk_score",
+                title="Avg Risk by State")
+    graph24_html = pio.to_html(fig, full_html=False)
+    return graph24_html
 
+def  District_Risk_Spread():
+    fig = px.box(df, x="district", y="risk_score",
+            title="District Risk Spread")
+    graph25_html = pio.to_html(fig, full_html=False)
+    return graph25_html
 
+def Density_Heatmap():
+    fig = px.density_heatmap(df, x="annual_recharge", y="annual_extraction",
+                        title="Density Heatmap")
+    graph26_html = pio.to_html(fig, full_html=False)
+    return graph26_html
+
+def
+    
 
 
 #resource & Extraction Analysis pages 
