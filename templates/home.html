@@ -1,999 +1,470 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>WellSense — Water Well Predictor</title>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,600;0,700;1,300;1,600&family=IBM+Plex+Mono:wght@300;400;500&family=Outfit:wght@300;400;600&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
   <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-    :root {
-      --earth:    #0a0705;
-      --soil:     #12100e;
-      --clay:     #1e1710;
-      --brown:    #2e2018;
-      --rust:     #5c3d1e;
-      --amber:    #c47a2b;
-      --gold:     #e8a83e;
-      --water:    #1a6b8a;
-      --aqua:     #2194b8;
-      --sky:      #5bc4e8;
-      --foam:     #a8e6f5;
-      --text:     #d4b896;
-      --muted:    #7a6248;
-      --white:    #f5ede0;
-    }
-
-    html { scroll-behavior: smooth; }
-
+    * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
-      font-family: 'IBM Plex Mono', monospace;
-      background: var(--earth);
-      color: var(--text);
+      font-family: 'DM Sans', sans-serif;
+      background: #0a1628;
+      color: #e8f4f0;
+      min-height: 100vh;
       overflow-x: hidden;
     }
 
-    /* ─── CUSTOM CURSOR ─── */
-    #cur  { position:fixed; top:0; left:0; z-index:9999; width:10px; height:10px; background:var(--sky); border-radius:50%; pointer-events:none; transform:translate(-50%,-50%); mix-blend-mode:screen; transition:transform .08s; }
-    #curR { position:fixed; top:0; left:0; z-index:9998; width:32px; height:32px; border:1px solid var(--amber); border-radius:50%; pointer-events:none; transform:translate(-50%,-50%); transition:left .15s ease,top .15s ease; opacity:.6; }
-    body { cursor: none; }
-
-    /* ─── CANVAS ─── */
-    #bgCanvas { position:fixed; inset:0; z-index:0; pointer-events:none; }
-
-    /* ─── NOISE ─── */
-    body::after { content:''; position:fixed; inset:0; z-index:1; background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"); opacity:.04; pointer-events:none; }
-
-    /* ─── NAV ─── */
-    nav {
-      position:fixed; top:0; left:0; right:0; z-index:200;
-      display:flex; align-items:center; justify-content:space-between;
-      padding:1.3rem 4rem;
-      background:linear-gradient(to bottom,rgba(10,7,5,.98) 0%,transparent 100%);
-      animation: navIn .8s ease both;
+    /* NAV */
+    .nav {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 1.25rem 2.5rem;
+      border-bottom: 0.5px solid rgba(255,255,255,0.08);
+      background: rgba(10,22,40,0.95);
+      position: sticky; top: 0; z-index: 10;
     }
-    @keyframes navIn { from{opacity:0;transform:translateY(-16px)} to{opacity:1;transform:translateY(0)} }
-
-    .logo {
-      font-family:'Cormorant Garamond',serif;
-      font-size:1.7rem; font-weight:700;
-      color:var(--white); letter-spacing:.02em;
+    .nav-logo {
+      display: flex; align-items: center; gap: 10px;
+      font-family: 'Playfair Display', serif; font-size: 1.3rem;
+      font-weight: 700; color: #7ecfb3; letter-spacing: -0.3px;
     }
-    .logo span { color:var(--sky); font-style:italic; }
-
-    .nav-links { display:flex; gap:2.4rem; list-style:none; }
-    .nav-links a { font-size:.68rem; letter-spacing:.14em; text-transform:uppercase; color:var(--muted); text-decoration:none; transition:color .2s; }
-    .nav-links a:hover { color:var(--gold); }
-
-    .nav-btn {
-      font-family:'IBM Plex Mono',monospace;
-      font-size:.68rem; letter-spacing:.1em; text-transform:uppercase;
-      padding:.55rem 1.5rem;
-      background:transparent;
-      border:1px solid var(--amber);
-      color:var(--amber);
-      text-decoration:none;
-      transition:background .2s,color .2s;
-      cursor:none;
+    .nav-logo .drop {
+      width: 28px; height: 28px;
+      background: linear-gradient(160deg, #7ecfb3, #3a8f72);
+      border-radius: 50% 50% 50% 10px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 14px;
     }
-    .nav-btn:hover { background:var(--amber); color:var(--earth); }
+    .nav-links { display: flex; gap: 2rem; list-style: none; }
+    .nav-links a {
+      font-size: 0.85rem; font-weight: 400;
+      color: rgba(232,244,240,0.6);
+      text-decoration: none; transition: color 0.2s;
+      letter-spacing: 0.3px;
+    }
+    .nav-links a:hover { color: #7ecfb3; }
+    .nav-cta {
+      background: #7ecfb3; color: #0a1628;
+      border: none; border-radius: 6px;
+      padding: 0.5rem 1.2rem; font-size: 0.85rem; font-weight: 500;
+      cursor: pointer; transition: background 0.2s;
+      font-family: 'DM Sans', sans-serif;
+    }
+    .nav-cta:hover { background: #9eddc7; }
 
-    /* ─── HERO ─── */
+    /* HERO */
     .hero {
-      position:relative; z-index:2;
-      min-height:100vh;
-      display:flex; flex-direction:column; justify-content:center;
-      padding:10rem 4rem 6rem;
-      overflow:hidden;
+      padding: 6rem 2.5rem 4rem;
+      max-width: 1100px; margin: 0 auto;
+      display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;
     }
-
-    /* Geological strata lines */
-    .strata {
-      position:absolute; inset:0; z-index:0;
-      pointer-events:none; overflow:hidden;
+    .hero-eyebrow {
+      font-size: 0.75rem; font-weight: 500; letter-spacing: 2px; text-transform: uppercase;
+      color: #7ecfb3; margin-bottom: 1.25rem;
+      display: flex; align-items: center; gap: 8px;
     }
-    .strata-line {
-      position:absolute; left:0; right:0; height:1px;
-      background:linear-gradient(90deg,transparent 0%,var(--rust) 30%,var(--rust) 70%,transparent 100%);
-      opacity:.18;
+    .hero-eyebrow::before {
+      content: ''; width: 24px; height: 1px; background: #7ecfb3;
     }
-
-    .hero-tag {
-      font-size:.65rem; letter-spacing:.22em; text-transform:uppercase;
-      color:var(--sky);
-      border:1px solid var(--water);
-      display:inline-block; padding:.35rem 1rem;
-      margin-bottom:2rem;
-      animation:fadeUp .7s .2s ease both;
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 3.2rem; font-weight: 700; line-height: 1.15;
+      color: #f0faf6; margin-bottom: 1.25rem;
+      letter-spacing: -1px;
     }
-
-    .hero-title {
-      font-family:'Cormorant Garamond',serif;
-      font-size:clamp(3.5rem,8vw,8.5rem);
-      font-weight:700; line-height:.95;
-      color:var(--white);
-      max-width:850px;
-      animation:fadeUp .7s .35s ease both;
+    .hero h1 span { color: #7ecfb3; }
+    .hero p {
+      font-size: 1rem; font-weight: 300; line-height: 1.75;
+      color: rgba(232,244,240,0.65); margin-bottom: 2rem;
+      max-width: 420px;
     }
-    .hero-title em { font-style:italic; color:var(--sky); }
-
-    .hero-sub {
-      margin-top:2rem;
-      font-family:'Outfit',sans-serif;
-      font-size:1.05rem; line-height:1.75;
-      color:var(--muted);
-      max-width:540px;
-      animation:fadeUp .7s .5s ease both;
-    }
-
-    .hero-actions {
-      display:flex; gap:1.2rem; flex-wrap:wrap;
-      margin-top:2.8rem;
-      animation:fadeUp .7s .65s ease both;
-    }
-
+    .hero-actions { display: flex; gap: 1rem; align-items: center; }
     .btn-primary {
-      display:inline-flex; align-items:center; gap:.6rem;
-      padding:.95rem 2.4rem;
-      background:var(--aqua); color:var(--earth);
-      font-family:'IBM Plex Mono',monospace;
-      font-size:.78rem; letter-spacing:.08em; text-transform:uppercase;
-      text-decoration:none; font-weight:500;
-      transition:background .2s,transform .2s;
-      cursor:none;
+      background: #7ecfb3; color: #0a1628;
+      border: none; border-radius: 8px;
+      padding: 0.75rem 1.75rem; font-size: 0.95rem; font-weight: 500;
+      cursor: pointer; transition: all 0.2s; font-family: 'DM Sans', sans-serif;
     }
-    .btn-primary:hover { background:var(--sky); transform:translateY(-2px); }
-
+    .btn-primary:hover { background: #9eddc7; transform: translateY(-1px); }
     .btn-ghost {
-      display:inline-flex; align-items:center; gap:.6rem;
-      padding:.95rem 2.4rem;
-      border:1px solid var(--brown); color:var(--text);
-      font-family:'IBM Plex Mono',monospace;
-      font-size:.78rem; letter-spacing:.08em; text-transform:uppercase;
-      text-decoration:none;
-      transition:border-color .2s,color .2s;
-      cursor:none;
+      background: transparent; color: #e8f4f0;
+      border: 0.5px solid rgba(255,255,255,0.2); border-radius: 8px;
+      padding: 0.75rem 1.75rem; font-size: 0.95rem; font-weight: 400;
+      cursor: pointer; transition: all 0.2s; font-family: 'DM Sans', sans-serif;
     }
-    .btn-ghost:hover { border-color:var(--gold); color:var(--gold); }
+    .btn-ghost:hover { border-color: #7ecfb3; color: #7ecfb3; }
 
-    /* depth gauge */
-    .depth-gauge {
-      position:absolute; right:5rem; top:50%;
-      transform:translateY(-50%);
-      display:flex; flex-direction:column; align-items:center; gap:.5rem;
-      animation:fadeUp .8s .7s ease both;
+    /* WELL VISUAL */
+    .hero-visual {
+      position: relative; display: flex;
+      align-items: center; justify-content: center;
     }
-    .gauge-label { font-size:.6rem; letter-spacing:.18em; text-transform:uppercase; color:var(--muted); }
-    .gauge-track {
-      width:4px; height:260px;
-      background:var(--brown); border-radius:2px;
-      position:relative; overflow:hidden;
+    .well-card {
+      background: rgba(255,255,255,0.04);
+      border: 0.5px solid rgba(126,207,179,0.2);
+      border-radius: 20px; padding: 2rem;
+      width: 100%; max-width: 360px;
     }
-    .gauge-fill {
-      position:absolute; bottom:0; left:0; right:0;
-      background:linear-gradient(to top, var(--aqua), var(--sky));
-      animation:gaugeFill 3s 1.5s ease both;
-      border-radius:2px;
+    .well-card-header {
+      display: flex; align-items: center; justify-content: space-between;
+      margin-bottom: 1.5rem;
     }
-    @keyframes gaugeFill { from{height:0} to{height:72%} }
-    .gauge-val {
-      font-family:'Cormorant Garamond',serif;
-      font-size:1.4rem; font-weight:600; color:var(--sky);
-    }
-    .gauge-unit { font-size:.6rem; color:var(--muted); }
-
-    /* info cards right */
-    .hero-cards {
-      position:absolute; right:5rem; bottom:6rem;
-      display:flex; gap:1rem;
-      animation:fadeUp .8s .8s ease both;
-    }
-    .hero-card {
-      background:rgba(18,16,14,.85);
-      border:1px solid var(--brown);
-      padding:.9rem 1.2rem;
-      min-width:130px;
-      transition:border-color .2s;
-    }
-    .hero-card:hover { border-color:var(--amber); }
-    .hc-val { font-family:'Cormorant Garamond',serif; font-size:1.8rem; font-weight:700; color:var(--gold); }
-    .hc-lbl { font-size:.58rem; letter-spacing:.14em; text-transform:uppercase; color:var(--muted); margin-top:.3rem; }
-
-    /* scroll indicator */
-    .scroll-hint {
-      position:absolute; bottom:2.5rem; left:4rem;
-      display:flex; align-items:center; gap:.8rem;
-      font-size:.6rem; letter-spacing:.2em; text-transform:uppercase; color:var(--muted);
-      animation:fadeUp .7s .9s ease both;
-    }
-    .s-line { width:40px; height:1px; background:var(--rust); position:relative; overflow:hidden; }
-    .s-line::after { content:''; position:absolute; top:0; left:-100%; width:100%; height:100%; background:var(--gold); animation:slideL 1.8s 1.5s ease-in-out infinite; }
-    @keyframes slideL { from{left:-100%} to{left:100%} }
-    @keyframes fadeUp { from{opacity:0;transform:translateY(28px)} to{opacity:1;transform:translateY(0)} }
-
-    /* ─── SECTION BASE ─── */
-    section { position:relative; z-index:2; }
-    .inner { max-width:1200px; margin:0 auto; padding:6rem 4rem; }
-    .s-label { font-size:.62rem; letter-spacing:.24em; text-transform:uppercase; color:var(--amber); margin-bottom:1rem; }
-    .s-title { font-family:'Cormorant Garamond',serif; font-size:clamp(2rem,4vw,3.4rem); font-weight:700; color:var(--white); line-height:1.1; }
-    .s-sub { font-family:'Outfit',sans-serif; font-size:.95rem; line-height:1.75; color:var(--muted); margin-top:1rem; max-width:520px; }
-
-    /* ─── HOW IT WORKS ─── */
-    #how { background:linear-gradient(180deg, var(--earth) 0%, var(--soil) 100%); }
-
-    .steps {
-      margin-top:4rem;
-      display:grid; grid-template-columns:repeat(4,1fr);
-      gap:0; border:1px solid var(--brown);
-    }
-    .step {
-      padding:2.4rem 1.8rem;
-      border-right:1px solid var(--brown);
-      position:relative; overflow:hidden;
-      transition:background .25s;
-      opacity:0; transform:translateY(24px);
-      transition:opacity .5s,transform .5s,background .25s;
-    }
-    .step.visible { opacity:1; transform:translateY(0); }
-    .step:last-child { border-right:none; }
-    .step::after {
-      content:'';
-      position:absolute; bottom:0; left:0; right:0; height:2px;
-      background:linear-gradient(90deg,var(--aqua),var(--sky));
-      transform:scaleX(0); transform-origin:left;
-      transition:transform .35s ease;
-    }
-    .step:hover { background:rgba(26,107,138,.08); }
-    .step:hover::after { transform:scaleX(1); }
-
-    .step-num { font-size:.6rem; letter-spacing:.2em; color:var(--rust); margin-bottom:1.2rem; }
-    .step-icon { font-size:2.2rem; margin-bottom:1rem; display:block; }
-    .step-title { font-family:'Cormorant Garamond',serif; font-size:1.2rem; font-weight:700; color:var(--white); margin-bottom:.7rem; }
-    .step-text { font-family:'Outfit',sans-serif; font-size:.82rem; line-height:1.7; color:var(--muted); }
-
-    /* ─── FEATURES ─── */
-    #features { background:var(--soil); }
-
-    .feat-grid {
-      display:grid; grid-template-columns:1fr 1fr 1fr;
-      gap:1px; background:var(--brown);
-      margin-top:3.5rem;
-    }
-    .feat-card {
-      background:var(--soil);
-      padding:2.4rem 2rem;
-      position:relative; overflow:hidden;
-      transition:background .25s;
-      opacity:0; transform:translateX(-16px);
-      transition:opacity .5s, transform .5s, background .25s;
-    }
-    .feat-card.visible { opacity:1; transform:translateX(0); }
-    .feat-card::before {
-      content:'';
-      position:absolute; top:0; left:0; bottom:0; width:0;
-      background:linear-gradient(180deg,var(--aqua),var(--water));
-      opacity:.15;
-      transition:width .35s;
-    }
-    .feat-card:hover { background:rgba(26,107,138,.1); }
-    .feat-card:hover::before { width:3px; }
-
-    .feat-icon { font-size:2rem; margin-bottom:1.2rem; display:block; }
-    .feat-title { font-family:'Cormorant Garamond',serif; font-size:1.15rem; font-weight:700; color:var(--white); margin-bottom:.7rem; }
-    .feat-desc { font-family:'Outfit',sans-serif; font-size:.8rem; line-height:1.75; color:var(--muted); }
-
-    /* ─── PREDICTOR DEMO ─── */
-    #predict { background:linear-gradient(180deg, var(--soil) 0%, var(--clay) 100%); }
-
-    .predict-layout {
-      display:grid; grid-template-columns:1fr 1fr;
-      gap:4rem; margin-top:3.5rem; align-items:start;
-    }
-
-    .form-box {
-      background:var(--clay);
-      border:1px solid var(--brown);
-      padding:2.4rem;
-      opacity:0; transform:translateX(-20px);
-      transition:opacity .6s, transform .6s;
-    }
-    .form-box.visible { opacity:1; transform:translateX(0); }
-    .form-box h3 { font-family:'Cormorant Garamond',serif; font-size:1.3rem; font-weight:700; color:var(--white); margin-bottom:1.8rem; }
-
-    .form-row { display:grid; grid-template-columns:1fr 1fr; gap:1rem; margin-bottom:1rem; }
-    .form-group { display:flex; flex-direction:column; gap:.4rem; margin-bottom:1rem; }
-    .form-group label { font-size:.62rem; letter-spacing:.14em; text-transform:uppercase; color:var(--muted); }
-    .form-group input,
-    .form-group select {
-      background:var(--brown);
-      border:1px solid var(--rust);
-      color:var(--text);
-      padding:.7rem 1rem;
-      font-family:'IBM Plex Mono',monospace;
-      font-size:.78rem;
-      outline:none;
-      transition:border-color .2s;
-      cursor:none;
-      -webkit-appearance:none;
-    }
-    .form-group input:focus,
-    .form-group select:focus { border-color:var(--aqua); }
-    .form-group select option { background:var(--brown); }
-    .form-group input,
-    .form-group select {
-      appearance: none;
-      -webkit-appearance: none;
-    }
-
-    .predict-btn {
-      width:100%; padding:1rem;
-      background:var(--aqua); color:var(--earth);
-      font-family:'IBM Plex Mono',monospace;
-      font-size:.78rem; letter-spacing:.1em; text-transform:uppercase;
-      border:none; cursor:none;
-      margin-top:1rem;
-      transition:background .2s, transform .15s;
-      font-weight:500;
-    }
-    .predict-btn:hover { background:var(--sky); transform:translateY(-1px); }
-    .predict-btn:active { transform:translateY(0); }
-
-    /* result panel */
-    .result-panel {
-      display:flex; flex-direction:column; gap:1.5rem;
-      opacity:0; transform:translateX(20px);
-      transition:opacity .6s .2s, transform .6s .2s;
-    }
-    .result-panel.visible { opacity:1; transform:translateX(0); }
-
-    .result-card {
-      background:var(--clay);
-      border:1px solid var(--brown);
-      padding:2rem;
-      transition:border-color .25s;
-    }
-    .result-card:hover { border-color:var(--aqua); }
-    .result-card-label { font-size:.6rem; letter-spacing:.18em; text-transform:uppercase; color:var(--muted); margin-bottom:.6rem; }
-    .result-val { font-family:'Cormorant Garamond',serif; font-size:3.2rem; font-weight:700; color:var(--sky); line-height:1; }
-    .result-unit { font-size:.7rem; color:var(--muted); margin-top:.3rem; }
-
-    .depth-visual {
-      background:var(--clay);
-      border:1px solid var(--brown);
-      padding:1.8rem;
-    }
-    .dv-label { font-size:.6rem; letter-spacing:.18em; text-transform:uppercase; color:var(--muted); margin-bottom:1.2rem; }
-    .dv-layers { display:flex; flex-direction:column; gap:2px; }
-    .dv-layer {
-      height:28px; display:flex; align-items:center; padding:0 .8rem;
-      font-size:.65rem; letter-spacing:.08em;
-      position:relative; overflow:hidden;
-    }
-    .dv-layer span { position:relative; z-index:1; }
-    .l-topsoil  { background:rgba(46,32,24,.8); color:#a08060; }
-    .l-clay     { background:rgba(62,38,14,.8); color:#b08050; }
-    .l-rock     { background:rgba(30,20,10,.9); color:#807060; }
-    .l-aquifer  { background:rgba(26,107,138,.35); color:var(--sky); border:1px solid rgba(33,148,184,.3); }
-    .l-deep     { background:rgba(10,7,5,.9); color:#504030; }
-
+    .well-label { font-size: 0.75rem; color: rgba(232,244,240,0.5); letter-spacing: 1px; text-transform: uppercase; }
     .well-status {
-      display:flex; gap:1rem; flex-wrap:wrap;
+      font-size: 0.72rem; padding: 3px 10px;
+      border-radius: 20px; font-weight: 500;
     }
-    .status-badge {
-      padding:.5rem 1.2rem;
-      font-size:.62rem; letter-spacing:.12em; text-transform:uppercase;
-      border:1px solid;
+    .status-good { background: rgba(126,207,179,0.15); color: #7ecfb3; border: 0.5px solid rgba(126,207,179,0.3); }
+    .well-depth-chart {
+      height: 120px; background: rgba(126,207,179,0.04);
+      border-radius: 10px; border: 0.5px solid rgba(126,207,179,0.1);
+      margin-bottom: 1.25rem; position: relative; overflow: hidden;
     }
-    .status-good  { border-color:#4ade80; color:#4ade80; background:rgba(74,222,128,.06); }
-    .status-warn  { border-color:var(--gold); color:var(--gold); background:rgba(232,168,62,.06); }
-    .status-bad   { border-color:#f87171; color:#f87171; background:rgba(248,113,113,.06); }
+    .depth-bars {
+      display: flex; align-items: flex-end; gap: 4px;
+      padding: 12px 12px 0; height: 100%;
+    }
+    .depth-bar {
+      flex: 1; border-radius: 3px 3px 0 0;
+      background: rgba(126,207,179,0.25);
+    }
+    .depth-bar.highlight { background: #7ecfb3; }
+    .well-metrics {
+      display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px;
+    }
+    .metric-cell {
+      background: rgba(255,255,255,0.04);
+      border-radius: 8px; padding: 0.6rem 0.75rem;
+      text-align: center;
+    }
+    .metric-val { font-size: 1.1rem; font-weight: 500; color: #7ecfb3; }
+    .metric-key { font-size: 0.65rem; color: rgba(232,244,240,0.4); margin-top: 2px; letter-spacing: 0.5px; }
+    .predict-badge {
+      margin-top: 1rem;
+      background: rgba(126,207,179,0.08);
+      border: 0.5px solid rgba(126,207,179,0.2);
+      border-radius: 8px; padding: 0.6rem 1rem;
+      display: flex; align-items: center; gap: 8px;
+      font-size: 0.8rem; color: rgba(232,244,240,0.7);
+    }
+    .predict-dot {
+      width: 8px; height: 8px; border-radius: 50%;
+      background: #7ecfb3; flex-shrink: 0;
+      animation: pulse 2s infinite;
+    }
+    @keyframes pulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.5; transform: scale(0.85); }
+    }
 
-    /* ─── STATS BAND ─── */
-    #stats {
-      background:linear-gradient(135deg, var(--water) 0%, #0d4d6b 100%);
-      padding:5rem 4rem; position:relative; overflow:hidden;
+    /* STATS STRIP */
+    .stats-strip {
+      border-top: 0.5px solid rgba(255,255,255,0.06);
+      border-bottom: 0.5px solid rgba(255,255,255,0.06);
+      background: rgba(255,255,255,0.02);
+      padding: 1.75rem 2.5rem;
     }
-    #stats::before { content:''; position:absolute; inset:0; background:radial-gradient(ellipse at center, rgba(91,196,232,.1) 0%,transparent 70%); }
-    .stats-grid {
-      max-width:1200px; margin:0 auto;
-      display:grid; grid-template-columns:repeat(5,1fr);
-      gap:0; text-align:center;
-      position:relative; z-index:1;
-      border:1px solid rgba(255,255,255,.1);
+    .stats-inner {
+      max-width: 1100px; margin: 0 auto;
+      display: grid; grid-template-columns: repeat(4, 1fr);
     }
     .stat-item {
-      padding:2rem 1rem;
-      border-right:1px solid rgba(255,255,255,.1);
+      text-align: center; padding: 0.5rem 1rem;
+      border-right: 0.5px solid rgba(255,255,255,0.07);
     }
-    .stat-item:last-child { border-right:none; }
-    .stat-val { font-family:'Cormorant Garamond',serif; font-size:2.8rem; font-weight:700; color:var(--white); line-height:1; }
-    .stat-lbl { font-size:.6rem; letter-spacing:.16em; text-transform:uppercase; color:rgba(240,250,255,.55); margin-top:.5rem; }
+    .stat-item:last-child { border-right: none; }
+    .stat-number { font-family: 'Playfair Display', serif; font-size: 2rem; font-weight: 700; color: #7ecfb3; }
+    .stat-desc { font-size: 0.78rem; color: rgba(232,244,240,0.45); margin-top: 4px; letter-spacing: 0.5px; }
 
-    /* ─── MODELS ─── */
-    #models { background:linear-gradient(180deg, var(--clay) 0%, var(--earth) 100%); }
+    /* FEATURES */
+    .features {
+      max-width: 1100px; margin: 0 auto;
+      padding: 5rem 2.5rem;
+    }
+    .section-label {
+      font-size: 0.72rem; letter-spacing: 2.5px; text-transform: uppercase;
+      color: #7ecfb3; margin-bottom: 0.75rem;
+    }
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.2rem; font-weight: 700; color: #f0faf6;
+      margin-bottom: 3rem; line-height: 1.25; letter-spacing: -0.5px;
+      max-width: 480px;
+    }
+    .features-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem;
+    }
+    .feature-card {
+      background: rgba(255,255,255,0.03);
+      border: 0.5px solid rgba(255,255,255,0.07);
+      border-radius: 14px; padding: 1.75rem;
+      transition: border-color 0.2s;
+    }
+    .feature-card:hover { border-color: rgba(126,207,179,0.3); }
+    .feature-icon {
+      width: 40px; height: 40px; border-radius: 10px;
+      background: rgba(126,207,179,0.1);
+      border: 0.5px solid rgba(126,207,179,0.2);
+      display: flex; align-items: center; justify-content: center;
+      margin-bottom: 1.25rem; font-size: 18px;
+    }
+    .feature-card h3 {
+      font-size: 1rem; font-weight: 500; color: #f0faf6;
+      margin-bottom: 0.6rem;
+    }
+    .feature-card p {
+      font-size: 0.85rem; line-height: 1.7;
+      color: rgba(232,244,240,0.5);
+    }
 
-    .models-table {
-      margin-top:3rem; width:100%;
-      border-collapse:collapse;
-      border:1px solid var(--brown);
+    /* HOW IT WORKS */
+    .how {
+      background: rgba(255,255,255,0.02);
+      border-top: 0.5px solid rgba(255,255,255,0.06);
+      border-bottom: 0.5px solid rgba(255,255,255,0.06);
+      padding: 5rem 2.5rem;
     }
-    .models-table th {
-      font-size:.62rem; letter-spacing:.16em; text-transform:uppercase;
-      color:var(--muted); padding:1rem 1.4rem;
-      border-bottom:1px solid var(--brown);
-      text-align:left; background:var(--clay);
+    .how-inner { max-width: 1100px; margin: 0 auto; }
+    .steps {
+      display: grid; grid-template-columns: repeat(4, 1fr); gap: 0;
+      margin-top: 3rem; position: relative;
     }
-    .models-table td {
-      padding:1rem 1.4rem;
-      font-size:.78rem; color:var(--text);
-      border-bottom:1px solid rgba(46,32,24,.6);
-      vertical-align:middle;
+    .steps::before {
+      content: ''; position: absolute;
+      top: 24px; left: 12.5%; right: 12.5%;
+      height: 0.5px; background: rgba(126,207,179,0.2);
     }
-    .models-table tr:last-child td { border-bottom:none; }
-    .models-table tr { transition:background .2s; }
-    .models-table tr:hover td { background:rgba(26,107,138,.08); }
+    .step { text-align: center; padding: 0 1rem; }
+    .step-num {
+      width: 48px; height: 48px; border-radius: 50%;
+      background: #0a1628;
+      border: 0.5px solid rgba(126,207,179,0.3);
+      display: flex; align-items: center; justify-content: center;
+      margin: 0 auto 1.25rem; font-weight: 500; font-size: 0.9rem;
+      color: #7ecfb3; position: relative; z-index: 1;
+    }
+    .step h4 { font-size: 0.9rem; font-weight: 500; color: #f0faf6; margin-bottom: 0.5rem; }
+    .step p { font-size: 0.8rem; color: rgba(232,244,240,0.45); line-height: 1.6; }
 
-    .acc-bar-wrap { width:120px; height:6px; background:var(--brown); border-radius:3px; overflow:hidden; }
-    .acc-bar { height:100%; background:linear-gradient(90deg,var(--water),var(--sky)); border-radius:3px; width:0; transition:width 1.3s ease; }
-    tr.visible .acc-bar { width:var(--w); }
-
-    .best-tag {
-      display:inline-block;
-      font-size:.55rem; letter-spacing:.1em; text-transform:uppercase;
-      padding:.2rem .6rem;
-      background:var(--aqua); color:var(--earth);
-      margin-left:.6rem;
+    /* CTA */
+    .cta-section {
+      max-width: 1100px; margin: 0 auto;
+      padding: 5rem 2.5rem; text-align: center;
     }
-    .acc-num { font-family:'Cormorant Garamond',serif; font-size:1.1rem; font-weight:700; color:var(--sky); }
-
-    /* ─── CTA ─── */
-    #cta {
-      background:var(--earth);
-      padding:8rem 4rem;
-      text-align:center; position:relative; overflow:hidden;
+    .cta-box {
+      background: rgba(126,207,179,0.06);
+      border: 0.5px solid rgba(126,207,179,0.2);
+      border-radius: 20px; padding: 4rem 2rem;
     }
-    #cta::before { content:''; position:absolute; inset:0; background:radial-gradient(ellipse at 50% 60%, rgba(26,107,138,.18) 0%,transparent 65%); }
-    .cta-inner { position:relative; z-index:1; }
-    .cta-title { font-family:'Cormorant Garamond',serif; font-size:clamp(2.5rem,6vw,5rem); font-weight:700; color:var(--white); line-height:1; margin-bottom:1.5rem; }
-    .cta-title em { font-style:italic; color:var(--sky); }
-    .cta-sub { font-family:'Outfit',sans-serif; font-size:.95rem; line-height:1.8; color:var(--muted); max-width:480px; margin:0 auto 3rem; }
-    .cta-note { font-size:.62rem; letter-spacing:.12em; text-transform:uppercase; color:var(--rust); margin-top:1.5rem; }
-
-    /* ─── FOOTER ─── */
-    footer {
-      background:var(--earth); border-top:1px solid var(--brown);
-      padding:2.5rem 4rem;
-      display:flex; justify-content:space-between; align-items:center;
-      position:relative; z-index:2;
+    .cta-box h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.5rem; font-weight: 700; color: #f0faf6;
+      margin-bottom: 1rem; letter-spacing: -0.5px;
     }
-    .f-logo { font-family:'Cormorant Garamond',serif; font-size:1.2rem; font-weight:700; color:var(--white); }
-    .f-logo span { color:var(--sky); font-style:italic; }
-    .f-copy { font-size:.62rem; color:var(--muted); }
-    .f-links { display:flex; gap:2rem; }
-    .f-links a { font-size:.62rem; color:var(--muted); text-decoration:none; transition:color .2s; letter-spacing:.1em; text-transform:uppercase; }
-    .f-links a:hover { color:var(--gold); }
-
-    /* ─── RIPPLE ─── */
-    .ripple { position:fixed; z-index:9000; border-radius:50%; border:1px solid var(--gold); pointer-events:none; transform:translate(-50%,-50%) scale(0); animation:rOut .7s ease-out forwards; }
-    @keyframes rOut { from{transform:translate(-50%,-50%) scale(0);opacity:.7} to{transform:translate(-50%,-50%) scale(5);opacity:0} }
-
-    /* ─── RESPONSIVE ─── */
-    @media(max-width:1024px){
-      .steps{grid-template-columns:repeat(2,1fr);}
-      .step:nth-child(2){border-right:none;}
-      .step:nth-child(1),.step:nth-child(2){border-bottom:1px solid var(--brown);}
-      .feat-grid{grid-template-columns:1fr 1fr;}
-      .stats-grid{grid-template-columns:repeat(3,1fr);}
-      .stat-item:nth-child(3){border-right:none;}
-      .stat-item:nth-child(4),.stat-item:nth-child(5){border-top:1px solid rgba(255,255,255,.1);}
-      .depth-gauge,.hero-cards{display:none;}
+    .cta-box p { font-size: 1rem; color: rgba(232,244,240,0.5); margin-bottom: 2rem; }
+    .cta-inputs {
+      display: flex; gap: 0.75rem; max-width: 460px; margin: 0 auto;
     }
-    @media(max-width:768px){
-      nav{padding:1.2rem 2rem;}
-      .nav-links{display:none;}
-      .inner{padding:4rem 2rem;}
-      .hero{padding:9rem 2rem 5rem;}
-      .feat-grid{grid-template-columns:1fr;}
-      .predict-layout{grid-template-columns:1fr;}
-      .form-row{grid-template-columns:1fr;}
-      .steps{grid-template-columns:1fr;}
-      .step{border-right:none;border-bottom:1px solid var(--brown);}
-      .stats-grid{grid-template-columns:1fr 1fr;}
-      #stats{padding:3rem 2rem;}
-      footer{flex-direction:column;gap:1.5rem;text-align:center;}
+    .cta-input {
+      flex: 1; background: rgba(255,255,255,0.07);
+      border: 0.5px solid rgba(255,255,255,0.15);
+      border-radius: 8px; padding: 0.75rem 1rem;
+      color: #e8f4f0; font-size: 0.9rem;
+      font-family: 'DM Sans', sans-serif; outline: none;
     }
+    .cta-input::placeholder { color: rgba(232,244,240,0.3); }
+    .cta-input:focus { border-color: rgba(126,207,179,0.5); }
+
+    /* FOOTER */
+    .footer {
+      border-top: 0.5px solid rgba(255,255,255,0.06);
+      padding: 2rem 2.5rem;
+      display: flex; align-items: center; justify-content: space-between;
+      max-width: 1100px; margin: 0 auto;
+    }
+    .footer-logo { font-family: 'Playfair Display', serif; color: #7ecfb3; font-size: 1rem; }
+    .footer-copy { font-size: 0.78rem; color: rgba(232,244,240,0.3); }
   </style>
 </head>
 <body>
 
-<div id="cur"></div>
-<div id="curR"></div>
-<canvas id="bgCanvas"></canvas>
+  <!-- NAV -->
+  <nav class="nav">
+    <div class="nav-logo">
+      <div class="drop">💧</div>
+      WellSense
+    </div>
+    <ul class="nav-links">
+      <li><a href="#">Features</a></li>
+      <li><a href="#">How it works</a></li>
+      <li><a href="#">Data</a></li>
+      <li><a href="#">Pricing</a></li>
+    </ul>
+    <button class="nav-cta">Get started</button>
+  </nav>
 
-<!-- ═══ NAV ═══ -->
-<nav>
-  <div class="logo">Well<span>Sense</span></div>
-  <ul class="nav-links">
-    <li><a href="#how">How It Works</a></li>
-    <li><a href="#features">Features</a></li>
-    <li><a href="#predict">Predictor</a></li>
-    <li><a href="#models">Models</a></li>
-  </ul>
-  <a href="#predict" class="nav-btn">Predict Now</a>
-</nav>
+  <!-- HERO -->
+  <section class="hero">
+    <div>
+      <div class="hero-eyebrow">AI-Powered Hydrology</div>
+      <h1>Predict your <span>water well</span> before you drill</h1>
+      <p>WellSense uses geospatial data, historical records, and machine learning to forecast well depth, yield, and success probability — saving time, money, and dry holes.</p>
+      <div class="hero-actions">
+        <button class="btn-primary">Run a prediction</button>
+        <button class="btn-ghost">See a demo</button>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="well-card">
+        <div class="well-card-header">
+          <div>
+            <div class="well-label">Site Analysis</div>
+            <div style="font-size:0.9rem;font-weight:500;color:#f0faf6;margin-top:4px;">Lat 26.84° · Lon 80.94°</div>
+          </div>
+          <div class="well-status status-good">High yield</div>
+        </div>
+        <div class="well-depth-chart">
+          <div class="depth-bars" id="bars"></div>
+        </div>
+        <div class="well-metrics">
+          <div class="metric-cell">
+            <div class="metric-val">42m</div>
+            <div class="metric-key">Est. Depth</div>
+          </div>
+          <div class="metric-cell">
+            <div class="metric-val">94%</div>
+            <div class="metric-key">Success</div>
+          </div>
+          <div class="metric-cell">
+            <div class="metric-val">18 LPS</div>
+            <div class="metric-key">Yield</div>
+          </div>
+        </div>
+        <div class="predict-badge">
+          <div class="predict-dot"></div>
+          Model trained on 12,400+ wells across Uttar Pradesh
+        </div>
+      </div>
+    </div>
+  </section>
 
-<!-- ═══ HERO ═══ -->
-<section class="hero">
-  <!-- Strata lines -->
-  <div class="strata">
-    <div class="strata-line" style="top:18%"></div>
-    <div class="strata-line" style="top:34%"></div>
-    <div class="strata-line" style="top:52%"></div>
-    <div class="strata-line" style="top:68%"></div>
-    <div class="strata-line" style="top:83%"></div>
-  </div>
-
-  <div style="position:relative;z-index:1;">
-    <div class="hero-tag">ML-Powered &nbsp;·&nbsp; Water Well Depth Predictor</div>
-    <h1 class="hero-title">
-      Find Water<br><em>Underground</em><br>with AI
-    </h1>
-    <p class="hero-sub">
-      Enter your location, soil type, and geological parameters —
-      WellSense predicts optimal well depth, water availability,
-      and aquifer zone using trained machine learning models.
-    </p>
-    <div class="hero-actions">
-      <a href="#predict" class="btn-primary">&#x25BC; Start Prediction</a>
-      <a href="#how" class="btn-ghost">How It Works &rarr;</a>
+  <!-- STATS STRIP -->
+  <div class="stats-strip">
+    <div class="stats-inner">
+      <div class="stat-item">
+        <div class="stat-number">94%</div>
+        <div class="stat-desc">Prediction accuracy</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">12K+</div>
+        <div class="stat-desc">Wells analyzed</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">₹2.4L</div>
+        <div class="stat-desc">Avg. cost saved per site</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">18</div>
+        <div class="stat-desc">States covered</div>
+      </div>
     </div>
   </div>
 
-  <!-- Depth gauge -->
-  <div class="depth-gauge">
-    <div class="gauge-label">Depth</div>
-    <div class="gauge-track">
-      <div class="gauge-fill"></div>
-    </div>
-    <div class="gauge-val">47m</div>
-    <div class="gauge-unit">predicted</div>
-  </div>
-
-  <!-- Bottom cards -->
-  <div class="hero-cards">
-    <div class="hero-card">
-      <div class="hc-val">95%</div>
-      <div class="hc-lbl">Accuracy</div>
-    </div>
-    <div class="hero-card">
-      <div class="hc-val">700+</div>
-      <div class="hc-lbl">Districts</div>
-    </div>
-    <div class="hero-card">
-      <div class="hc-val">8</div>
-      <div class="hc-lbl">ML Models</div>
-    </div>
-  </div>
-
-  <div class="scroll-hint">
-    <div class="s-line"></div> Scroll to explore
-  </div>
-</section>
-
-<!-- ═══ HOW IT WORKS ═══ -->
-<section id="how">
-  <div class="inner">
-    <p class="s-label">Process</p>
-    <h2 class="s-title">How WellSense Works</h2>
-    <p class="s-sub">Four intelligent steps from your inputs to a precise well prediction in seconds.</p>
-
-    <div class="steps">
-      <div class="step">
-        <div class="step-num">STEP — 01</div>
-        <span class="step-icon">📍</span>
-        <div class="step-title">Enter Location & Soil Data</div>
-        <p class="step-text">Provide your district, state, soil type, annual rainfall, topography, and nearby land-use information. The system auto-populates known geological parameters.</p>
+  <!-- FEATURES -->
+  <section class="features">
+    <div class="section-label">What we offer</div>
+    <div class="section-title">Everything you need before the drill hits ground</div>
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feature-icon">🗺️</div>
+        <h3>Geospatial mapping</h3>
+        <p>Visualize aquifer zones, soil layers, and terrain data on an interactive map with real-time overlays.</p>
       </div>
-      <div class="step">
-        <div class="step-num">STEP — 02</div>
-        <span class="step-icon">⚙️</span>
-        <div class="step-title">ML Model Processes Inputs</div>
-        <p class="step-text">Your data is normalized, encoded, and passed through our trained Random Forest model — built on thousands of verified well records from CGWB and state boards.</p>
+      <div class="feature-card">
+        <div class="feature-icon">📉</div>
+        <h3>Depth prediction</h3>
+        <p>Get accurate depth-to-water estimates with confidence intervals based on nearby well records and geology.</p>
       </div>
-      <div class="step">
-        <div class="step-num">STEP — 03</div>
-        <span class="step-icon">💧</span>
-        <div class="step-title">Aquifer Zone Identified</div>
-        <p class="step-text">The model predicts the depth to water table, identifies the aquifer zone (phreatic or confined), and estimates seasonal fluctuation ranges for the location.</p>
+      <div class="feature-card">
+        <div class="feature-icon">💧</div>
+        <h3>Yield forecasting</h3>
+        <p>Predict water yield in litres per second so you can plan pump size, storage, and usage before spending a rupee.</p>
       </div>
-      <div class="step">
-        <div class="step-num">STEP — 04</div>
-        <span class="step-icon">📋</span>
-        <div class="step-title">Report & Recommendations</div>
-        <p class="step-text">Receive a full prediction report with optimal well depth, casing depth, expected yield in LPH, drilling cost estimate, and sustainability classification.</p>
+      <div class="feature-card">
+        <div class="feature-icon">✅</div>
+        <h3>Success probability</h3>
+        <p>A single clear score — how likely is this site to produce a functional well? De-risk your decision instantly.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">📊</div>
+        <h3>Historical well data</h3>
+        <p>Access records from 12,000+ wells across India — filterable by district, year, depth, and yield class.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">📄</div>
+        <h3>Exportable reports</h3>
+        <p>Generate a shareable PDF site report for contractors, government bodies, or NGO funding applications.</p>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- ═══ FEATURES ═══ -->
-<section id="features">
-  <div class="inner">
-    <p class="s-label">Capabilities</p>
-    <h2 class="s-title">Everything You Need<br>for Well Planning</h2>
-
-    <div class="feat-grid">
-      <div class="feat-card">
-        <span class="feat-icon">🗺️</span>
-        <div class="feat-title">District-wise Predictions</div>
-        <p class="feat-desc">Covers 700+ districts across 36 Indian states and UTs with region-specific geological training data for highly localized predictions.</p>
-      </div>
-      <div class="feat-card">
-        <span class="feat-icon">📉</span>
-        <div class="feat-title">Water Table Depth Forecast</div>
-        <p class="feat-desc">Predict pre-monsoon and post-monsoon water table depths with seasonal variation modelling based on 20+ years of historical data.</p>
-      </div>
-      <div class="feat-card">
-        <span class="feat-icon">🧪</span>
-        <div class="feat-title">Soil & Geology Analysis</div>
-        <p class="feat-desc">Input soil texture, permeability, lithology, and rock type — the model understands how subsurface composition affects aquifer depth and yield.</p>
-      </div>
-      <div class="feat-card">
-        <span class="feat-icon">⚖️</span>
-        <div class="feat-title">Multi-Model Comparison</div>
-        <p class="feat-desc">8 ML algorithms benchmarked. Random Forest selected as champion with 95% R² — results also show confidence intervals from ensemble predictions.</p>
-      </div>
-      <div class="feat-card">
-        <span class="feat-icon">🔐</span>
-        <div class="feat-title">Secure & Role-Based Access</div>
-        <p class="feat-desc">JWT authentication with separate portals for government water boards, engineers, researchers, and farmers — each with appropriate data access levels.</p>
-      </div>
-      <div class="feat-card">
-        <span class="feat-icon">📄</span>
-        <div class="feat-title">Downloadable PDF Reports</div>
-        <p class="feat-desc">Generate professional well planning reports with geological cross-section diagrams, depth recommendations, cost estimates, and sustainability ratings.</p>
+  <!-- HOW IT WORKS -->
+  <section class="how">
+    <div class="how-inner">
+      <div class="section-label">How it works</div>
+      <div class="section-title">From coordinates to confidence in minutes</div>
+      <div class="steps">
+        <div class="step">
+          <div class="step-num">01</div>
+          <h4>Pin your location</h4>
+          <p>Drop a pin on the map or enter GPS coordinates for your proposed drilling site.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">02</div>
+          <h4>We fetch the data</h4>
+          <p>Soil type, rainfall, aquifer maps, and nearby well records are pulled automatically.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">03</div>
+          <h4>Model runs</h4>
+          <p>Our trained ML model analyzes 40+ parameters to generate your site prediction.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">04</div>
+          <h4>Get your report</h4>
+          <p>Review depth, yield, and success scores — and download a full site PDF.</p>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- ═══ PREDICTOR DEMO ═══ -->
-<section id="predict">
-  <div class="inner">
-    <p class="s-label">Prediction Tool — Live Demo</p>
-    <h2 class="s-title">Predict Your Well<br>Depth Now</h2>
-
-    <div class="predict-layout">
-
-      <!-- Form -->
-      <div class="form-box" id="formBox">
-        <h3>Enter Well Parameters</h3>
-
-        <div class="form-row">
-          <div class="form-group">
-            <label>State</label>
-            <select>
-              <option>Rajasthan</option>
-              <option>Gujarat</option>
-              <option>Maharashtra</option>
-              <option>Punjab</option>
-              <option>Uttar Pradesh</option>
-              <option>Madhya Pradesh</option>
-              <option>Karnataka</option>
-              <option>Tamil Nadu</option>
-              <option>Andhra Pradesh</option>
-              <option>Telangana</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label>District</label>
-            <select>
-              <option>Jaipur</option>
-              <option>Jodhpur</option>
-              <option>Ahmedabad</option>
-              <option>Pune</option>
-              <option>Lucknow</option>
-              <option>Bhopal</option>
-            </select>
-          </div>
-        </div>
-
-        <div class="form-row">
-          <div class="form-group">
-            <label>Annual Rainfall (mm)</label>
-            <input type="number" placeholder="e.g. 650"/>
-          </div>
-          <div class="form-group">
-            <label>Elevation (m)</label>
-            <input type="number" placeholder="e.g. 230"/>
-          </div>
-        </div>
-
-        <div class="form-group">
-          <label>Soil Type</label>
-          <select>
-            <option>Sandy Loam</option>
-            <option>Clay</option>
-            <option>Black Cotton Soil</option>
-            <option>Red Laterite</option>
-            <option>Alluvial</option>
-            <option>Rocky / Hard Rock</option>
-          </select>
-        </div>
-
-        <div class="form-row">
-          <div class="form-group">
-            <label>Land Use</label>
-            <select>
-              <option>Agricultural</option>
-              <option>Urban</option>
-              <option>Forest</option>
-              <option>Wasteland</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label>Recharge Rate (BCM)</label>
-            <input type="number" placeholder="e.g. 12.4"/>
-          </div>
-        </div>
-
-        <div class="form-row">
-          <div class="form-group">
-            <label>Extraction (BCM)</label>
-            <input type="number" placeholder="e.g. 9.8"/>
-          </div>
-          <div class="form-group">
-            <label>Water Table Depth (m)</label>
-            <input type="number" placeholder="e.g. 8.5"/>
-          </div>
-        </div>
-
-        <button class="predict-btn" onclick="runPrediction()">&#9670; &nbsp;Run Prediction</button>
-      </div>
-
-      <!-- Results -->
-      <div class="result-panel" id="resultPanel">
-
-        <div class="result-card">
-          <div class="result-card-label">Predicted Well Depth</div>
-          <div class="result-val" id="depthVal">—</div>
-          <div class="result-unit">metres below ground level</div>
-        </div>
-
-        <div class="depth-visual">
-          <div class="dv-label">Geological Cross-Section</div>
-          <div class="dv-layers">
-            <div class="dv-layer l-topsoil"><span>0–3m &nbsp; Top Soil / Humus</span></div>
-            <div class="dv-layer l-clay"><span>3–15m &nbsp; Clay / Silt Layer</span></div>
-            <div class="dv-layer l-rock"><span>15–32m &nbsp; Hard Rock / Granite</span></div>
-            <div class="dv-layer l-aquifer"><span>💧 32–55m &nbsp; Aquifer Zone ← Target</span></div>
-            <div class="dv-layer l-deep"><span>55m+ &nbsp; Deep Confined Aquifer</span></div>
-          </div>
-        </div>
-
-        <div class="result-card">
-          <div class="result-card-label">Estimated Yield</div>
-          <div class="result-val" id="yieldVal" style="font-size:2.2rem;">—</div>
-          <div class="result-unit">litres per hour (LPH)</div>
-        </div>
-
-        <div>
-          <div class="s-label" style="margin-bottom:.8rem;">Sustainability Status</div>
-          <div class="well-status">
-            <span class="status-badge status-good" id="statSafe">✓ Safe Zone</span>
-            <span class="status-badge status-warn" id="statSemi">⚠ Semi-Critical</span>
-            <span class="status-badge status-bad" id="statOver">✗ Over-Exploited</span>
-          </div>
-        </div>
-
+  <!-- CTA -->
+  <section class="cta-section">
+    <div class="cta-box">
+      <h2>Ready to find water?</h2>
+      <p>Enter your email and we'll send you early access to WellSense.</p>
+      <div class="cta-inputs">
+        <input class="cta-input" type="email" placeholder="your@email.com" />
+        <button class="btn-primary">Request access</button>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- ═══ STATS ═══ -->
-<div id="stats">
-  <div class="stats-grid">
-    <div class="stat-item"><div class="stat-val" data-target="700" data-suffix="+">0</div><div class="stat-lbl">Districts Covered</div></div>
-    <div class="stat-item"><div class="stat-val" data-target="95" data-suffix="%">0</div><div class="stat-lbl">Model Accuracy R²</div></div>
-    <div class="stat-item"><div class="stat-val" data-target="50000" data-suffix="+">0</div><div class="stat-lbl">Well Records Trained</div></div>
-    <div class="stat-item"><div class="stat-val" data-target="8" data-suffix="">0</div><div class="stat-lbl">ML Algorithms</div></div>
-    <div class="stat-item"><div class="stat-val" data-target="20" data-suffix="yr">0</div><div class="stat-lbl">Historical Data</div></div>
-  </div>
-</div>
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-logo">WellSense</div>
+    <div class="footer-copy">© 2026 WellSense. Built for India's water future.</div>
+  </footer>
 
-<!-- ═══ MODELS ═══ -->
-<section id="models">
-  <div class="inner">
-    <p class="s-label">Algorithm Benchmarks</p>
-    <h2 class="s-title">Model Performance<br>Comparison</h2>
-    <p class="s-sub">All models trained on 80% of CGWB dataset, tested on 20% hold-out set with 5-fold cross-validation.</p>
-
-    <table class="models-table">
-      <thead>
-        <tr>
-          <th>Algorithm</th>
-          <th>R² Score</th>
-          <th>Accuracy Bar</th>
-          <th>MAE (m)</th>
-          <th>RMSE (m)</th>
-          <th>Status</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td><strong style="color:var(--white);">Random Forest</strong><span class="best-tag">Champion</span></td>
-          <td><span class="acc-num">95.1%</span></td>
-          <td><div class="acc-bar-wrap"><div class="acc-bar" style="--w:95.1%"></div></div></td>
-          <td>1.8</td><td>2.4</td>
-          <td><span class="status-badge status-good" style="font-size:.55rem;padding:.2rem .6rem;">Selected</span></td>
-        </tr>
-        <tr>
-          <td>Gradient Boosting</td>
-          <td><span class="acc-num">92.7%</span></td>
-          <td><div class="acc-bar-wrap"><div class="acc-bar" style="--w:92.7%"></div></div></td>
-          <td>2.1</td><td>3.0</td><td>—</td>
-        </tr>
-        <tr>
-          <td>Extra Trees</td>
-          <td><span class="acc-num">91.3%</span></td>
-          <td><div class="acc-bar-wrap"><div class="acc-bar" style="--w:91.3%"></div></div></td>
-          <td>2.3</td><td>3.2</td><td>—</td>
-        </tr>
-        <tr>
-          <td>XGBoost</td>
-          <td><span class="acc-num">90.6%</span></td>
-          <td><div class="acc-bar-wrap"><div class="acc-bar" style="--w:90.6%"></div></div></td>
-          <td>2.5</td><td>3.5</td><td>—</td>
-        </tr>
-        <tr>
-          <td>Decision Tree</td>
-          <td><span class="acc-num">83.2%</span></td>
-          <td><div class="acc-bar-wrap"><div class="acc-bar" style="--w:83.2%"></div></div></td>
-          <td>3.8</td><td>5.1</td><td>—</td>
-        </tr>
-        <tr>
-          <td>K-Nearest Neighbours</td>
-          <td><span class="acc-num">79.4%</span></td>
-          <td><div class="acc-bar-wrap"><div class="acc-bar" style="--w:79.4%"></div></div></td>
-          <td>4.4</td><td>6.0</td><td>—</td>
-        </tr>
-        <tr>
-          <td>SVR (RBF)</td>
-          <td><span class="acc-num">75.1%</span></td>
-          <td><div class="acc-bar-wrap"><div class="acc-bar" style="--w:75.1%"></div></div></td>
-          <td>5.2</td><td>7.1</td><td>—</td>
-        </tr>
-        <tr>
-          <td>Linear Regression</td>
-          <td><span class="acc-num">67.8%</span></td>
-          <td><div class="acc-bar-wrap"><div class="acc-bar" style="--w:67.8%"></div></div></td>
-          <td>6.8</td><td>9.3</td><td>—</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-</section>
-
-<!-- ═══ CTA ═══ -->
-<section id="cta">
-  <div class="cta-inner">
-    <h2 class="cta-title">Drill Smarter,<br>Not <em>Deeper</em></h2>
-    <p class="cta-sub">Stop guessing well depth. Use WellSense to predict exactly where water is — saving drilling costs, time, and protecting India's groundwater future.</p>
-    <div style="display:flex;gap:1.2rem;justify-content:center;flex-wrap:wrap;">
-      <a href="#predict" class="btn-primary">&#x25BC; Predict My Well Depth</a>
-      <a href="#" class="btn-ghost">Download Research Paper</a>
-    </div>
-    <div class="cta-note">Free for researchers &nbsp;·&nbsp; Government access available &nbsp;·&nbsp; API for developers</div>
-  </div>
-</section>
-
-<!-- ═══ FOOTER ═══ -->
-<footer>
-  <div class="f-logo">Well<span>Sense</span></div>
-  <div class="f-copy">© 2025 WellSense · Groundwater Intelligence · India</div>
-  <div class="f-links">
-    <a href="#">Docs</a>
-    <a href="#">API</a>
-    <a href="#">Dataset</a>
-    <a href="#">Contact</a>
-  </div>
-</footer>
-
-<script>
-  // ── Cursor ──
-  const cur = document.getElementById('cur'), curR = document.getElementById('curR');
-  let mx=0,my=0,rx=0,ry=0;
-  document.addEventListener('mousemove', e=>{ mx=e.clientX; my=e.clientY; cur.style.left=mx+'px'; cur.style.top=my+'px'; });
-  (function animR(){ rx+=(mx-rx)*.13; ry+=(my-ry)*.13; curR.style.left=rx+'px'; curR.style.top=ry+'px'; requestAnimationFrame(animR); })();
-
-  // ── Click ripple ──
-  document.addEventListener('click', e=>{
-    const r=document.createElement('div'); r.className='ripple';
-    r.style.cssText=`left:${e.clientX}px;top:${e.clientY}px;width:30px;height:30px;`;
-    document.body.appendChild(r); setTimeout(()=>r.remove(),750);
-  });
-
-  // ── Canvas particle network ──
-  const cv=document.getElementById('bgCanvas'), ctx=cv.getContext('2d');
-  let W,H,pts=[];
-  function resize(){ W=cv.width=innerWidth; H=cv.height=innerHeight; }
-  resize(); addEventListener('resize',resize);
-  class Pt {
-    constructor(){ this.reset(); }
-    reset(){ this.x=Math.random()*W; this.y=Math.random()*H; this.r=Math.random()*1.2+.3; this.vx=(Math.random()-.5)*.25; this.vy=(Math.random()-.5)*.25; this.a=Math.random()*.3+.05; }
-    tick(){ this.x+=this.vx; this.y+=this.vy; if(this.x<0||this.x>W||this.y<0||this.y>H)this.reset(); }
-    draw(){ ctx.beginPath(); ctx.arc(this.x,this.y,this.r,0,Math.PI*2); ctx.fillStyle=`rgba(${Math.random()>.5?'33,148,184':'196,122,43'},${this.a})`; ctx.fill(); }
-  }
-  for(let i=0;i<100;i++) pts.push(new Pt());
-  (function loop(){
-    ctx.clearRect(0,0,W,H);
-    pts.forEach(p=>{ p.tick(); p.draw(); });
-    for(let i=0;i<pts.length;i++) for(let j=i+1;j<pts.length;j++){
-      const dx=pts[i].x-pts[j].x,dy=pts[i].y-pts[j].y,d=Math.sqrt(dx*dx+dy*dy);
-      if(d<90){ ctx.beginPath(); ctx.moveTo(pts[i].x,pts[i].y); ctx.lineTo(pts[j].x,pts[j].y); ctx.strokeStyle=`rgba(26,107,138,${.1*(1-d/90)})`; ctx.lineWidth=.5; ctx.stroke(); }
-    }
-    requestAnimationFrame(loop);
-  })();
-
-  // ── IntersectionObserver for scroll animations ──
-  const io = new IntersectionObserver(entries=>{
-    entries.forEach(e=>{
-      if(e.isIntersecting){ e.target.classList.add('visible'); }
+  <script>
+    const bars = document.getElementById('bars');
+    const heights = [30, 45, 55, 40, 70, 60, 85, 75, 90, 80, 65, 95, 70, 55, 40];
+    heights.forEach((h, i) => {
+      const bar = document.createElement('div');
+      bar.className = 'depth-bar' + (i === 12 ? ' highlight' : '');
+      bar.style.height = h + '%';
+      bars.appendChild(bar);
     });
-  },{ threshold:.15 });
-
-  document.querySelectorAll('.step,.feat-card,#formBox,#resultPanel').forEach(el=>io.observe(el));
-  document.querySelectorAll('.step').forEach((el,i)=>{ el.style.transitionDelay=`${i*.1}s`; });
-  document.querySelectorAll('.feat-card').forEach((el,i)=>{ el.style.transitionDelay=`${i*.08}s`; });
-
-  // acc bars in table
-  const tio = new IntersectionObserver(entries=>{
-    entries.forEach(e=>{ if(e.isIntersecting) e.target.classList.add('visible'); });
-  },{threshold:.2});
-  document.querySelectorAll('.models-table tbody tr').forEach((tr,i)=>{ tr.style.transitionDelay=`${i*.07}s`; tio.observe(tr); });
-
-  // ── Stats counter ──
-  const sio = new IntersectionObserver(entries=>{
-    entries.forEach(e=>{
-      if(!e.isIntersecting) return;
-      e.target.querySelectorAll('.stat-val').forEach(el=>{
-        const target=+el.dataset.target, suffix=el.dataset.suffix||'';
-        let s=0; const dur=1800, t0=performance.now();
-        (function tick(now){
-          const p=Math.min((now-t0)/dur,1), val=Math.floor(p*target);
-          el.textContent=(val>=1000?val.toLocaleString():val)+suffix;
-          if(p<1) requestAnimationFrame(tick); else el.textContent=target.toLocaleString()+suffix;
-        })(t0);
-      });
-      sio.unobserve(e.target);
-    });
-  },{threshold:.4});
-  sio.observe(document.getElementById('stats'));
-
-  // ── Demo Prediction ──
-  function runPrediction(){
-    const btn = document.querySelector('.predict-btn');
-    btn.textContent = '⏳  Analysing...';
-    btn.style.background='var(--water)';
-    setTimeout(()=>{
-      const depth = (Math.floor(Math.random()*35)+28);
-      const yield_ = (Math.floor(Math.random()*800)+400);
-      document.getElementById('depthVal').textContent = depth + 'm';
-      document.getElementById('yieldVal').textContent = yield_ + ' LPH';
-
-      // status highlight
-      const ratio = depth / 65;
-      document.getElementById('statSafe').style.opacity = ratio < .55 ? '1' : '.25';
-      document.getElementById('statSemi').style.opacity = ratio >= .55 && ratio < .8 ? '1' : '.25';
-      document.getElementById('statOver').style.opacity = ratio >= .8 ? '1' : '.25';
-
-      btn.textContent = '✓  Prediction Complete';
-      btn.style.background='#2d7d50';
-      setTimeout(()=>{ btn.textContent='◆  Run Prediction'; btn.style.background=''; },3500);
-    },2000);
-  }
-</script>
+  </script>
 </body>
 </html>
