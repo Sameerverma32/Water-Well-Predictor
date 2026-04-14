@@ -205,6 +205,26 @@ def resource_extraction_analysis():
 
 @app.route('/stress_risk_analysis')
 def stress_risk_analysis():
+    graph10_html = Stress_Level_Count()
+    graph11_html = Risk_Score_Distribution()
+    graph12_html = Risk_vs_Extraction_Ratio()
+    graph13_html = Average_Risk_Over_Time()
+    graph14_html = Utilization_Distribution()
+    graph15_html = Utilization_vs_Risk()
+    graph16_html = Stress_vs_Extraction()
+    graph17_html = Risk_Score_Distribution()
+    graph18_html = Stress_vs_Utilization()
+
+    return render_template('stress_risk_analysis.html',
+                            graph10_html=graph10_html,
+                            graph11_html=graph11_html,
+                            graph12_html=graph12_html,
+                            graph13_html=graph13_html,
+                            graph14_html=graph14_html,
+                            graph15_html=graph15_html,
+                            graph16_html=graph16_html,
+                            graph17_html=graph17_html,
+                            graph18_html=graph18_html)
 
 
 if __name__ == '__main__':
