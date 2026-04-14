@@ -203,6 +203,10 @@ def resource_extraction_analysis():
                             graph8_html=graph8_html, 
                             graph9_html=graph9_html)
 
+@app.route('/stress_risk_analysis')
+def stress_risk_analysis():
+
+
 if __name__ == '__main__':
     if not os.path.exists('users.db'):
         with app.app_context():
