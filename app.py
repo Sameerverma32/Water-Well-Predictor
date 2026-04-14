@@ -284,6 +284,31 @@ def stress_risk_analysis():
                             graph17_html=graph17_html,
                             graph18_html=graph18_html)
 
+@app.route('/state_district_insights')
+def state_district_insights():
+    graph19_html = Hierarchical_View()
+    graph20_html = Resource_Treemap()
+    graph21_html = Statewise_Extraction_Trend()
+    graph22_html = State_Comparison()
+    graph23_html = Bubble_Chart()
+    graph24_html = Avg_Risk_by_State()
+    graph25_html = District_Risk_Spread()
+    graph26_html = Density_Heatmap()
+    graph27_html = Category_Distribution_Pie()
+    graph28_html = State_wise_Risk_Distribution()
+        
+    return render_template('state_district_insights.html',
+                            graph19_html=graph19_html,
+                            graph20_html=graph20_html,
+                            graph21_html=graph21_html,
+                            graph22_html=graph22_html,
+                            graph23_html=graph23_html,
+                            graph24_html=graph24_html,
+                            graph25_html=graph25_html,
+                            graph26_html=graph26_html,
+                            graph27_html=graph27_html,
+                            graph28_html=graph28_html)
+
 
 if __name__ == '__main__':
     if not os.path.exists('users.db'):
