@@ -1,24 +1,531 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>resource_extraction_analysis</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Resource Extraction Analysis — WellSense</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=DM+Sans:wght@300;400;500&display=swap"
+        rel="stylesheet" />
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'DM Sans', sans-serif;
+            background: #0a1628;
+            color: #e8f4f0;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        /* NAV */
+        .nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1.25rem 2.5rem;
+            border-bottom: 0.5px solid rgba(255, 255, 255, 0.08);
+            background: rgba(10, 22, 40, 0.95);
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        .nav-logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #7ecfb3;
+            letter-spacing: -0.3px;
+            text-decoration: none;
+        }
+
+        .nav-logo .drop {
+            width: 28px;
+            height: 28px;
+            background: linear-gradient(160deg, #7ecfb3, #3a8f72);
+            border-radius: 50% 50% 50% 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            font-size: 0.85rem;
+            font-weight: 400;
+            color: rgba(232, 244, 240, 0.6);
+            text-decoration: none;
+            transition: color 0.2s;
+            letter-spacing: 0.3px;
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: #7ecfb3;
+        }
+
+        .nav-cta {
+            background: #7ecfb3;
+            color: #0a1628;
+            border: none;
+            border-radius: 6px;
+            padding: 0.5rem 1.2rem;
+            font-size: 0.85rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: background 0.2s;
+            font-family: 'DM Sans', sans-serif;
+        }
+
+        .nav-cta:hover {
+            background: #9eddc7;
+        }
+
+        /* PAGE HEADER */
+        .page-header {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 3.5rem 2.5rem 2rem;
+            border-bottom: 0.5px solid rgba(255, 255, 255, 0.06);
+        }
+
+        .page-eyebrow {
+            font-size: 0.72rem;
+            letter-spacing: 2.5px;
+            text-transform: uppercase;
+            color: #7ecfb3;
+            margin-bottom: 0.75rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .page-eyebrow::before {
+            content: '';
+            width: 24px;
+            height: 1px;
+            background: #7ecfb3;
+        }
+
+        .page-header h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #f0faf6;
+            letter-spacing: -0.5px;
+            line-height: 1.2;
+            margin-bottom: 0.75rem;
+        }
+
+        .page-header p {
+            font-size: 0.95rem;
+            font-weight: 300;
+            color: rgba(232, 244, 240, 0.55);
+            line-height: 1.7;
+            max-width: 580px;
+        }
+
+        .header-meta {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .meta-badge {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 0.78rem;
+            color: rgba(232, 244, 240, 0.45);
+            background: rgba(255, 255, 255, 0.04);
+            border: 0.5px solid rgba(255, 255, 255, 0.08);
+            border-radius: 20px;
+            padding: 4px 12px;
+        }
+
+        .meta-badge .dot {
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: #7ecfb3;
+        }
+
+        /* SUMMARY STRIP */
+        .summary-strip {
+            background: rgba(255, 255, 255, 0.02);
+            border-bottom: 0.5px solid rgba(255, 255, 255, 0.06);
+        }
+
+        .summary-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 1.5rem 2.5rem;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        .summary-item {
+            padding: 0.5rem 1rem;
+            border-right: 0.5px solid rgba(255, 255, 255, 0.07);
+        }
+
+        .summary-item:first-child {
+            padding-left: 0;
+        }
+
+        .summary-item:last-child {
+            border-right: none;
+        }
+
+        .summary-label {
+            font-size: 0.7rem;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: rgba(232, 244, 240, 0.35);
+            margin-bottom: 4px;
+        }
+
+        .summary-value {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: #7ecfb3;
+        }
+
+        .summary-sub {
+            font-size: 0.75rem;
+            color: rgba(232, 244, 240, 0.4);
+            margin-top: 2px;
+        }
+
+        /* MAIN CONTENT */
+        .content {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 2.5rem 2.5rem 5rem;
+        }
+
+        /* SECTION DIVIDERS */
+        .section-divider {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin: 2.5rem 0 1.5rem;
+        }
+
+        .section-divider-label {
+            font-size: 0.7rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: rgba(232, 244, 240, 0.35);
+            white-space: nowrap;
+        }
+
+        .section-divider-line {
+            flex: 1;
+            height: 0.5px;
+            background: rgba(255, 255, 255, 0.07);
+        }
+
+        .section-num {
+            font-size: 0.7rem;
+            color: rgba(126, 207, 179, 0.5);
+            font-family: 'Playfair Display', serif;
+        }
+
+        /* GRAPH WRAPPERS */
+        .graph-wrapper {
+            background: rgba(255, 255, 255, 0.03);
+            border: 0.5px solid rgba(255, 255, 255, 0.07);
+            border-radius: 16px;
+            overflow: hidden;
+            margin-bottom: 1.5rem;
+            transition: border-color 0.2s;
+        }
+
+        .graph-wrapper:hover {
+            border-color: rgba(126, 207, 179, 0.2);
+        }
+
+        .graph-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1rem 1.5rem;
+            border-bottom: 0.5px solid rgba(255, 255, 255, 0.06);
+        }
+
+        .graph-title {
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: #f0faf6;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .graph-title::before {
+            content: '';
+            width: 3px;
+            height: 14px;
+            background: #7ecfb3;
+            border-radius: 2px;
+            flex-shrink: 0;
+        }
+
+        .graph-tag {
+            font-size: 0.68rem;
+            padding: 2px 8px;
+            border-radius: 20px;
+            background: rgba(126, 207, 179, 0.1);
+            color: #7ecfb3;
+            border: 0.5px solid rgba(126, 207, 179, 0.2);
+            letter-spacing: 0.5px;
+        }
+
+        .graph-body {
+            padding: 1.25rem 1rem;
+        }
+
+        .graph-body>* {
+            width: 100% !important;
+        }
+
+        /* TWO-COLUMN GRID */
+        .graph-grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .graph-grid-2 .graph-wrapper {
+            margin-bottom: 0;
+        }
+
+        /* FOOTER */
+        .footer {
+            border-top: 0.5px solid rgba(255, 255, 255, 0.06);
+            padding: 2rem 2.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .footer-logo {
+            font-family: 'Playfair Display', serif;
+            color: #7ecfb3;
+            font-size: 1rem;
+        }
+
+        .footer-copy {
+            font-size: 0.78rem;
+            color: rgba(232, 244, 240, 0.3);
+        }
+    </style>
 </head>
+
 <body>
-    
 
-    
-    {{graph1_html|safe}}
-    {{graph2_html|safe}}
-    {{graph3_html|safe}}
-    {{graph4_html|safe}}
-    {{graph5_html|safe}}
-    {{graph6_html|safe}}
-    {{graph7_html|safe}}
-    {{graph8_html|safe}}
-    {{graph9_html|safe}}
 
+    <!-- PAGE HEADER -->
+    <div class="page-header">
+        <div class="page-eyebrow">Analysis Dashboard</div>
+        <h1>Resource Extraction Analysis</h1>
+        <p>Deep-dive into groundwater extraction patterns, trends, and anomalies across India's well network — powered
+            by 12,000+ historical well records.</p>
+        <div class="header-meta">
+            <div class="meta-badge"><span class="dot"></span> 9 visualizations</div>
+            <div class="meta-badge"><span class="dot"></span> Updated live</div>
+            <div class="meta-badge"><span class="dot"></span> 18 states covered</div>
+        </div>
+    </div>
+
+    <!-- SUMMARY STRIP -->
+    <div class="summary-strip">
+        <div class="summary-inner">
+            <div class="summary-item">
+                <div class="summary-label">Wells analyzed</div>
+                <div class="summary-value">12,400+</div>
+                <div class="summary-sub">Across all monitored districts</div>
+            </div>
+            <div class="summary-item">
+                <div class="summary-label">Avg. extraction depth</div>
+                <div class="summary-value">38m</div>
+                <div class="summary-sub">National median</div>
+            </div>
+            <div class="summary-item">
+                <div class="summary-label">Data coverage</div>
+                <div class="summary-value">18 States</div>
+                <div class="summary-sub">Including UP, Rajasthan, Punjab</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div class="content">
+
+        <!-- Graph 1 -->
+        <div class="section-divider">
+            <span class="section-num">01</span>
+            <span class="section-divider-line"></span>
+            <span class="section-divider-label">Extraction Overview</span>
+        </div>
+        <div class="graph-wrapper">
+            <div class="graph-header">
+                <div class="graph-title">Extraction Volume Distribution</div>
+                <span class="graph-tag">Overview</span>
+            </div>
+            <div class="graph-body">
+                {{graph1_html|safe}}
+            </div>
+        </div>
+
+        <!-- Graph 2 -->
+        <div class="section-divider">
+            <span class="section-num">02</span>
+            <span class="section-divider-line"></span>
+            <span class="section-divider-label">Temporal Trends</span>
+        </div>
+        <div class="graph-wrapper">
+            <div class="graph-header">
+                <div class="graph-title">Extraction Trends Over Time</div>
+                <span class="graph-tag">Trend</span>
+            </div>
+            <div class="graph-body">
+                {{graph2_html|safe}}
+            </div>
+        </div>
+
+        <!-- Graph 3 & 4 — side by side -->
+        <div class="section-divider">
+            <span class="section-num">03 – 04</span>
+            <span class="section-divider-line"></span>
+            <span class="section-divider-label">Depth & Yield Correlation</span>
+        </div>
+        <div class="graph-grid-2">
+            <div class="graph-wrapper">
+                <div class="graph-header">
+                    <div class="graph-title">Depth vs. Yield Scatter</div>
+                    <span class="graph-tag">Correlation</span>
+                </div>
+                <div class="graph-body">
+                    {{graph3_html|safe}}
+                </div>
+            </div>
+            <div class="graph-wrapper">
+                <div class="graph-header">
+                    <div class="graph-title">Depth Distribution by Aquifer Type</div>
+                    <span class="graph-tag">Distribution</span>
+                </div>
+                <div class="graph-body">
+                    {{graph4_html|safe}}
+                </div>
+            </div>
+        </div>
+
+        <!-- Graph 5 -->
+        <div class="section-divider">
+            <span class="section-num">05</span>
+            <span class="section-divider-line"></span>
+            <span class="section-divider-label">Seasonal Patterns</span>
+        </div>
+        <div class="graph-wrapper">
+            <div class="graph-header">
+                <div class="graph-title">Seasonal Extraction Patterns</div>
+                <span class="graph-tag">Seasonal</span>
+            </div>
+            <div class="graph-body">
+                {{graph5_html|safe}}
+            </div>
+        </div>
+
+        <!-- Graph 6 & 7 — side by side -->
+        <div class="section-divider">
+            <span class="section-num">06 – 07</span>
+            <span class="section-divider-line"></span>
+            <span class="section-divider-label">Resource Classification</span>
+        </div>
+        <div class="graph-grid-2">
+            <div class="graph-wrapper">
+                <div class="graph-header">
+                    <div class="graph-title">Yield Class Breakdown</div>
+                    <span class="graph-tag">Classification</span>
+                </div>
+                <div class="graph-body">
+                    {{graph6_html|safe}}
+                </div>
+            </div>
+            <div class="graph-wrapper">
+                <div class="graph-header">
+                    <div class="graph-title">Well Type by Usage Category</div>
+                    <span class="graph-tag">Classification</span>
+                </div>
+                <div class="graph-body">
+                    {{graph7_html|safe}}
+                </div>
+            </div>
+        </div>
+
+        <!-- Graph 8 -->
+        <div class="section-divider">
+            <span class="section-num">08</span>
+            <span class="section-divider-line"></span>
+            <span class="section-divider-label">Geological Factors</span>
+        </div>
+        <div class="graph-wrapper">
+            <div class="graph-header">
+                <div class="graph-title">Extraction by Soil & Geology Type</div>
+                <span class="graph-tag">Geology</span>
+            </div>
+            <div class="graph-body">
+                {{graph8_html|safe}}
+            </div>
+        </div>
+
+        <!-- Graph 9 -->
+        <div class="section-divider">
+            <span class="section-num">09</span>
+            <span class="section-divider-line"></span>
+            <span class="section-divider-label">Summary</span>
+        </div>
+        <div class="graph-wrapper">
+            <div class="graph-header">
+                <div class="graph-title">Extraction Efficiency Index</div>
+                <span class="graph-tag">Summary</span>
+            </div>
+            <div class="graph-body">
+                {{graph9_html|safe}}
+            </div>
+        </div>
+
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-logo">WellSense</div>
+        <div class="footer-copy">© 2026 WellSense. Built for India's water future.</div>
+    </footer>
 
 </body>
+
 </html>

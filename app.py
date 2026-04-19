@@ -27,7 +27,7 @@ login_manager.login_view = 'login'
 class User(UserMixin, db.Model):
     id = db.Column(db.Integer, primary_key=True)
     username = db.Column(db.String(150), unique=True, nullable=False)
-    
+    email = db.Column(db.String(150), unique=True, nullable=False)
     password = db.Column(db.String(150), nullable=False)
 
 # Create all database tables
@@ -62,17 +62,55 @@ def home():
     }
     return render_template('home.html', stats=stats)
 
-@app.route('/about')
-def about():
-    return render_template('about.html')
 
-@app.route('/login')
+@app.route('/login', methods=['GET', 'POST'])
 def login():
+    if request.method == 'POST':
+        email = request.form.get('email')
+        password = request.form.get('password')
+        
+        user = User.query.filter_by(email=email).first()
+        if user and check_password_hash(user.password, password):
+            login_user(user)
+            return redirect(url_for('home'))
+        else:
+            flash('Invalid email or password')
+            return redirect(url_for('login'))
     return render_template('login.html')
 
-@app.route('/register')
+@app.route('/register', methods=['GET', 'POST'])
 def register():
+    if request.method == 'POST':
+        username = request.form.get('name')  # Using name as username
+        email = request.form.get('email')
+        password = request.form.get('password')
+        confirm_password = request.form.get('confirm_password')
+        
+        if password != confirm_password:
+            flash('Passwords do not match')
+            return redirect(url_for('register'))
+        
+        # Check if user already exists
+        existing_user = User.query.filter((User.username == username) | (User.email == email)).first()
+        if existing_user:
+            flash('Username or email already exists')
+            return redirect(url_for('register'))
+        
+        # Create new user
+        hashed_password = generate_password_hash(password)
+        new_user = User(username=username, email=email, password=hashed_password)
+        db.session.add(new_user)
+        db.session.commit()
+        
+        flash('Account created successfully! Please log in.')
+        return redirect(url_for('login'))
+    
     return render_template('register.html')
+
+@app.route('/logout')
+def logout():
+    logout_user()
+    return redirect(url_for('home'))
 
 #graphs functions
 def Annual_Recharge_Trend():
@@ -254,6 +292,12 @@ def  State_wise_Risk_Distribution():
     graph28_html = pio.to_html(fig, full_html=False)
     return graph28_html
 
+#------------------------ Dashboard page-------------------
+@app.route('/dashboard')
+@login_required
+def dashboard():
+    return render_template('dashboard.html')
+
 #resource & Extraction Analysis pages 
 @app.route('/resource_extraction_analysis')
 @login_required
@@ -327,6 +371,7 @@ def state_district_insights():
                             graph26_html=graph26_html,
                             graph27_html=graph27_html,
                             graph28_html=graph28_html)
+
 
 
 if __name__ == '__main__':

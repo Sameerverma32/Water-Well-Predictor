@@ -6,7 +6,9 @@
   <title>WellSense — Water Well Predictor</title>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
   <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html {
+      scroll-behavior: smooth;
+    }
     body {
       font-family: 'DM Sans', sans-serif;
       background: #0a1628;
@@ -37,7 +39,7 @@
     }
     .nav-links { display: flex; gap: 2rem; list-style: none; }
     .nav-links a {
-      font-size: 0.85rem; font-weight: 400;
+      font-size: 0.9rem; font-weight: 400;
       color: rgba(232,244,240,0.6);
       text-decoration: none; transition: color 0.2s;
       letter-spacing: 0.3px;
@@ -46,16 +48,17 @@
     .nav-cta {
       background: #7ecfb3; color: #0a1628;
       border: none; border-radius: 6px;
-      padding: 0.5rem 1.2rem; font-size: 0.85rem; font-weight: 500;
+      padding: 0.5rem 1.2rem; font-size: 0.9rem; font-weight: 500;
       cursor: pointer; transition: background 0.2s;
       font-family: 'DM Sans', sans-serif;
+      text-decoration: none;
     }
-    .nav-cta:hover { background: #9eddc7; }
+    .nav-cta:hover { background: #a8f0d7; }
 
     /* HERO */
     .hero {
       padding: 6rem 2.5rem 4rem;
-      max-width: 1100px; margin: 0 auto;
+      max-width: 100%; margin: 0 auto;
       display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;
     }
     .hero-eyebrow {
@@ -83,6 +86,7 @@
       background: #7ecfb3; color: #0a1628;
       border: none; border-radius: 8px;
       padding: 0.75rem 1.75rem; font-size: 0.95rem; font-weight: 500;
+      text-decoration: none;
       cursor: pointer; transition: all 0.2s; font-family: 'DM Sans', sans-serif;
     }
     .btn-primary:hover { background: #9eddc7; transform: translateY(-1px); }
@@ -178,7 +182,7 @@
 
     /* FEATURES */
     .features {
-      max-width: 1100px; margin: 0 auto;
+      max-width: 100%; margin: 0 auto;
       padding: 5rem 2.5rem;
     }
     .section-label {
@@ -224,7 +228,7 @@
       border-bottom: 0.5px solid rgba(255,255,255,0.06);
       padding: 5rem 2.5rem;
     }
-    .how-inner { max-width: 1100px; margin: 0 auto; }
+    .how-inner { max-width: 100%; margin: 0 auto; }
     .steps {
       display: grid; grid-template-columns: repeat(4, 1fr); gap: 0;
       margin-top: 3rem; position: relative;
@@ -248,7 +252,7 @@
 
     /* CTA */
     .cta-section {
-      max-width: 1100px; margin: 0 auto;
+      max-width: 100%; margin: 0 auto;
       padding: 5rem 2.5rem; text-align: center;
     }
     .cta-box {
@@ -280,7 +284,7 @@
       border-top: 0.5px solid rgba(255,255,255,0.06);
       padding: 2rem 2.5rem;
       display: flex; align-items: center; justify-content: space-between;
-      max-width: 1100px; margin: 0 auto;
+      max-width: 100%; margin: 0 auto;
     }
     .footer-logo { font-family: 'Playfair Display', serif; color: #7ecfb3; font-size: 1rem; }
     .footer-copy { font-size: 0.78rem; color: rgba(232,244,240,0.3); }
@@ -295,12 +299,12 @@
       WellSense
     </div>
     <ul class="nav-links">
-      <li><a href="#">Features</a></li>
-      <li><a href="#">How it works</a></li>
-      <li><a href="#">Data</a></li>
-      <li><a href="#">Pricing</a></li>
+      <li><a href="#features">Features</a></li>
+      <li><a href="#HowItWorks">How it works</a></li>
+      <li><a href="/login">Login</a></li>
+      <li><a href="/register">Register</a></li>
     </ul>
-    <button class="nav-cta">Get started</button>
+    <a href="/dashboard" class="nav-cta">Get started</a>
   </nav>
 
   <!-- HERO -->
@@ -310,8 +314,7 @@
       <h1>Predict your <span>water well</span> before you drill</h1>
       <p>WellSense uses geospatial data, historical records, and machine learning to forecast well depth, yield, and success probability — saving time, money, and dry holes.</p>
       <div class="hero-actions">
-        <button class="btn-primary">Run a prediction</button>
-        <button class="btn-ghost">See a demo</button>
+        <a href="/dashboard" class="btn-primary">Run a prediction</a>
       </div>
     </div>
     <div class="hero-visual">
@@ -371,7 +374,7 @@
   </div>
 
   <!-- FEATURES -->
-  <section class="features">
+  <section class="features" id="features">
     <div class="section-label">What we offer</div>
     <div class="section-title">Everything you need before the drill hits ground</div>
     <div class="features-grid">
@@ -409,7 +412,7 @@
   </section>
 
   <!-- HOW IT WORKS -->
-  <section class="how">
+  <section class="how" id="HowItWorks">
     <div class="how-inner">
       <div class="section-label">How it works</div>
       <div class="section-title">From coordinates to confidence in minutes</div>

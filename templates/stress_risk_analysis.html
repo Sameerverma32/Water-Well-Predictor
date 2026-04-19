@@ -1,24 +1,542 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=
-    , initial-scale=1.0">
-    <title>Stress & Risk Analysis</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stress & Risk Analysis — WellSense</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=DM+Sans:wght@300;400;500&display=swap"
+        rel="stylesheet" />
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'DM Sans', sans-serif;
+            background: #0a1628;
+            color: #e8f4f0;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+
+        /* PAGE HEADER */
+        .page-header {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 3.5rem 2.5rem 2rem;
+            border-bottom: 0.5px solid rgba(255, 255, 255, 0.06);
+        }
+
+        .page-eyebrow {
+            font-size: 0.72rem;
+            letter-spacing: 2.5px;
+            text-transform: uppercase;
+            color: #e07a5f;
+            margin-bottom: 0.75rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .page-eyebrow::before {
+            content: '';
+            width: 24px;
+            height: 1px;
+            background: #e07a5f;
+        }
+
+        .page-header h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #f0faf6;
+            letter-spacing: -0.5px;
+            line-height: 1.2;
+            margin-bottom: 0.75rem;
+        }
+
+        .page-header p {
+            font-size: 0.95rem;
+            font-weight: 300;
+            color: rgba(232, 244, 240, 0.55);
+            line-height: 1.7;
+            max-width: 580px;
+        }
+
+        .header-meta {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .meta-badge {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 0.78rem;
+            color: rgba(232, 244, 240, 0.45);
+            background: rgba(255, 255, 255, 0.04);
+            border: 0.5px solid rgba(255, 255, 255, 0.08);
+            border-radius: 20px;
+            padding: 4px 12px;
+        }
+
+        .meta-badge .dot {
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+        }
+
+        .meta-badge .dot-risk {
+            background: #e07a5f;
+        }
+
+        .meta-badge .dot-teal {
+            background: #7ecfb3;
+        }
+
+        /* RISK ALERT BANNER */
+        .risk-banner {
+            background: rgba(224, 122, 95, 0.06);
+            border-bottom: 0.5px solid rgba(224, 122, 95, 0.15);
+        }
+
+        .risk-banner-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 1rem 2.5rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .risk-icon {
+            width: 32px;
+            height: 32px;
+            border-radius: 8px;
+            background: rgba(224, 122, 95, 0.15);
+            border: 0.5px solid rgba(224, 122, 95, 0.3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            flex-shrink: 0;
+        }
+
+        .risk-banner-text {
+            font-size: 0.82rem;
+            color: rgba(232, 244, 240, 0.6);
+            line-height: 1.5;
+        }
+
+        .risk-banner-text strong {
+            color: #e07a5f;
+            font-weight: 500;
+        }
+
+        /* SUMMARY STRIP */
+        .summary-strip {
+            background: rgba(255, 255, 255, 0.02);
+            border-bottom: 0.5px solid rgba(255, 255, 255, 0.06);
+        }
+
+        .summary-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 1.5rem 2.5rem;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        .summary-item {
+            padding: 0.5rem 1rem;
+            border-right: 0.5px solid rgba(255, 255, 255, 0.07);
+        }
+
+        .summary-item:first-child {
+            padding-left: 0;
+        }
+
+        .summary-item:last-child {
+            border-right: none;
+        }
+
+        .summary-label {
+            font-size: 0.7rem;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: rgba(232, 244, 240, 0.35);
+            margin-bottom: 4px;
+        }
+
+        .summary-value {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.6rem;
+            font-weight: 700;
+        }
+
+        .summary-value.risk {
+            color: #e07a5f;
+        }
+
+        .summary-value.teal {
+            color: #7ecfb3;
+        }
+
+        .summary-sub {
+            font-size: 0.75rem;
+            color: rgba(232, 244, 240, 0.4);
+            margin-top: 2px;
+        }
+
+        /* MAIN CONTENT */
+        .content {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 2.5rem 2.5rem 5rem;
+        }
+
+        /* SECTION DIVIDERS */
+        .section-divider {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin: 2.5rem 0 1.5rem;
+        }
+
+        .section-divider-label {
+            font-size: 0.7rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: rgba(232, 244, 240, 0.35);
+            white-space: nowrap;
+        }
+
+        .section-divider-line {
+            flex: 1;
+            height: 0.5px;
+            background: rgba(255, 255, 255, 0.07);
+        }
+
+        .section-num {
+            font-size: 0.7rem;
+            color: rgba(224, 122, 95, 0.6);
+            font-family: 'Playfair Display', serif;
+        }
+
+        /* GRAPH WRAPPERS */
+        .graph-wrapper {
+            background: rgba(255, 255, 255, 0.03);
+            border: 0.5px solid rgba(255, 255, 255, 0.07);
+            border-radius: 16px;
+            overflow: hidden;
+            margin-bottom: 1.5rem;
+            transition: border-color 0.2s;
+        }
+
+        .graph-wrapper:hover {
+            border-color: rgba(224, 122, 95, 0.2);
+        }
+
+        .graph-wrapper.high-risk {
+            border-color: rgba(224, 122, 95, 0.15);
+        }
+
+        .graph-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1rem 1.5rem;
+            border-bottom: 0.5px solid rgba(255, 255, 255, 0.06);
+        }
+
+        .graph-title {
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: #f0faf6;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .graph-title::before {
+            content: '';
+            width: 3px;
+            height: 14px;
+            border-radius: 2px;
+            flex-shrink: 0;
+        }
+
+        .graph-title.risk-accent::before {
+            background: #e07a5f;
+        }
+
+        .graph-title.teal-accent::before {
+            background: #7ecfb3;
+        }
+
+        .graph-tag {
+            font-size: 0.68rem;
+            padding: 2px 8px;
+            border-radius: 20px;
+            letter-spacing: 0.5px;
+        }
+
+        .graph-tag.risk {
+            background: rgba(224, 122, 95, 0.1);
+            color: #e07a5f;
+            border: 0.5px solid rgba(224, 122, 95, 0.2);
+        }
+
+        .graph-tag.teal {
+            background: rgba(126, 207, 179, 0.1);
+            color: #7ecfb3;
+            border: 0.5px solid rgba(126, 207, 179, 0.2);
+        }
+
+        .graph-body {
+            padding: 1.25rem 1rem;
+        }
+
+        .graph-body>* {
+            width: 100% !important;
+        }
+
+        /* TWO-COLUMN GRID */
+        .graph-grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .graph-grid-2 .graph-wrapper {
+            margin-bottom: 0;
+        }
+
+        /* FOOTER */
+        .footer {
+            border-top: 0.5px solid rgba(255, 255, 255, 0.06);
+            padding: 2rem 2.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .footer-logo {
+            font-family: 'Playfair Display', serif;
+            color: #7ecfb3;
+            font-size: 1rem;
+        }
+
+        .footer-copy {
+            font-size: 0.78rem;
+            color: rgba(232, 244, 240, 0.3);
+        }
+    </style>
 </head>
+
 <body>
-    
-    {{graph10_html|safe}}
-    {{graph11_html|safe}}
-    {{graph12_html|safe}}
-    {{graph13_html|safe}}
-    {{graph14_html|safe}}
-    {{graph15_html|safe}}
-    {{graph16_html|safe}}
-    {{graph17_html|safe}}
-    {{graph18_html|safe}}
 
+    <!-- PAGE HEADER -->
+    <div class="page-header">
+        <div class="page-eyebrow">Risk Dashboard</div>
+        <h1>Stress & Risk Analysis</h1>
+        <p>Identify high-risk groundwater zones, over-extraction hotspots, and aquifer stress levels to guide
+            sustainable drilling decisions and policy interventions.</p>
+        <div class="header-meta">
+            <div class="meta-badge"><span class="dot dot-risk"></span> 9 risk indicators</div>
+            <div class="meta-badge"><span class="dot dot-teal"></span> Live model data</div>
+            <div class="meta-badge"><span class="dot dot-risk"></span> Stress-mapped zones</div>
+        </div>
+    </div>
 
+    <!-- RISK ALERT BANNER -->
+    <div class="risk-banner">
+        <div class="risk-banner-inner">
+            <div class="risk-icon">⚠️</div>
+            <div class="risk-banner-text">
+                <strong>Elevated stress detected</strong> in 6 districts. Review the aquifer depletion and
+                over-extraction charts below to identify at-risk sites before committing to new wells.
+            </div>
+        </div>
+    </div>
+
+    <!-- SUMMARY STRIP -->
+    <div class="summary-strip">
+        <div class="summary-inner">
+            <div class="summary-item">
+                <div class="summary-label">High-risk districts</div>
+                <div class="summary-value risk">6</div>
+                <div class="summary-sub">Requiring immediate attention</div>
+            </div>
+            <div class="summary-item">
+                <div class="summary-label">Avg. stress index</div>
+                <div class="summary-value risk">0.74</div>
+                <div class="summary-sub">Above safe threshold (0.5)</div>
+            </div>
+            <div class="summary-item">
+                <div class="summary-label">Safe drilling zones</div>
+                <div class="summary-value teal">62%</div>
+                <div class="summary-sub">Of monitored area</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div class="content">
+
+        <!-- Graph 10 -->
+        <div class="section-divider">
+            <span class="section-num">10</span>
+            <span class="section-divider-line"></span>
+            <span class="section-divider-label">Stress Overview</span>
+        </div>
+        <div class="graph-wrapper high-risk">
+            <div class="graph-header">
+                <div class="graph-title risk-accent">Groundwater Stress Index by Zone</div>
+                <span class="graph-tag risk">Critical</span>
+            </div>
+            <div class="graph-body">
+                {{graph10_html|safe}}
+            </div>
+        </div>
+
+        <!-- Graph 11 -->
+        <div class="section-divider">
+            <span class="section-num">11</span>
+            <span class="section-divider-line"></span>
+            <span class="section-divider-label">Depletion Trends</span>
+        </div>
+        <div class="graph-wrapper">
+            <div class="graph-header">
+                <div class="graph-title risk-accent">Aquifer Depletion Rate Over Time</div>
+                <span class="graph-tag risk">Trend</span>
+            </div>
+            <div class="graph-body">
+                {{graph11_html|safe}}
+            </div>
+        </div>
+
+        <!-- Graph 12 & 13 — side by side -->
+        <div class="section-divider">
+            <span class="section-num">12 – 13</span>
+            <span class="section-divider-line"></span>
+            <span class="section-divider-label">Over-Extraction & Recharge</span>
+        </div>
+        <div class="graph-grid-2">
+            <div class="graph-wrapper">
+                <div class="graph-header">
+                    <div class="graph-title risk-accent">Over-Extraction Hotspots</div>
+                    <span class="graph-tag risk">Risk</span>
+                </div>
+                <div class="graph-body">
+                    {{graph12_html|safe}}
+                </div>
+            </div>
+            <div class="graph-wrapper">
+                <div class="graph-header">
+                    <div class="graph-title teal-accent">Recharge vs. Extraction Balance</div>
+                    <span class="graph-tag teal">Balance</span>
+                </div>
+                <div class="graph-body">
+                    {{graph13_html|safe}}
+                </div>
+            </div>
+        </div>
+
+        <!-- Graph 14 -->
+        <div class="section-divider">
+            <span class="section-num">14</span>
+            <span class="section-divider-line"></span>
+            <span class="section-divider-label">Seasonal Stress</span>
+        </div>
+        <div class="graph-wrapper">
+            <div class="graph-header">
+                <div class="graph-title risk-accent">Seasonal Stress Fluctuation</div>
+                <span class="graph-tag risk">Seasonal</span>
+            </div>
+            <div class="graph-body">
+                {{graph14_html|safe}}
+            </div>
+        </div>
+
+        <!-- Graph 15 & 16 — side by side -->
+        <div class="section-divider">
+            <span class="section-num">15 – 16</span>
+            <span class="section-divider-line"></span>
+            <span class="section-divider-label">Risk Classification</span>
+        </div>
+        <div class="graph-grid-2">
+            <div class="graph-wrapper">
+                <div class="graph-header">
+                    <div class="graph-title risk-accent">Risk Zone Distribution</div>
+                    <span class="graph-tag risk">Classification</span>
+                </div>
+                <div class="graph-body">
+                    {{graph15_html|safe}}
+                </div>
+            </div>
+            <div class="graph-wrapper">
+                <div class="graph-header">
+                    <div class="graph-title teal-accent">Safe vs. At-Risk Well Sites</div>
+                    <span class="graph-tag teal">Comparison</span>
+                </div>
+                <div class="graph-body">
+                    {{graph16_html|safe}}
+                </div>
+            </div>
+        </div>
+
+        <!-- Graph 17 -->
+        <div class="section-divider">
+            <span class="section-num">17</span>
+            <span class="section-divider-line"></span>
+            <span class="section-divider-label">Depth Risk Correlation</span>
+        </div>
+        <div class="graph-wrapper">
+            <div class="graph-header">
+                <div class="graph-title risk-accent">Drilling Depth vs. Risk Score</div>
+                <span class="graph-tag risk">Correlation</span>
+            </div>
+            <div class="graph-body">
+                {{graph17_html|safe}}
+            </div>
+        </div>
+
+        <!-- Graph 18 -->
+        <div class="section-divider">
+            <span class="section-num">18</span>
+            <span class="section-divider-line"></span>
+            <span class="section-divider-label">Risk Summary</span>
+        </div>
+        <div class="graph-wrapper high-risk">
+            <div class="graph-header">
+                <div class="graph-title risk-accent">Composite Risk Score by District</div>
+                <span class="graph-tag risk">Summary</span>
+            </div>
+            <div class="graph-body">
+                {{graph18_html|safe}}
+            </div>
+        </div>
+
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-logo">WellSense</div>
+        <div class="footer-copy">© 2026 WellSense. Built for India's water future.</div>
+    </footer>
 
 </body>
+
 </html>

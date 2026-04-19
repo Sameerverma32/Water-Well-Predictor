@@ -1,23 +1,659 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>State & District_Level_Insights</title>
-</head>
-<body>
-    
-    {{graph19_html|safe}}
-    {{graph20_html|safe}}
-    {{graph21_html|safe}}
-    {{graph22_html|safe}}
-    {{graph23_html|safe}}
-    {{graph24_html|safe}}
-    {{graph25_html|safe}}
-    {{graph26_html|safe}}
-    {{graph27_html|safe}}
-    {{graph28_html|safe}}
 
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>State & District Insights — WellSense</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=DM+Sans:wght@300;400;500&display=swap"
+        rel="stylesheet" />
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'DM Sans', sans-serif;
+            background: #0a1628;
+            color: #e8f4f0;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        /* NAV
+        .nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1.25rem 2.5rem;
+            border-bottom: 0.5px solid rgba(255, 255, 255, 0.08);
+            background: rgba(10, 22, 40, 0.95);
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        .nav-logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #7ecfb3;
+            letter-spacing: -0.3px;
+            text-decoration: none;
+        }
+
+        .nav-logo .drop {
+            width: 28px;
+            height: 28px;
+            background: linear-gradient(160deg, #7ecfb3, #3a8f72);
+            border-radius: 50% 50% 50% 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            font-size: 0.85rem;
+            font-weight: 400;
+            color: rgba(232, 244, 240, 0.6);
+            text-decoration: none;
+            transition: color 0.2s;
+            letter-spacing: 0.3px;
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: #7ecfb3;
+        }
+
+        .nav-cta {
+            background: #7ecfb3;
+            color: #0a1628;
+            border: none;
+            border-radius: 6px;
+            padding: 0.5rem 1.2rem;
+            font-size: 0.85rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: background 0.2s;
+            font-family: 'DM Sans', sans-serif;
+        }
+
+        .nav-cta:hover {
+            background: #9eddc7;
+        } */
+
+        /* PAGE HEADER */
+        .page-header {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 3.5rem 2.5rem 2rem;
+            border-bottom: 0.5px solid rgba(255, 255, 255, 0.06);
+        }
+
+        .page-eyebrow {
+            font-size: 0.72rem;
+            letter-spacing: 2.5px;
+            text-transform: uppercase;
+            color: #a78bfa;
+            margin-bottom: 0.75rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .page-eyebrow::before {
+            content: '';
+            width: 24px;
+            height: 1px;
+            background: #a78bfa;
+        }
+
+        .page-header h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #f0faf6;
+            letter-spacing: -0.5px;
+            line-height: 1.2;
+            margin-bottom: 0.75rem;
+        }
+
+        .page-header p {
+            font-size: 0.95rem;
+            font-weight: 300;
+            color: rgba(232, 244, 240, 0.55);
+            line-height: 1.7;
+            max-width: 580px;
+        }
+
+        .header-meta {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .meta-badge {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 0.78rem;
+            color: rgba(232, 244, 240, 0.45);
+            background: rgba(255, 255, 255, 0.04);
+            border: 0.5px solid rgba(255, 255, 255, 0.08);
+            border-radius: 20px;
+            padding: 4px 12px;
+        }
+
+        .meta-badge .dot {
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+        }
+
+        .meta-badge .dot-purple {
+            background: #a78bfa;
+        }
+
+        .meta-badge .dot-teal {
+            background: #7ecfb3;
+        }
+
+        /* BREADCRUMB / FILTER BAR */
+        .filter-bar {
+            background: rgba(255, 255, 255, 0.02);
+            border-bottom: 0.5px solid rgba(255, 255, 255, 0.06);
+        }
+
+        .filter-bar-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0.85rem 2.5rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .filter-label {
+            font-size: 0.75rem;
+            color: rgba(232, 244, 240, 0.35);
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            flex-shrink: 0;
+        }
+
+        .filter-chip {
+            font-size: 0.75rem;
+            padding: 4px 12px;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.2s;
+            border: 0.5px solid rgba(255, 255, 255, 0.1);
+            color: rgba(232, 244, 240, 0.5);
+            background: transparent;
+            font-family: 'DM Sans', sans-serif;
+        }
+
+        .filter-chip.active {
+            background: rgba(167, 139, 250, 0.12);
+            border-color: rgba(167, 139, 250, 0.3);
+            color: #a78bfa;
+        }
+
+        .filter-chip:hover:not(.active) {
+            border-color: rgba(255, 255, 255, 0.2);
+            color: rgba(232, 244, 240, 0.75);
+        }
+
+        /* SUMMARY STRIP */
+        .summary-strip {
+            background: rgba(255, 255, 255, 0.02);
+            border-bottom: 0.5px solid rgba(255, 255, 255, 0.06);
+        }
+
+        .summary-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 1.5rem 2.5rem;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+        }
+
+        .summary-item {
+            padding: 0.5rem 1rem;
+            border-right: 0.5px solid rgba(255, 255, 255, 0.07);
+        }
+
+        .summary-item:first-child {
+            padding-left: 0;
+        }
+
+        .summary-item:last-child {
+            border-right: none;
+        }
+
+        .summary-label {
+            font-size: 0.7rem;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: rgba(232, 244, 240, 0.35);
+            margin-bottom: 4px;
+        }
+
+        .summary-value {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.6rem;
+            font-weight: 700;
+        }
+
+        .summary-value.purple {
+            color: #a78bfa;
+        }
+
+        .summary-value.teal {
+            color: #7ecfb3;
+        }
+
+        .summary-sub {
+            font-size: 0.75rem;
+            color: rgba(232, 244, 240, 0.4);
+            margin-top: 2px;
+        }
+
+        /* MAIN CONTENT */
+        .content {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 2.5rem 2.5rem 5rem;
+        }
+
+        /* SECTION DIVIDERS */
+        .section-divider {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin: 2.5rem 0 1.5rem;
+        }
+
+        .section-divider-label {
+            font-size: 0.7rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: rgba(232, 244, 240, 0.35);
+            white-space: nowrap;
+        }
+
+        .section-divider-line {
+            flex: 1;
+            height: 0.5px;
+            background: rgba(255, 255, 255, 0.07);
+        }
+
+        .section-num {
+            font-size: 0.7rem;
+            color: rgba(167, 139, 250, 0.6);
+            font-family: 'Playfair Display', serif;
+        }
+
+        /* GRAPH WRAPPERS */
+        .graph-wrapper {
+            background: rgba(255, 255, 255, 0.03);
+            border: 0.5px solid rgba(255, 255, 255, 0.07);
+            border-radius: 16px;
+            overflow: hidden;
+            margin-bottom: 1.5rem;
+            transition: border-color 0.2s;
+        }
+
+        .graph-wrapper:hover {
+            border-color: rgba(167, 139, 250, 0.2);
+        }
+
+        .graph-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1rem 1.5rem;
+            border-bottom: 0.5px solid rgba(255, 255, 255, 0.06);
+        }
+
+        .graph-title {
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: #f0faf6;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .graph-title::before {
+            content: '';
+            width: 3px;
+            height: 14px;
+            border-radius: 2px;
+            flex-shrink: 0;
+        }
+
+        .graph-title.purple-accent::before {
+            background: #a78bfa;
+        }
+
+        .graph-title.teal-accent::before {
+            background: #7ecfb3;
+        }
+
+        .graph-tag {
+            font-size: 0.68rem;
+            padding: 2px 8px;
+            border-radius: 20px;
+            letter-spacing: 0.5px;
+        }
+
+        .graph-tag.purple {
+            background: rgba(167, 139, 250, 0.1);
+            color: #a78bfa;
+            border: 0.5px solid rgba(167, 139, 250, 0.2);
+        }
+
+        .graph-tag.teal {
+            background: rgba(126, 207, 179, 0.1);
+            color: #7ecfb3;
+            border: 0.5px solid rgba(126, 207, 179, 0.2);
+        }
+
+        .graph-body {
+            padding: 1.25rem 1rem;
+        }
+
+        .graph-body>* {
+            width: 100% !important;
+        }
+
+        /* TWO-COLUMN GRID */
+        .graph-grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .graph-grid-2 .graph-wrapper {
+            margin-bottom: 0;
+        }
+
+        /* THREE-COLUMN GRID */
+        .graph-grid-3 {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .graph-grid-3 .graph-wrapper {
+            margin-bottom: 0;
+        }
+
+        /* FOOTER */
+        .footer {
+            border-top: 0.5px solid rgba(255, 255, 255, 0.06);
+            padding: 2rem 2.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .footer-logo {
+            font-family: 'Playfair Display', serif;
+            color: #7ecfb3;
+            font-size: 1rem;
+        }
+
+        .footer-copy {
+            font-size: 0.78rem;
+            color: rgba(232, 244, 240, 0.3);
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <!-- PAGE HEADER -->
+    <div class="page-header">
+        <div class="page-eyebrow">Geographic Insights</div>
+        <h1>State & District Level Insights</h1>
+        <p>Compare groundwater performance, extraction efficiency, and risk profiles across India's states and districts
+            — from broad regional trends to hyper-local patterns.</p>
+        <div class="header-meta">
+            <div class="meta-badge"><span class="dot dot-purple"></span> 10 visualizations</div>
+            <div class="meta-badge"><span class="dot dot-teal"></span> 18 states</div>
+            <div class="meta-badge"><span class="dot dot-purple"></span> District-level granularity</div>
+        </div>
+    </div>
+
+    <!-- FILTER BAR -->
+    <div class="filter-bar">
+        <div class="filter-bar-inner">
+            <span class="filter-label">View by</span>
+            <button class="filter-chip active">All India</button>
+            <button class="filter-chip">Uttar Pradesh</button>
+            <button class="filter-chip">Rajasthan</button>
+            <button class="filter-chip">Punjab</button>
+            <button class="filter-chip">Maharashtra</button>
+            <button class="filter-chip">Bihar</button>
+        </div>
+    </div>
+
+    <!-- SUMMARY STRIP -->
+    <div class="summary-strip">
+        <div class="summary-inner">
+            <div class="summary-item">
+                <div class="summary-label">States covered</div>
+                <div class="summary-value purple">18</div>
+                <div class="summary-sub">Across monitored network</div>
+            </div>
+            <div class="summary-item">
+                <div class="summary-label">Districts analyzed</div>
+                <div class="summary-value purple">340+</div>
+                <div class="summary-sub">With well-level records</div>
+            </div>
+            <div class="summary-item">
+                <div class="summary-label">Top performing state</div>
+                <div class="summary-value teal">HP</div>
+                <div class="summary-sub">Himachal Pradesh</div>
+            </div>
+            <div class="summary-item">
+                <div class="summary-label">Most stressed region</div>
+                <div class="summary-value purple">RJ</div>
+                <div class="summary-sub">Rajasthan (western zones)</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div class="content">
+
+        <!-- Graph 19 -->
+        <div class="section-divider">
+            <span class="section-num">19</span>
+            <span class="section-divider-line"></span>
+            <span class="section-divider-label">State-Level Overview</span>
+        </div>
+        <div class="graph-wrapper">
+            <div class="graph-header">
+                <div class="graph-title purple-accent">Well Performance by State</div>
+                <span class="graph-tag purple">State</span>
+            </div>
+            <div class="graph-body">
+                {{graph19_html|safe}}
+            </div>
+        </div>
+
+        <!-- Graph 20 & 21 — side by side -->
+        <div class="section-divider">
+            <span class="section-num">20 – 21</span>
+            <span class="section-divider-line"></span>
+            <span class="section-divider-label">Depth & Yield by Region</span>
+        </div>
+        <div class="graph-grid-2">
+            <div class="graph-wrapper">
+                <div class="graph-header">
+                    <div class="graph-title purple-accent">Average Depth by State</div>
+                    <span class="graph-tag purple">Depth</span>
+                </div>
+                <div class="graph-body">
+                    {{graph20_html|safe}}
+                </div>
+            </div>
+            <div class="graph-wrapper">
+                <div class="graph-header">
+                    <div class="graph-title teal-accent">Average Yield by State</div>
+                    <span class="graph-tag teal">Yield</span>
+                </div>
+                <div class="graph-body">
+                    {{graph21_html|safe}}
+                </div>
+            </div>
+        </div>
+
+        <!-- Graph 22 -->
+        <div class="section-divider">
+            <span class="section-num">22</span>
+            <span class="section-divider-line"></span>
+            <span class="section-divider-label">District Rankings</span>
+        </div>
+        <div class="graph-wrapper">
+            <div class="graph-header">
+                <div class="graph-title purple-accent">Top & Bottom Districts by Success Rate</div>
+                <span class="graph-tag purple">Ranking</span>
+            </div>
+            <div class="graph-body">
+                {{graph22_html|safe}}
+            </div>
+        </div>
+
+        <!-- Graph 23 & 24 — side by side -->
+        <div class="section-divider">
+            <span class="section-num">23 – 24</span>
+            <span class="section-divider-line"></span>
+            <span class="section-divider-label">Extraction Patterns</span>
+        </div>
+        <div class="graph-grid-2">
+            <div class="graph-wrapper">
+                <div class="graph-header">
+                    <div class="graph-title purple-accent">Extraction Volume by District</div>
+                    <span class="graph-tag purple">Extraction</span>
+                </div>
+                <div class="graph-body">
+                    {{graph23_html|safe}}
+                </div>
+            </div>
+            <div class="graph-wrapper">
+                <div class="graph-header">
+                    <div class="graph-title teal-accent">Well Density per 100km²</div>
+                    <span class="graph-tag teal">Density</span>
+                </div>
+                <div class="graph-body">
+                    {{graph24_html|safe}}
+                </div>
+            </div>
+        </div>
+
+        <!-- Graph 25 -->
+        <div class="section-divider">
+            <span class="section-num">25</span>
+            <span class="section-divider-line"></span>
+            <span class="section-divider-label">Geographic Heatmap</span>
+        </div>
+        <div class="graph-wrapper">
+            <div class="graph-header">
+                <div class="graph-title purple-accent">Aquifer Richness Heatmap</div>
+                <span class="graph-tag purple">Spatial</span>
+            </div>
+            <div class="graph-body">
+                {{graph25_html|safe}}
+            </div>
+        </div>
+
+        <!-- Graph 26 & 27 — side by side -->
+        <div class="section-divider">
+            <span class="section-num">26 – 27</span>
+            <span class="section-divider-line"></span>
+            <span class="section-divider-label">Comparative Analysis</span>
+        </div>
+        <div class="graph-grid-2">
+            <div class="graph-wrapper">
+                <div class="graph-header">
+                    <div class="graph-title purple-accent">State-wise Risk vs. Yield</div>
+                    <span class="graph-tag purple">Comparison</span>
+                </div>
+                <div class="graph-body">
+                    {{graph26_html|safe}}
+                </div>
+            </div>
+            <div class="graph-wrapper">
+                <div class="graph-header">
+                    <div class="graph-title teal-accent">Rainfall Correlation by State</div>
+                    <span class="graph-tag teal">Correlation</span>
+                </div>
+                <div class="graph-body">
+                    {{graph27_html|safe}}
+                </div>
+            </div>
+        </div>
+
+        <!-- Graph 28 -->
+        <div class="section-divider">
+            <span class="section-num">28</span>
+            <span class="section-divider-line"></span>
+            <span class="section-divider-label">Summary View</span>
+        </div>
+        <div class="graph-wrapper">
+            <div class="graph-header">
+                <div class="graph-title purple-accent">District-Level Composite Score</div>
+                <span class="graph-tag purple">Summary</span>
+            </div>
+            <div class="graph-body">
+                {{graph28_html|safe}}
+            </div>
+        </div>
+
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-logo">WellSense</div>
+        <div class="footer-copy">© 2026 WellSense. Built for India's water future.</div>
+    </footer>
+
+    <script>
+        // Filter chip interaction
+        document.querySelectorAll('.filter-chip').forEach(chip => {
+            chip.addEventListener('click', () => {
+                document.querySelectorAll('.filter-chip').forEach(c => c.classList.remove('active'));
+                chip.classList.add('active');
+            });
+        });
+    </script>
 
 </body>
+
 </html>
